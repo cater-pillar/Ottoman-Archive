@@ -1,0 +1,1392 @@
+2	1	Ahmed ve Huseyyin ve Ali	Abdurrahman Aga
+2	2	Ahmed 	Osman
+2	3	Emin	Ibrahim
+2	4	Hafiz ???? Efendi 	Suleyman
+2	5	Ahmed 	Hasan
+2	6	Haci Mustafa 	Haci Ahmed
+2	7	Mustafa 	Ahmed
+2	8	serif Mustafa 	Ismail
+2	9	omer 	Mustafa
+2	10	Memis 	Ali
+2	11	Ali Bey 	Abdulkerim Bey
+2	12	Huseyyin 	Mehmed
+2	13	Haci Mehmed 	Hafiz Ahmed
+2	14	Numan	Suleyman
+2	15	"Ali, Abdurahman ve Hasan"	Ibrahim
+2	16	Osman 	Abdurahman
+2	17	Salih 	Ahmed
+2	18	Hafiz Yusuf 	Haci Mehmed Efendi
+2	19	Ali 	Abdullah
+2	20	Abdulcelil 	Huseyin
+2	21	Ali 	Huseyin
+2	22	Ali 	Mustafa
+2	23	Osman 	Suleyman
+2	24	Rasid 	Ahmed
+2	25	Haydar 	Sadis
+2	26	Ali 	Abdullah
+2	27	Emin 	Abdullah
+2	28	Abdurahman 	Emin
+2	29	Mustafa 	Zeynel
+2	30	Ahmed 	Ibrahim
+2	31	Mehmed 	Haci Ahmed
+2	32	Ahmed 	Abdullah
+2	33	Mehmed 	Mustafa
+2	34	serif 	Memis
+2	35	Salih 	Sadik
+2	36	Hasan 	Abdullah
+2	37	Abu Bekir 	Islam
+2	38	Haci Osman 	Abdulhalim
+2	39	Hasan 	Ahmed
+2	40	Mahmud 	Ahmed
+2	41	Haci Ahmed 	Ahmed
+2	42	Ayse Hatun	.
+2	43	Ali 	Mustafa
+2	44	Abdulhalim 	Ahmed
+2	45	Salim 	Ali
+2	46	Mustafa 	Abdullatif
+2	63	Mehmed Efendi 	???
+2	64	Osman 	Murad
+2	65	Mehmed 	Murad
+2	66	L??? 	Abdullah
+2	67	Mustafa 	Salih
+2	68	L???	Yusuf
+2	69	Ahmed 	Salih
+2	70	Mehmed 	Mehmed
+2	71	Halil 	Abdullah
+2	72	Hasan 	Ali
+2	73	Hasan Pasa? 	Suleyman
+2	74	Yasar 	???
+2	75	Yusuf 	Ali
+2	76	Hacu Suleyman 	Mehmed
+2	77	Osman 	Abu Bekir
+2	78	Ali 	Abdullah
+2	79	Salih 	Ali
+2	80	omer 	Ali
+2	81	Sadik 	Abdullah
+2	82	omer 	Ali
+2	83	Suleyman 	Abu Bekir
+2	84	Abdurrahman 	Ali
+2	85	Emin Suleyman Efendi 	Osman
+2	86	Emrullah 	Ali
+2	87	Hasan 	Abdurrahman
+2	88	Ali 	Hasan
+2	89	Mehmed 	Ali
+2	90	Mehmed 	Haydar
+2	91	Salim 	omer
+2	92	Mehmed 	Ibrahim
+2	93	Yasar 	Huseyyin
+2	94	Osman 	Emin
+2	95	Hasan 	Huseyin
+2	96	Merhum Hazinedar oglu Ahmed Agazade Hasan	.
+2	97	Mustafa 	Huseyin
+2	98	Murtezi 	Mehmed
+2	99	Huseyin 	???
+2	100	Halil 	Osman
+2	101	Hasan	Tahir
+2	102	Abdurrahman	Murtezi
+2	103	Halil	???
+2	104	Rasid 	Ibrahim
+2	105	Mustafa 	Abdullah
+2	106	Besir  	Ahmed *
+2	107	Halil  	Abdullah
+2	108	Haci Suleyman  	Haci Ahmed
+2	109	Ahmed  	???
+2	110	Ahmed  	Abdullah
+2	111	L???  	Suleyman
+2	112	Basar  	Suleyman
+2	113	Yusuf  	Abu Bekir
+2	114	Huseyin Mulazim  	Mehmed
+2	115	Mehmed  	Ali
+2	116	L???	Suleyman
+2	117	Abdi  	Basar
+3	0	Mir-i Miran Mahmud Pasa	Hafiz Pasa
+3	1	Hafiz Ahmed Efendi 	Mehmed
+3	2	Yusuf	Mehmed
+3	3	Molla Said	Hasan
+3	4	Haci Ahmed Bey	Haci Memis
+3	5	omer ve biraderi Mustafa	Mehmed 
+3	6	Haci Mustafa	Osman
+3	7	Haci Ali	Haci Memis
+3	8	Hasan	Ali
+3	9	B???	Abdullah
+3	10	Haci Mustafa	Abdurrahman
+3	11	Hasan	Mehmed
+3	12	Mahmud Bey ve biraderi Huseyin Bey	Bekir Bey 
+3	13	Haci Ali	Mehmed
+3	14	Mustafa	Osman
+3	15	Hasim	Bilal
+3	16	Merhum Zimma Bey Halilesi serife Hatun	
+3	17	Mustafa	???
+3	18	Ismail	Hasan
+3	19	Mehmed Efendi	Numan
+3	20	Abdurrahman Efendi	Muftu Ali Efendi
+3	21	Mahmud	Abdullah
+3	22	sakir	Abdullah
+3	23	Bilal	Abdullah
+3	24	Osman	Ibrahim
+3	25	Haci Ismail Bey	Haci Munavvir Efendi
+3	26	Ahmed	Haci Ahmed
+3	27	serif ????? Hatun	.
+3	28	Huseyin	Mustafa
+3	29	Abu Bekir	Abdullah
+3	30	Ali	Mehmed
+3	31	Ibrahim	Suleyman
+3	32	Emin	Mustafa
+3	33	Hafiz Hasan Efendi	Mustafa
+3	34	Ismail	???
+3	35	Ismail	Yahya
+3	36	Merhum omer Zevcesi	.
+3	37	Ali	Haci Salih
+3	38	sakir Efendi	Emin
+3	39	Mahmud	Abdullah
+3	40	Ali	Mehmed Porcu?
+3	41	Abdullah	Abdullah
+3	42	Mustafa	Hasan
+3	43	Haci Seydi	Mehmed
+3	44	Nezir	Islam
+3	45	Arslan Dobrina	Isa
+3	46	Ismail	Osman
+3	47	Suleyman	Ali
+3	48	Hafiz Mustafa	Mehmed
+3	49	Ali	Ali
+3	50	Ahmed	Abdullah
+3	51	xxx	Abdullatif
+3	52	Ismail	Haci Muhtar
+3	53	Sadik	Abdulhatah???
+3	54	Mustafa	Huseyin
+3	55	serif Ahmed	Salih
+3	56	Haci Osman	Salih
+3	57	Haci Salih	Muhtar
+3	58	Mehmed	Ismail
+3	59	Hasan	Haci omer
+3	60	Ali	Ibrahim Bey
+3	61	Mehmed	Ismail
+3	62	Mahmuda	Haci Hasan
+3	63	Mehmed Aga Kerimesi ??? Hatun	.
+3	64	Haci Osman	Haci Memis
+3	65	Hasan Husni Efendi	Mustafa
+3	66	Osman	Mehmed
+3	67	Sadik	Mehmed
+3	68	Jabota Osman	Zoko
+3	69	Hafiz Hasan	Abdi
+3	70	Haci Suleyman	Mustafa
+3	71	Abdurrahman	Mehmed
+3	72	omer	Receb
+3	73	XXX	Mehmed
+3	74	Dervis	Abdi
+3	75	Ferhad	Mustafa
+3	76	Mehmed	Ismail
+3	77	Hafiz Yahya Efendi	Ali
+3	78	Hasan	Ali
+3	79	omer	Ali
+3	80	Mustafa	Ali
+1	1	Hafiz Ahmed	Mehmed Emin
+1	2	XXX	Yakub
+1	3	Halil	Ahmed
+1	4	Haci Ferhad	Abdah
+1	5	Haci Hasan	Suleyman
+1	6	Huseyyin	Emin
+1	7	Vehhabi	Mustafa
+1	8	Huseyyin	Islam
+1	9	Osman	Abdah
+1	10	Mehmed	Salih
+1	11	Mahmud	Mehmed
+1	12	Mehmed	Abdah
+1	13	Bahram	Numan
+1	14	Hasan	Ismail
+1	15	Ahmed	Mustafa
+1	16	Salih 	Ahmed
+1	17	Mehmed	Abdah
+1	18	Haci Huseyyin	Mustafa
+1	19	seyh Ibrahim	Nuruddin
+1	20	Ali	omer
+1	21	Huseyyin Efendi	Ibrahim
+1	22	Abdi	Mustafa
+1	23	Salih	Ibrahim
+1	24	Mehmed	Osman
+1	25	Yusuf	Ahmed
+1	26	Ibrahim	Mustafa
+1	28	Ahmed	Hasan 
+1	29	Mehmed	Hasan
+1	30	Ali	Ibrahim
+1	31	Suleyman	Ahmed
+1	33	Ibrahim	Halil 
+1	34	Emin	Abdah
+1	35	??? Huseyyin	omer
+1	36	Nuruddin	Arif
+1	37	Ali	Ahmed
+1	38	Huseyyin	Halil
+1	39	Mehmed	Huseyyin ??
+1	40	omer	Ali
+1	41	Memis	Ahmed
+1	42	Hasan	Ibrahim
+1	43	Salih	Osman
+1	44	Emin	Abdah
+1	45	Ali	Yakub
+1	46	Salih	Memis
+1	47	Mehmed	Abdah
+1	48	Mustafa	Hasan
+1	49	Suleyman	Osman
+1	50	Ahmed	Mehmed
+1	51	Selim	Abdah
+1	52	Mahmud 	Ali
+1	53	Ibrahim	Numan
+1	54	Ahmed	Huseyyin 
+1	55	Ahmed	Hasan
+1	56	Mazlum	Haydar ?
+1	57	Hasan	Ahmed
+1	58	Huseyyin	Ibrahim
+1	59	Abdulkerim	Sadik
+1	60	Mehmed	Yusuf
+1	61	Mehmed	Abdah
+1	62	Ibrahim	Hasan
+1	63	Yusuf	Ali
+1	64	Salih	Hasan
+1	65	Haci Emin	omer
+1	66	Emin	Ali
+1	67	Ahmed	Feyzah
+1	68	Hasan	Ahmed
+1	69	Haci Huseyyin	Ibrahim
+1	70	Halid	omer
+1	71	Huseyyin	Abdah
+1	72	Yunus	Ibrahim
+1	73	Ibrahim	Beytullah
+1	74	Osman	Mehmed
+1	75	Mehmed	Ali
+1	76	Mehmed	Ismail
+1	77	omer	Ibrahim
+1	78	Bahram	Mehmed
+1	79	Hasan	Halil
+1	80	Murad	Mehmed
+1	81	Hafiz Haci Ali	Ismail
+1	82	Mustafa	Huseyyin
+5	1	Abdurrahman	Mustafa
+5	2	omer	serif
+5	3	Abdurrahman	XXX
+5	4	Suleyman	Ali
+5	5	Ibrahim	Zeynel
+5	6	XXX	Ibrahim
+5	7	Ismail Bey	Ibrahim
+5	8	Ahmed Bey	Suleyman Bey
+5	9	seyh Haci omer Efendi 	.
+5	10	Hasan	Ali
+5	11	Ismail	Abdullah
+5	12	Abide ve kardesi	Memis 
+5	13	Salih	Hasan
+5	14	Emin	Abdullah
+5	15	Mustafa	Haci Suleyman
+5	16	Mustafa	Salih
+5	17	Haci ??? zade kerimeleri	.
+5	18	Islam	Zubeyyir
+5	19	Ali	Abdullah
+5	20	Suleyman Bey	Suleyman
+5	21	Mustafa	Abdi
+5	22	Hasan	sakir
+5	23	Selim	Ali
+5	24	Osman	Hasan
+5	25	Bekir Bey	Ahmed Bey
+5	26	Ismail	Mustafa
+5	27	Ali	Ahmed
+5	28	Ibragim	Haci Davud
+5	29	Ibrahim Bey	Ahmed Bey
+5	30	Hafiz Abdurrahman	Halil
+5	31	Ismail	Mustafa
+5	32	Halil	omer
+5	33	Mahmud	Haci Ahmed
+5	34	serif	Ibrahim
+5	35	Mustafa Bey	Haci Ali
+5	36	Mitre	Mehmed
+5	37	Ibrahim	Abdullah
+5	38	Huseyyin	Abdullah
+5	39	seyh Hafiz Efendi	Abdullah
+5	40	Yusuf Bey	Ismail Bey
+5	41	Ismail	Mustafa
+5	42	Dervis	Agos ???
+5	43	Mehmed	Mustafa
+5	44	Ali	Hasan
+5	45	Hasan	Zeynel
+5	46	Ali	Mehmed
+5	47	Merhum Mehmed Emin eytamlari	.
+5	48	Basar	Adem
+5	49	Mehmed	Suleyman
+5	50	Hasan	Ahmed
+5	51	Salih	Mustafa
+5	52	Yusuf	Haci Salih
+5	53	Ahmed	omer
+5	54	Emin	Ibrahim
+5	55	Mehmed	Ibrahim
+5	56	Bekir	Halid
+5	57	Mehmed	Abdullah
+5	58	Fazli	Ismail
+5	59	Suleyman	Salih
+5	60	Muettin	Abdullah
+5	61	Haci Huseyyin	Musa ???
+5	62	Halil	Mehmed
+5	63	Huseyyin	saban
+5	64	Mehmed	Abdullah
+5	65	Ali	Salih
+5	66	omer	Halil
+5	67	XXX	Abidi
+5	68	Mehmed	Abdullah
+5	69	Ali	Faiz
+5	70	Haci Halid	Salih
+5	71	Ferhad	Lutf
+5	72	Basar	Fazli
+5	73	Hasan	Fazli
+5	74	Arif	Abdullah
+5	75	Ahmed	Mustafa
+5	76	Ahmed	omer
+5	77	Emin	Osman
+5	78	Islam	Mustafa
+5	79	Ismail	Ali
+4	1	Eyup	Yusuf
+4	2	Basar	Murad
+4	3	Mehmed	omer
+4	4	Halil	Salih
+4	5	Yakub	omer
+4	6	serif	Ahmed
+4	7	Suleyman	Ali
+4	8	Ahmed	Abdurrahman
+4	9	Ibrahim	Suleyman
+4	10	Abdulletif	Halil
+4	11	Mustafa	Osman
+4	12	Ismail	Abdurrahman
+4	13	Mehmed	Zekir
+4	14	Hasan	Mustafa
+4	15	Merhum Zeynel Sipahinin Zevcesi	.
+4	16	serif	Huseyyin
+4	17	Ismail	Dervis
+4	18	Ahmed	XXX
+4	19	Kurtu	Receb
+4	20	Ali	XXX
+4	21	Osman	Hasan
+4	22	Mehmed	Suleyman
+4	23	XXX	Salih
+4	24	Sadik	Numan
+4	25	seyh Abdi	Numan
+4	0		Ogullari
+4	26	Hasan	Ali
+4	27	Mehmed 	Huseyyin
+4	28	Kurtu	omer
+4	29	Ismail	Adem
+4	30	Selim	Mustafa
+4	31	Kurtu	Bekir
+4	32	Ibrahim	Abdi
+4	33	omer	XXX
+4	34	Adem	XXX
+4	35	Halim	Adem
+4	36	Numan	Ali
+4	37	Nezir	Abdul
+4	38	Hasan	Hayreddin
+4	39	Ahmed Bey	Ibrahim Bey
+4	41	serif	Mehmed
+4	42	Ibrahim ve kardesi Mustafa	Mehmed
+4	43	Mustafa	Cafer
+4	44	Idris	Abdullah
+4	45	Mehmed	XXX
+4	46	Nuri	Mehmed
+4	47	Ismail	Ahmed
+4	48	Mustafa	Ali
+4	49	Davud	Mustafa
+4	50	Emin	Kasim
+4	51	Haci Seydi	Suleyman
+4	52	Mehmed	Osman
+4	53	Mustafa	Huseyyin
+4	54	Osman	Abdullah
+4	55	Osman	Ahmed
+4	56	Muvettin	Ibrahim
+4	57	Osman	Ibrahim
+4	58	Huseyyin	Suleyman
+4	59	Ahmed	Mehmed
+4	60	Mustafa	Seydi
+4	61	Huseyyin	Tahir
+4	62	Suleyman	Kamir?
+4	63	Mustafa	Islam
+4	64	serif Ali	Ahmed
+4	65	Basar	Feyzo?
+4	66	Mustafa	Yaso?
+4	67	Malik	Yusuf
+4	68	Dervis	Ali
+4	69	Mustafa	Feyzullah
+4	70	Dervis Suleyman	Basir
+4	71	Mehmed	Huseyyin
+4	72	Mustafa	Suleyman
+4	73	Huseyyin	Mustafa
+4	74	Hasan	Ibrahim
+4	75	Yahya	Suleyman
+4	76	Adem	Osman
+4	77	Suleyman	Ismail
+4	78	Huseyyin	Haydar
+4	79	Salih	Hasan
+4	80	Kasim	Suleyman
+4	81	XXX	Ali
+4	82	Suleyman	XXX
+4	83	XXX	Mustafa
+4	84	Zekir	XXX
+4	85	Basar	XXX
+4	86	Numan	Yusuf
+4	87	Ahmed	Mehmed
+4	88	Ali	Abdullah
+4	89	XXX	Isamil
+4	90	Ibrahim	Abdullah
+4	91	Halil	Mehmed
+4	92	Ahmed	Fazli
+4	93	Hasan	Osman
+4	94	XXX	Nuri
+4	95	Halil	Ibrahim
+4	96	serif Osman	Mustafa
+4	97	Mustafa	Abdullah
+4	98	Mustafa	Huseyyin
+4	99	Bekir	Mehmed
+4	100	Mehmed	Suleyman
+4	101	Ibrahim	Mustafa
+4	102	Murad	Zeynel
+4	103	Salih	Mehmed
+8	1	Numan	Hasan
+8	2	Mahmud	Haci Mehmed
+8	3	Halid	Kahraman
+8	4	Ibrahim	Feyzullah
+8	5	Dervis Huseyyin	Hasan
+8	6	Osman	Mehmed
+8	7	Mehmed	Abdullah
+8	8	XXX	.
+8	9	Suleyman	Ali
+8	10	Mehmed	Hasan
+8	11	Salih	Recep
+8	12	sakir	XXX
+8	13	XXX	Musa
+8	14	Mehmed	Ali
+8	15	Mustafa	Mehmed
+8	16	Yusuf	Abdullah
+8	0	Ali	Ahmad
+8	17	Bahram	Abdi
+8	18	Hayrullah	Osman
+8	19	Ibrahim	Halil
+8	0	Huseyyin	Mustafa
+8	20	Ibrahim	XXX
+8	21	Latif	Feyzullah
+8	22	Osman	Ali
+8	0	serif	Mehmed
+8	23	Mehmed	Abdullah
+8	24	Yasar	Mehmed
+8	25	Zeynel	Abdullah
+8	26	Yusuf	Hasan
+8	27	Murad	Ali
+8	28	Suleyman	Feyzullah
+8	29	Suleyman	Salman
+8	30	Mustafa	Feyzullah
+8	31	Ahmed	Mehmed
+8	32	Seydi	Kurtus???
+8	33	Yasar	Ali
+8	34	Lutfi	Besir
+8	35	Halil	Abdullah
+8	36	Osman	Ali
+8	37	Hasan	Salih
+8	38	omer	Mehmed
+8	39	Ahmed	Ali
+8	40	Mustafa	Ismail
+8	41	XXX	XXX
+8	42	Yasar valad Ahmed	
+8	43	Abdullah valad Abdullah	
+8	44	Halid valad ???	
+8	45	Suleyman valad Selim	
+8	46	Halid	Mustafa
+8	47	Salih valad Mehmed	
+8	48	xxx	
+8	49	Ali valad Ibrahim halilesi	
+8	50	Ahmed valad Mehmed	
+8	51	Ali valad Mehmed	
+8	52	Ahmed Sipahi valad Mehmed	
+8	0	Mustafa valad Ahmed	
+8	53	Sadik valad Ibrahim	
+8	54	??? valad Osman	
+8	55	Halil valad Osman	
+8	56	Ahmed valad Ali	
+8	57	Arif valad Ramis	
+8	58	Zuneyyir valad Huseyyin	
+8	59	Said valad Islam	
+8	60	Hasan valad Hasan	
+8	61	sakir valad Abdullah	
+8	62	Suleyman valad Fazli	
+8	63	Salih valad Mustafa	
+8	64	Metis valad Ismail	
+8	65	Salih valad Ibis?	
+8	66	Kavri valad ???	
+8	67	Said valad Ibrahim	
+8	68	xxx	
+8	69	Suleyman valad Ali	
+8	70	Suleyman valad Halid	
+8	71	Ali valad Bekir	
+8	72	Mutis valad Mahmed	
+8	73	Rasid  	Osman
+8	74	Emin valad Ali	
+8	75	Hasan valad Suleyman	
+8	76	saban valad Mustafa	
+8	77	Kadri valad Mustafa	
+8	78	Emin valad Hasan	
+8	79	Mehmed valad Veysel	
+8	80	Salih valad Kerim	
+8	81	Letif valad Kasim	
+8	82	Ramid valad Abdi	
+8	83	??? Valad Suleyman	
+8	84	Ahmed valad ???	
+8	85	Mustafa valad Seydi	
+8	86	Said valad Halil	
+8	87	Osman valad Mehmed	
+8	88	Abdurahman valad Arif	
+8	89	Yusuf valad Abdullah	
+8	90	Hasan valad Mehmed	
+8	91	Maksud valad Osman	
+8	92	Abdullah valad Adem	
+8	93	Salih valad Abdullah	
+8	94	Huseyyin valad Osman	
+8	95	Salih valad Abdi	
+8	96	saban valad Osman	
+8	97	Abdul valad Yusuf	
+8	98	??? Valad Sadik	
+8	99	Mustafa 	Mihram???
+8	100	Abdi valad Mehmed	
+8	101	Salih valad Huseyyin	
+8	102	Ali valad Mehmed	
+8	103	Halil valad Ilyas	
+8	104	Said valad Hasan	
+8	105	Ahmed valad Salih	
+8	106	Mehmed valad Hasan	
+8	107	Selih valad Arif	
+8	108	Mustafa valad Abdullah	
+8	109	Sadik valad Ibrahim	
+8	110	Murad valad Suleyman	
+8	111	Numan valad Mustafa	
+8	112	Mehmed valad Lutfi	
+8	113	Metis valad Nezir	
+8	114	Ali valad Mehmed	
+8	115	Hasan valad Osman	
+8	116	Suleyman valad Salman	
+8	117	Ahmed valad Mustafa	
+8	118	??? Valad Abdullah	
+8	119	Huseyyin valad Huseyyin	
+8	120	Said valad Abdi	
+8	121	Sadik valad Tahir	
+8	122	saban valad Receb	
+8	123	Selih valad Abdullah	
+8	124	??? Valad Abdullah	
+8	125	Ibrahim valad Suleyman	
+8	126	Selim valad Ismail	
+8	127	Ali valad Ismail	
+8	128	Letif valad Ismail	
+8	129	Mustafa valad Islam	
+8	130	Zako? Valad Maksud	
+8	131	Salih valad Ali	
+8	132	Murad valad omer	
+8	133	??? Valad Selim	
+8	134	Mustafa valad ???	
+8	135	??? Valad Kurto	
+8	136	Selim valad Mehmed	
+8	137	Suleyman valad ???	
+8	138	Sakir valad Mustafa	
+8	139	Metis valad Osman	
+8	140	Suleyman valad Aruc	
+8	141	Salih valad Abdi	
+8	142	Abdi valad Suleyman	
+8	143	Mehmed valad Ismail	
+8	144	Mustafa valad Ahmed	
+8	145	Mustafa valad Murassal???	
+8	146	Emin valad Haci Abdullah	
+8	147	Bayram valad Yusuf	
+8	148	Huseyyin valad Ismail	
+8	149	Selim valad Haydar	
+8	150	Letif valad Ali	
+8	151	Suleyman valad Ibrahim	
+8	152	Huseyyin valad Mehmed	
+8	153	Resid valad Abdullah	
+8	154	Said valad ___	
+8	155	xxx	
+8	156	saban valad Haydar	
+8	157	Salih valad Halil	
+8	158	Kanbar valad Zanbar???	
+8	159	Haci Abdullah valad Abdullah	
+8	160	Ibrahim valad Abdullah	
+8	161	Abdi valad Huseyyin	
+8	162	Mehmed valad Abdullah	
+8	163	Aruc valad Ibrahim	
+8	164	Ibrahim valad Ali	
+8	165	??? Valad Salih	
+8	166	Fazli valad Islam	
+8	167	Nezir valad Ismail	
+8	168	Fettah valad omer	
+8	169	Osman valad Abdullah	
+8	170	Abdurrahman valad Hasan	
+8	171	Hasan valad Suleyman	
+8	172	Ali valad Hacu Ibrahim	
+8	173	Ramo valad Halil	
+8	174	Mehmed valad Ali	
+8	175	Ibrahim valad Mehmed	
+8	176	??? Valad Salman	
+8	177	Ruhan valad omer	
+8	178	Ali valad Zenber	
+8	179	Yasar valad Hasan	
+8	180	Mustafa valad Muammer	
+8	181	Mutis valad Abdi	
+8	182	Lutfi valad Zekir	
+8	183	omer valad Suleyman	
+8	184	Receb valad Mehmed	
+8	185	Arif valad Kaytas	
+8	186	Halim valad Bekir	
+8	187	Osman valad Yusuf	
+8	188	Suleyman valad ???	
+8	189	Mustafa valad Ali 	
+8	190	Yakub valad Tahir	
+8	191	Ali valad Islam	
+8	192	Huseyyin valad Ismail	
+8	193	Huseyyin valad Halil	
+8	194	Receb valad Huseyyin	
+8	195	Abdurrahman valad Osman	
+8	196	Mehmed valad Halil	
+8	197	Reco valad Maksud	
+8	198	Zeynel valad Maksud	
+8	199	Ismail valad Osman	
+8	200	Abdullutf valad Arslan	
+8	201	Huseyyin valad Mustafa	
+8	202	Emin valad Hasan	
+8	203	Bahram valad Abdullah	
+8	204	Ali valad ???	
+8	205	Salih valad Suleyman	
+8	206	Ali valad Musa	
+8	207	Haci Rustem valad Yahya	
+8	208	Nezir valad Said	
+8	209	Salih valad Veysel	
+8	210	??? Valad Veysel	
+8	211	Abdi valad Ilyas	
+8	212	Yasar valad Ibrahim	
+6	1	Seyyid Abdurrahman Efendi valad Seyyid Muftu Mustafa Efendi	
+6	2	Osman valad Mehmed	
+6	3	seyh Said Efendi valad seyh Ahmed Efendi	
+6	4	Salih valad Ali	
+6	5	Ahmed valad Salman	
+6	6	Halil valad Mustafa	
+6	7	Hasan valad Yusuf	
+6	8	Osman valad Yahya	
+6	9	omer valad Salih	
+6	10	Adil valad Feyzullah	
+6	11	Mehmed Bey valad Ali Pasa	
+6	12	merhum Haci Ahmed Aga zevcesi Selime Hatun	
+6	13	Mehmed valad Ahmed	
+6	14	Ahmed valad Hasan	
+6	15	Ali Efendi valad Haci Yasar	
+6	16	Salim valad Mustafa	
+6	17	Huseyyin valad Ali	
+6	18	Mustafa valad Ahmed 	
+6	19	? Ismail valad Receb	
+6	20	Kara Mustafa valad Ahmed	
+6	21	Hasan valad Abdullah	
+6	22	Osman Efendi valad Suleyman	
+6	23	Haci Yusuf valad Salman	
+6	24	Mehmed valad Ahmed	
+6	25	Memis valad Mustafa	
+6	26	Kahraman valad Murad	
+6	27	Abdullah valad Mehmed	
+6	28	Haci Emin valad omer	
+6	29	Halil valad Hasan	
+6	30	Abu Bekir valad Salih	
+6	31	Ismail valad Zeynel	
+6	32	Salim valad Haci Dervis	
+6	33	Abu Bekir valad omer	
+6	34	Mehmed valad Hasan	
+6	35	Haci Abdullah valad Huseyyin	
+6	36	Abu Bekir valad Ibrahim	
+6	37	Mustafa valad Osman	
+6	38	Suleyman valad Hasan	
+6	39	Hasan valad omer	
+6	40	omer valad Abdullah	
+6	41	Arif valad Ali	
+6	42	Ibrahim Efendi valad Emin	
+6	43	omer valad Mehmed	
+6	44	Halil valad Suleyman	
+6	45	Abdulletif valad Ibrahim	
+6	46	sahbaz valad Halil	
+6	47	Mehmed valad Memis	
+6	48	Ahmed valad Huseyyin	
+6	49	Zeynel valad Huseyyin	
+6	50	Haci Kutas valad Haci Bekir	
+6	51	Ibrahim valad Mustafa	
+6	52	Ibrahim valad Ali	
+6	53	Ismail valad Ali	
+6	54	Ahmed valad Ibrahim	
+6	55	Ali valad Mehmed	
+6	56	Mehmed valad Osman	
+6	57	Receb valad Huseyyin	
+6	58	Murad valad Salman	
+6	59	Huseyyin valad Kurto	
+6	60	Ali valad Salman	
+6	61	Abdullah valad Ismail	
+6	62	Suleyman valad Mursil	
+6	63	??? Valad Suleyman	
+6	64	omer valad Mahmud	
+6	65	Halil valad Mustafa	
+6	66	Huseyyin valad Salih	
+6	67	Kurto valad Tahir	
+6	68	Mehmed valad Ahmed	
+6	69	Mustafa valad Ali	
+6	70	Tosun Ibrahim valad Mustafa	
+6	71	Suleyman valad Osman	
+6	72	Hasan valad ____	
+6	73	serif valad Salih	
+6	74	Mehmed valad Abdulfettah	
+6	75	Tosun valad Ali	
+6	76	Zeynel valad Huseyyin	
+6	77	Idris valad Ali	
+6	78	Huseyyin valad Memis	
+6	79	omer valad Huseyyin	
+6	80	Mehmed valad Islam	
+6	81	Hasan valad Yaso	
+6	82	Mustafa valad Bektas	
+6	83	Mustafa valad Ahmed	
+6	84	Mahmed valad Masli	
+6	85	Suleyman valad Ali	
+6	86	Haci omer valad Mahmud	
+6	87	Sadik valad Ibrahim	
+6	88	Mehmed valad Ibrahim	
+6	89	Mahmud valad Abdullah	
+6	90	Tahir valad Mustafa	
+6	91	sahin Abdurrahman valad Yaso	
+6	92	Ibrahim valad Ahmed	
+6	93	Hasan valad Ali	
+6	94	Suleyman valad omer	
+6	95	Ahmed valad Kadri	
+6	96	Halil valad Ahmed	
+6	97	Mustafa valad Osman	
+6	98	Ismail valad Abbullah	
+6	99	Mehmed valad Ali	
+6	100	Ibrahim valad Ibrahim	
+6	101	Fazli valad Ismail	
+6	102	Arif valad Osman	
+6	103	Mustafa valad Mehmed	
+6	104	Fazli valad Abdullah	
+6	105	Abdulkerim valad Bahram	
+6	106	Halil valad Ali	
+6	107	Halil valad Abbas	
+6	108	Mutis valad Mustafa	
+6	109	Isamil valad Agus???	
+6	110	Bektas valad Osman	
+6	111	Osman valad Osman	
+6	112	Dervis valad Bekir	
+6	113	Osman valad Ali	
+6	114	Selim valad Abdullah	
+6	115	Abdulletif valad Mustafa	
+6	116	Ali valad Ahmed	
+6	117	Suleyman valad Abdulletif	
+6	118	Ibrahim valad Abdullah	
+6	119	Ibrahim valad Ali	
+6	120	Zakarya valad Abdullah	
+6	121	Mehmed valad Abu Bekir	
+6	122	Ahmed valad Mustafa	
+6	123	Dursu Bakire valad Hasan	
+6	0	Ahmed valad Abdullah	
+6	0	Ahmed valad Mehmed	
+7	1	Bayram bin Zeynel	
+7	2	Ahmed bin serif	
+7	3	Abdulkadir bin Ismail	
+7	4	Ali bin Mustafa	
+7	5	Huseyyin bin Ali	
+7	6	Abdurrahmab bin Feyzullah	
+7	7	Mustafa bin Halil	
+7	8	Abdurrahman bin Osman	
+7	9	Salih bin Ahmed 	
+7	10	Haci Hafiz bin ???	
+7	11	Ismail Efendi bin Mehmed	
+7	12	Huseyyin bin Numan	
+7	13	Ali bin Bayram	
+7	14	Said bin Adem	
+7	15	serif Ibrahim bin Emin	
+7	16	Abdi bin Mehmed	
+7	17	Murad bin Dervis	
+7	18	Yahya bin Mehmed	
+7	20	Mustafa bin Osman	
+7	19	Mehmed bin Abdullah	
+7	21	Mehmed Efendi bin omer	
+7	22	Ibrahim bin Mehmed	
+7	23	Huseyyin bin Abdullah	
+7	24	Huseyyin bin Ali 	
+7	25	Mehmed bin Yahya	
+7	26	Abdurrahman bin Haci Osman	
+7	27	Haci Ali bin Mustafa	
+7	28	omer bin Haci Emin	
+7	29	Mustafa bin Salih	
+7	30	Abdullah bin Ibrahim	
+7	31	Ali bin Adem	
+7	32	Ahmed bin Hasan	
+7	33	Basar bin Hasan	
+7	34	Suleyman bin Yun	
+7	35	Hasan bin Suleyman	
+7	36	Hasan bin Mehmed	
+7	37	Mutis bin Hasan	
+7	38	Mehmed bin Receb	.
+17	1	Tomo 	Rayko
+17	2	Yovan	Ratko
+17	3	Milenko	cvetko
+17	4	Tamo	???
+17	5	cvetko	Marinko
+17	6	xxx	Radoyko
+17	7	xxx	???
+17	8	Istano	Rasto
+17	9	Istifan	Istanko
+17	10	Istamenko	Istoyan
+17	11	Milivoye	Krsto
+17	12	Yanko	Istoyan
+17	13	Milivoye	???
+17	14	Milenko	Krsto
+17	15	Yovance	Marko
+17	16	Yayna	Dimitre
+17	17	Pavon	Rayko
+17	18	Gozradan	Pavle
+17	19	Krsto	???
+17	20	Marko	Istamenko
+17	21	Mladen	Kurye
+17	22	Marinko	Gorgi
+17	23	Yovance	Gorgi
+17	24	Gorgi	Niso
+17	25	xxx	Istifan
+17	26	Radoy	Velko
+21	1	Pitre	Istoyan
+21	2	Istoyan	Blagoye
+21	3	Taso	Pitre
+21	4	cako	???
+21	5	Marko	Pitre
+21	6	Istoiko	Istanko
+21	7	Istanoye	Risto
+21	8	Jivko	Istifan
+21	9	xxx	???
+21	10	Mito	Istoiko
+21	11	Rankel	Miladin
+21	12	Todorce	Istifan
+21	13	Vucko	Istanko
+21	14	Mihalko	Milos
+21	15	Dinka	???
+21	16	Istifan	???
+21	17	Kosto	Marko
+21	18	Kole	???
+21	19	Yovance	cutko
+21	20	Istoiko	Yovan
+21	21	Izdravko	Istifan
+21	22	Milko	Petko
+21	23	Anice	.
+21	24	Yovance	Istoyce
+21	25	Vane	Istifan
+21	26	Istamenko	Petre
+21	27	Istanko	Ispahoye
+21	28	Gorgi	Vidun
+21	29	Yovance	Bogdan
+21	30	Anto	Istanoye
+21	31	Velko	cvetko
+21	32	Golub	Nikola
+21	33	Goro	Bojo
+21	34	Nedo	.
+21	35	Lazar	Izdravko
+21	36	Ilya	Milko
+21	37	Tricko	Pitre
+21	38	Izlatko	Kure
+21	39	Istoyan	Anto
+21	40	L	.
+21	41	Dino	Pavle
+21	42	L???	Petre
+21	43	Gorgi	Yovan
+21	44	Miso	Ilya
+21	45	Milko	Miso
+21	46	Kiro	Yovan
+21	47	Petre	Yovan
+21	48	Taso	Yovo
+21	49	Lalo	Yovan
+21	50	cvetan	Anto
+21	51	Gorgi	Mito
+21	52	Mito	Istoiko
+21	53	Krsto	Yovan
+21	54	Mitre	???
+21	55	Girko	Jivko
+21	56	Tomo 	Dule?
+21	57	Yanko	Ilya
+21	58	Istamenko	cvetko
+21	59	Rankel	Istoyan
+21	60	Istanko	Yanko
+21	61	Mirko	Despot
+21	62	Istanko	Istifan
+21	63	Istoiko	Risto
+20	1	Anastas	Marko
+20	2	Gorgi	Anastas
+20	3	Kustadin	Balas
+20	4	xxx	Yovan
+20	5	Gorgi	Yanko
+20	6	Petre	Ispaso
+20	7	L???	Istifan
+20	8	Rayko	Istoyan
+20	9	Jivko	Istifan
+20	10	Mito	???
+20	11	L???	???
+20	12	Istanoye	Yovo
+20	13	Matko	Todor
+20	14	Mladen	Petre
+20	15	Dino	Istanoye
+20	16	Taso	Istoyan
+20	17	Mito	Miloyko
+20	18	Mile 	Jivadin
+20	19	Kuro	Spaso
+20	20	Petre	Yovan
+20	21	Kosto	Mitre
+20	22	Done??	Marko
+20	23	Yovance	Marko
+20	24	Mica	Marko
+20	25	Gorgi	Istifan
+20	26	Taso	Miloyko
+20	27	Taso	Koco
+20	28	Gorgi	cvetko
+20	29	Izdravko	Mladen
+20	30	Gorgi	Nasto
+20	31	Taso	Jivko
+20	32	Taso	Marko
+20	33	Golub	Jiva
+20	34	L???	Taso
+20	35	Mito	Istoyan
+20	36	Yovance	Demyan
+20	37	L???	???
+20	38	Nikola	Istanko
+20	39	Kostandin	Nikolca
+20	40	Vane	Vucko
+20	41	Dino	Rasto
+20	42	Koco	Istanko
+20	43	Kosto	Istanko
+20	44	Petre	Istifan
+20	45	Haci Boyo	Ivanko
+20	46	Bogdan	Nikola
+20	47	Mito	Miso
+20	48	Marko	Istoyan
+20	49	Mitre	Nikola
+20	50	Istoyanca	Trcko
+20	51	Petre	Taso
+20	52	Yovance	Izdravko
+20	53	Rajo	Rasto
+20	54	Mito	Jivko
+20	55	Yovance	Marko
+20	56	Istamenko	Nikola
+20	57	Istanoyle	Milenko
+20	58	Milenko	Yovan
+20	59	Yoco	Istoyan
+20	60	Istoyan	Raso
+20	61	L???	.
+20	62	Niso	Peso
+20	63	Istoyan	Miladin
+20	64	Istamenko	???
+20	65	Miloyko	Marko
+20	66	Tircko	Todor
+20	67	Risto	Lazar
+20	68	Istoyan	Miliye
+20	69	Izdravko	Mile
+20	70	Gorgi	Mile
+20	71	Istoyko	Radosav
+20	72	Istanko	???
+20	73	Nikola	???
+20	74	Mito	Istoyan
+20	75	Todorca	Kuko
+20	76	xxx	???
+20	77	Vidoyko	Golub
+20	78	Raso	Rayko
+20	79	Risto	Ilya
+20	80	Mihalko	Istoyan
+20	81	Pavle	Mitre
+20	82	Simo	Kuro
+20	83	Lazar	Dacko
+20	84	Izdravko	Nikola
+20	85	Istoyanca	Mitre
+20	86	Lazar	Istamenko
+20	87	Risto	Panapot
+13	1	Risto	Jivko
+13	2	cako	Kosto
+13	3	Nikola	Petre
+13	4	Peco	Velko
+13	5	Istoyan	Niso
+13	6	Milos	Jivko
+13	7	Ispiridol	Yovan
+13	8	Petre	Miladin
+13	9	Mito	Jivko
+13	10	Miso	Andriya
+13	11	Marko	Yovan
+13	12	Koco	Jivko
+13	13	Istanko	Petko
+13	14	Marko	Todor
+13	15	cvetan	Istifan
+13	16	Niko	Jivko
+13	17	Mihalko	Istoyan
+13	18	Koso	Petko
+13	19	Mirte	Istoyance
+13	20	Istanko	Yanko
+13	21	Kosto	Pavle
+13	22	Gorgi	Mitre
+13	23	Petre	Kosto
+13	24	Istoyan	.
+13	25	Milenko	Nikola
+13	26	Istamenko	Miladin
+13	27	Duno	Mihailo
+13	28	Dimitre	Bora
+13	29	Yovan	Mico
+13	30	Yanko	Ilya
+13	31	Istoyanko	Izdravko
+13	32	Yovance	Yanko
+13	33	Sotir	Mane
+13	34	Toso	Petko
+13	35	Petre	Dimitre
+13	36	Radoyko	Petre
+13	37	Istanko	Petko
+13	38	Istifan 	Petko
+13	39	Yovan	Vecko
+13	40	Petre	Jivadin
+13	41	Miliye	Jivko
+13	42	Petko	Despot
+13	43	Mito	Bojidar
+13	44	Paco	Ilya
+13	45	Gorgi	Ivanko
+13	46	Marko 	Dimitre
+13	47	L???	???
+13	48	Aleksa	Istanimir
+13	49	Petko	cvetko
+13	50	L???	Nikola
+13	51	Rayko	Velko
+13	0	Miloyka	Milenko
+13	0	L???	Rafael
+13	52	Petre	Mito
+13	53	Milko	cvetko
+13	54	Yanko	Demyan
+13	55	Dimitre	Manco
+13	56	Mariya	Antonas
+13	0	Istana	Todor
+13	57	Vidoyko	Jivoyko
+13	58	Yovan	Maryan
+13	59	L???	Istamenko
+13	60	Mile	Dimitre
+13	61	Antonas	Yovan
+13	62	Koco	Krsto
+13	63	Petre	Petko
+13	64	Mila	Gorgi
+13	65	Marco???	cvetko
+13	66	Marya	Miladin
+13	67	Taso	Nikola
+13	68	Ilya	Niso
+13	69	Dimitre	Harci Yovan
+13	70	Petre	Nikola
+13	71	Nikola	Mihal
+13	72	Mile	Harci Maco
+13	73	Istoyanka	Mihaylo
+14	74	xxx	Istoso
+14	75	Marko	Risto
+14	76	Tola	Nikola
+14	77	Istamenko	Paun
+15	78	Rankel	Miladin
+15	79	cvetan	Istoyan
+15	80	Istoilko	Istanko
+15	81	coko	Mitre
+15	82	xxx	Manco
+15	83	Todorca	Petko
+15	84	Aci Toso	Krsto
+15	85	Todorca	Istoyan
+15	86	Gorgi	Yanko
+15	87	Yovanca	Nikola
+15	88	Milos	Yovo
+15	89	Istamenko	Istanko
+15	90	Taso	Marko
+15	91	Yovanca	Petre
+16	92	xxx	Aci Mito
+16	93	Gorgi	Aci Peso
+16	94	Aci Kuko	Todor
+16	95	Aci Todor	Aci Gire
+16	96	Dimitre	Alekso
+16	97	Nikola	???
+16	98	Kosto	???
+16	99	xxx	Kosto
+16	0	Mago?	Bole
+16	100	Goso	Nedelko
+16	101	Nikola	Bogdan
+16	102	Antonas	Risto
+16	103	Kosto	Todor
+16	104	Marko	Kosto
+16	105	Yovanko	Mladen
+16	106	Borofir???	???
+16	107	Mestice???	Manco
+16	108	Tane	Izdravko
+16	109	Ignat	Kuro
+16	110	Koco	Blagoye
+16	111	Liforiye???	Nikola
+16	112	L???	???
+16	113	Miladin	Yovan
+16	114	Krsto	cvetko
+16	115	L???	cvetko
+16	116	Jivko	???
+16	117	Ignat	Koco
+16	118	Gorgi	Yova
+16	119	Mitice	Ignat
+16	120	Mimalaki???	Kostantin
+16	121	L???	Yovanco
+16	122	L???	Iliya
+16	123	Mito 	Istanko
+16	124	Nikola	Istanko
+16	125	Mihalko	Pavle
+16	126	Nikola	Istriyo???
+16	127	Petko	Todor
+16	128	Milenko	Jivko
+16	129	Mito 	Todor
+16	130	Istoyan	Gorgi
+16	131	Jivko	Vasilko
+16	132	Milenko	Jivko
+16	133	Istoyan	Pavle
+16	134	Mihalca	Pavle
+16	135	Anto	.
+16	136	Miso	.
+16	137	L???	Rayko
+16	138	Nako	Nikola
+16	139	Yovanko	Golub
+16	140	Istoyko	Demyan
+16	141	Mihaylo	Jivko
+16	142	Aci ciko 	Petre
+16	143	Kuro 	Istanko
+16	144	Aci Miso	Istanko
+16	145	Koco	Istoyan
+16	146	Istoyan	Radovan
+16	147	Istoyan	Krsto
+16	148	Petre	Yovan
+16	149	xxx	???
+16	150	Mito 	Istoyanko
+16	151	Koco	Petre
+16	152	Nikola	Yovan
+16	153	Mihalko	Marko
+16	154	Petko	Gorgi
+16	155	L???	Istoyan
+16	156	Yovo	Istanko
+16	157	Istoyanca	Manco
+16	158	Krsto 	Lazo
+16	159	Taso	Risto
+16	160	Mico	Toso
+16	161	Lacika???	Ivostol???
+16	162	Svetor???	Dimitre
+16	163	Mile	Iliya
+16	164	Gorgi	Mito
+16	165	Kole	???
+16	166	Kosto	Duyko???
+16	167	Mito 	Istanko
+16	168	Risto	Istanko
+16	169	Gorgi	Papas Rankel???
+16	170	Tane	Rankel???
+16	171	cvetko	Petre
+16	172	Mihalko	Iliya
+16	173	Istifan	Isvilen
+16	174	Manoylo	Panyo???
+16	175	L???	Istifan
+16	176	Istoyanko	Krsto
+16	177	Dino	Nasto
+16	178	Kostantin	Koco
+16	179	Istoyan	Miladin
+16	180	Istanko	???
+16	181	Petre	Yovan
+16	182	Haco	Dino
+16	183	Aci Mihail	Aci Tane
+16	184	Mito 	Anastas
+16	0	Milos	Yovan
+16	185	Yovan	Milko
+16	186	L???	???
+16	187	Papas Milovan	.
+16	190	Papas Mito	Miladin
+16	191	Tane	Istanko
+16	192	L???x3	Yovan
+19	1	Istoyko	Dimitre
+19	2	Aci Naun	Yanko
+19	3	Kiliyanta???	Dimitre
+19	4	Dimitre	Gorgi
+19	5	Todor	Dimo
+19	6	Petko	Radoyko
+19	7	Pavle	Nikolca
+19	8	Istanko	Iliya
+19	9	Milenko	Velko
+19	10	Mito	Todor
+19	11	Mihal	Dono???
+19	12	Kure	Istoyan
+19	13	Zuzu???	???
+19	14	Taso	???x2
+19	15	Izlatko	Petre
+19	16	Alekso	Istanko
+19	0	Panco	Miso
+24	1	Istifan	Izdravko
+24	2	Trapko???	Iyovan
+24	3	Miliye	Niso
+22	1	conko'??	Istoyko
+22	2	Pavle	Izdravko
+23	1	Yanko	Istoyko
+23	2	Istamenko	Istoyko
+23	3	Istoyan	Kurp???
+23	4	Milko	Kure
+11	1	Nikola	Lazar
+11	2	Ispaso	Yovan
+11	3	Istanoye	Istoyadin
+11	4	Mito	Mitre
+11	5	Rankel???	Istoyko
+11	6	Yovo	Istoyko
+11	7	Istanso	Milenko
+11	8	Mito	Risto
+11	9	Petre	Risto
+11	10	Gorki	Iyovan
+11	11	Mile	Kufo???
+11	12	Istanoye	Miladin
+11	13	Vaso	Miladin
+11	14	Istoyan	Krsto
+11	15	conko???	Marinko
+11	16	Petre	Istoyan
+11	17	Istamenko	Goko???
+11	18	Vlayko	Nikola
+11	19	Nasko	Yovan???
+11	20	Istoyko	Yovan???
+11	21	Iliya	Istamenko
+11	22	Miliye	Miladin
+11	23	Mahilo	Dimitre
+11	24	Pero	Yovan???
+11	25	Mani	Dimitre
+11	26	conko???	Milifoye
+11	27	Mihilo??	Iliya
+11	28	Gorki	Istoyan
+11	29	cvetan	Istoyan
+11	30	Todor	Istanko
+11	31	Koko???	???
+11	32	Istifan	Velko
+11	33	Antanas	Gorki
+11	34	Naso??	Mitre
+11	35	Izdravko	Istoyko
+11	36	Izdravko	Mitre
+11	37	Milko	Mitre
+11	38	Gorki	Istoyan
+11	39	Istoso	Niso
+11	40	Nikola	Yanko
+11	41	xxx	???
+11	42	Angelko	cvetko
+11	43	Lazar	Niso
+11	44	Rayko	???
+11	45	xxx	Rankel???
+11	46	xxx	Milutin
+11	47	Gorki	???
+11	48	Milko	Istifan
+11	49	Izdravko	???
+10	1	Istamen	Tayko
+10	2	Yovan	Miso
+10	3	Istoyko	Velko
+10	4	Mladen	???
+10	5	Krsto	Pavle
+10	6	Ispasa	Istamen
+10	7	Gogo	Filip
+10	8	Risto	Miso
+10	9	Kole	Bico???
+10	10	Kiro???	Mito
+10	11	Krsto	Jivko
+10	12	Jivko	Rayko
+10	13	Gogo	Baun???
+10	14	Istoyan	Baun???
+10	15	??? Istanko	???
+10	16	cone???	Yovan
+10	17	Icvetko	Ignat
+10	18	Postul???	Istoyan
+10	19	Corco	Petre
+10	20	Jivko	Petre
+10	21	Icvetko	Petre
+10	22	Petre	???
+10	23	Ispasa	Radona
+10	24	Milenko	Risto
+10	25	Yovan	Todor
+10	26	Savo	Istamen
+10	27	Yova	Anto
+10	28	Petre	Mladen
+10	29	Mitre	Yovan
+10	30	Kole	Yanko
+10	31	Gorki	Ranco???
+10	32	?? Ispas	..
+10	33	Risto	Milenko
+10	34	Mito	???
+10	35	Anto	Izlatko
+10	36	Baun???	Marko
+10	37	Manco???	Todor
+10	38	Velko	Yovan
+10	39	Yovan	Istoyan
+10	40	Manco???	Andriyo
+10	41	Mito	Iliya
+10	42	Kiro???	Petre
+10	43	Bone???	Miso
+10	44	Gospodin	Nikola
+10	45	Istoyca	Marinko
+10	46	Jivko	Istifan
+10	47	Kiro???	Yakim
+10	48	Korgo???	Istoiko
+10	49	Yovan	Kole
+10	50	Kole	Istanko
+10	51	Iko	Istifan
+10	52	Ivlatko	Miladin
+10	53	Kole	Istoin
+10	54	Jivko	Bore?
+10	55	Yanko	Tosa
+10	56	Kole	Mitre
+10	57	Kosto	Lilo???
+10	58	Goke???	???
+10	59	Petre	Yovan
+10	60	Korgo???	Papaz Iliya
+10	61	Yovan	???
+10	62	Milko	Lazar
+10	63	Icvetko	Ivlatko
+10	64	Istoyan	Korgo???
+10	65	Pona	Icvetko
+10	66	Ipko???	Risto
+10	67	Tosa	Mitre
+10	68	xxx	Krsto
+10	69	Mito	Korgo???
+10	70	Miladin	Yovan
+10	71	Istoyan	Ignat
+10	72	Vidin???	Yanko
+10	73	Velko	Todor
+10	74	Bostol???	Ranco
+10	75	Istanco	Tosa
+10	76	Baun???	Kole
+10	77	Marko	.
+10	78	Manco???	Nikola
+10	79	cole???	Kole
+10	80	Jivko	Kole
+10	81	Istifan	Mlaco
+10	82	Ispasa	Istanoye
+10	83	Istanko	Mato???
+9	1	cuno???	Velko
+9	2	Jivko	Marinko
+9	3	Yovo	Subotin???
+9	4	Ispasa	Yanko
+9	5	cvele	Trcko???
+9	6	Banayot???	cvele
+9	7	Mato	Marko
+9	8	Petre	Yovan
+9	9	cole???	Matko???
+9	10	Kiro???	Nikola
+9	11	Bico???	Bosko
+9	12	Kole	Velko
+9	13	Ranco??	Miso
+9	14	Pavle	Miso
+9	15	Kiro???	Miso
+9	16	Istoyan	Miso
+9	17	Bone???	Anto
+9	18	Yanko	Yovan
+9	19	Miloye	Yovan
+9	20	Banayot???	Bano???
+9	21	Korgo???	Tipko???
+9	22	Neso	Izdravko
+9	23	Miladin	...
+9	24	Tosa	Izdravko
+9	25	Istamen	Bozin???
+9	26	Bano??	Lilo???
+9	26	Krsto	Baso???
+9	27	Baso???	Risto
+9	28	Trcko???	Nikola
+9	29	Bano??	Nikola
+9	30	Goke???	Istanoye
+9	31	Pano???	bavuna
+9	32	Angelko	cvetko
+12	1	Mihail	Sokol
+12	2	Yone	Petre
+12	3	Krsto	Marko
+18	1	Bogdan	Uros
+18	2	Yanko	Iliya
+18	3	Krsto	Panayut???
+18	4	Trpko???	Dalcikoz???

@@ -1,0 +1,11 @@
+
+
+INSERT INTO occ_branch (name)
+VALUES
+
+('Esnaf'),
+('Gorevli'),
+('Isciler'),
+('Mesleksiz'),
+('Ticaret'),
+('Ziraat')
