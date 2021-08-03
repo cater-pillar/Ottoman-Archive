@@ -5,16 +5,16 @@ $navbar = array(
         "href" => "index.php",
         "text" => "Home"),
     array(
-        "href" => "unos_podataka_ajax.php",
+        "href" => "input_form.php",
         "text" => "Input Form"),
     array(
-        "href" => "pregled_domacinstava.php",
+        "href" => "browse_households.php",
         "text" => "Browse Households"),
     array(
-        "href" => "uspesno_dodato.php",
-        "text" => "Poslednje Dodato"),
+        "href" => "last_added.php",
+        "text" => "Last Added"),
     array(
-        "href" => "edit_unosa.php",
+        "href" => "edit_form.php",
         "text" => "Edit")
     );
 ?> 
