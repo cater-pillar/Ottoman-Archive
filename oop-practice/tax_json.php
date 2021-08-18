@@ -8,7 +8,7 @@ FROM
 `tax_household`,
 `tax`
 WHERE 
-`tax_household`.`fk_household_id` = 23
+`tax_household`.`fk_household_id` = '. $_GET['id'] .'
 AND
 `tax_household`.`fk_tax_id` = `tax`.`tax_id`';
 

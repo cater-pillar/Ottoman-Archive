@@ -6,22 +6,8 @@ document.getElementById('object-button')
 .addEventListener('click', createObject);
 
 
-// An array of JSON files I want to use as data for creating a Household Object
-
-const jsonList = [
-  ['household', 'household_json.php'],
-  ['occupation', 'occupation_json.php'],
-  ['tax', 'tax_json.php'],
-  ['land', 'land_json.php'],
-  ['real_estate', 'real_estate_json.php'],
-  ['livestock', 'livestock_json.php']
-];
-
-// An empty array where I plan to store the data from JSON files as sub arrays
-
 const convertedJSON = {};
 
-// function that convertes the given JSON file and pushes the data onto convertedJSON object
 
 function getJSON(jsonFile) {
  
@@ -36,15 +22,23 @@ function getJSON(jsonFile) {
         xhr.send();          
         };
 
-// Function loops through the JSON list and calls the getJSON() function in every iteration
-
 
 function activate() {
+  let id = document.getElementById('id').value;
+
+  let jsonList = [
+    ['household', 'household_json.php?id='+id],
+    ['occupation', 'occupation_json.php?id='+id],
+    ['tax', 'tax_json.php?id='+id],
+    ['land', 'land_json.php?id='+id],
+    ['real_estate', 'real_estate_json.php?id='+id],
+    ['livestock', 'livestock_json.php?id='+id]
+  ];
+
 for (let i = 0; i < jsonList.length; i++) {
   getJSON(jsonList[i]);
 };};
 
-// defining the Household class
 
 
 class Household {
@@ -92,12 +86,14 @@ class Household {
     return sum;
   };
   totalIncome() {
-    let sum = this.totalLandIncome() + this.totalLivestockIncome() + this.totalOccupationIncome() + this.totalRealEstateIncome();
+    let sum = this.totalLandIncome() + 
+              this.totalLivestockIncome() + 
+              this.totalOccupationIncome() + 
+              this.totalRealEstateIncome();
     return sum; 
   }
 }
 
-// Creating the object from the Household class
 
 function createObject() {
   const house1 = new Household(convertedJSON);

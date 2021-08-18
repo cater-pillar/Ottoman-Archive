@@ -11,7 +11,7 @@ FROM
 `real_estate_household`,
 `real_estate`
 WHERE 
-`real_estate_household`.`fk_household_id` = 23
+`real_estate_household`.`fk_household_id` = '. $_GET['id'] .'
 AND
 `real_estate_household`.`fk_real_estate_id` = `real_estate`.`real_estate_id`';
 

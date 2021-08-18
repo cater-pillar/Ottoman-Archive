@@ -9,7 +9,7 @@ FROM
 `occupation_household`,
 `occupation`
 WHERE 
-`occupation_household`.`fk_household_id` = 23
+`occupation_household`.`fk_household_id` = '. $_GET['id'] .'
 AND
 `occupation_household`.`fk_occupation_id` = `occupation`.`occupation_id`';
 

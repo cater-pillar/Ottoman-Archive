@@ -14,7 +14,7 @@ FROM
 `location_type`,
 `household_member_type`
 WHERE 
-`household`.`household_id` = 23
+`household`.`household_id` = '. $_GET['id'] .' 
 AND
 `household`.`fk_household_member_type_id` = `household_member_type`.`household_member_type_id`
 AND

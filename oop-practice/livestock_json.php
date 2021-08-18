@@ -9,7 +9,7 @@ FROM
 `livestock_household`,
 `livestock`
 WHERE 
-`livestock_household`.`fk_household_id` = 23
+`livestock_household`.`fk_household_id` = '. $_GET['id'] .'
 AND
 `livestock_household`.`fk_livestock_id` = `livestock`.`livestock_id`';
 
