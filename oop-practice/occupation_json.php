@@ -2,9 +2,9 @@
 require '../require/conn.php';
 
 $query = 'SELECT 
-`occupation`.`name` AS `occupation`,
-`occupation_household`.`income` AS `occupation-income`,
-`occupation_household`.`type` AS `occupation-skill`
+`occupation`.`name` AS `type`,
+`occupation_household`.`income` AS `income`,
+`occupation_household`.`type` AS `skill`
 FROM 
 `occupation_household`,
 `occupation`
@@ -13,6 +13,6 @@ WHERE
 AND
 `occupation_household`.`fk_occupation_id` = `occupation`.`occupation_id`';
 
-$result = $mysqli -> query($query) -> fetch_all();
+$result = $mysqli -> query($query) -> fetch_all(MYSQLI_ASSOC);
 
 echo json_encode($result);

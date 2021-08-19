@@ -2,8 +2,8 @@
 require '../require/conn.php';
 
 $query = 'SELECT 
-`tax`.`type` AS `tax`,
-`tax_household`.`amount` AS `tax-amount`
+`tax`.`type` AS `type`,
+`tax_household`.`amount` AS `amount`
 FROM  
 `tax_household`,
 `tax`
@@ -12,7 +12,7 @@ WHERE
 AND
 `tax_household`.`fk_tax_id` = `tax`.`tax_id`';
 
-$result = $mysqli -> query($query) -> fetch_all();
+$result = $mysqli -> query($query) -> fetch_all(MYSQLI_ASSOC);
 
 echo json_encode($result);
 

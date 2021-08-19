@@ -2,12 +2,12 @@
 require '../require/conn.php';
 
 $query = 'SELECT 
-`land`.`type` AS `land`,
-`land_household`.`area` AS `land-area`,
-`land_household`.`income` AS `land-income`,
-`land_household`.`payed_rent` AS `land-rent`,
-`land_household`.`location` AS `land-location`,
-`land_household`.`description` AS `land-description`
+`land`.`type` AS `type`,
+`land_household`.`area` AS `area`,
+`land_household`.`income` AS `income`,
+`land_household`.`payed_rent` AS `rent`,
+`land_household`.`location` AS `location`,
+`land_household`.`description` AS `description`
 FROM 
 `land_household`,
 `land`
@@ -16,7 +16,7 @@ WHERE
 AND
 `land_household`.`fk_land_id` = `land`.`land_id`';
 
-$result = $mysqli -> query($query) -> fetch_all();
+$result = $mysqli -> query($query) -> fetch_all(MYSQLI_ASSOC);
 
 echo json_encode($result);
 

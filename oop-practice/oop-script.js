@@ -53,35 +53,35 @@ class Household {
   totalLandArea() {
     let sum = 0;
     for (let i = 0; i < this.land.length; i++) {
-      sum += parseInt(this.land[i][1], 10);
+      sum += parseInt(this.land[i]['area'], 10);
     }
     return sum;
   };
   totalLandIncome() {
     let sum = 0;
     for (let i = 0; i < this.land.length; i++) {
-      sum += parseInt(this.land[i][2], 10);
+      sum += parseInt(this.land[i]['income'], 10);
     }
     return sum;
   };
   totalRealEstateIncome() {
     let sum = 0;
     for (let i = 0; i < this.realEstate.length; i++) {
-      sum += parseInt(this.realEstate[i][2], 10);
+      sum += parseInt(this.realEstate[i]['income'], 10);
     }
     return sum;
   };
   totalLivestockIncome() {
     let sum = 0;
     for (let i = 0; i < this.livestock.length; i++) {
-      sum += parseInt(this.livestock[i][2], 10);
+      sum += parseInt(this.livestock[i]['income'], 10);
     }
     return sum;
   };
   totalOccupationIncome() {
     let sum = 0;
     for (let i = 0; i < this.occupation.length; i++) {
-      sum += parseInt(this.occupation[i][1], 10);
+      sum += parseInt(this.occupation[i]['income'], 10);
     }
     return sum;
   };
@@ -104,5 +104,6 @@ function createObject() {
   console.log(house1.totalOccupationIncome());
   console.log(house1.totalRealEstateIncome());
   console.log(house1.totalIncome());
+  console.log(house1.tax[0]['type'])
 }
 

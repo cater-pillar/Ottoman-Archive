@@ -22,7 +22,7 @@ AND
 AND
 `location_name`.`fk_location_type_id` = `location_type`.`location_type_id`';
 
-$result = $mysqli -> query($query) -> fetch_all();
+$result = $mysqli -> query($query) -> fetch_all(MYSQLI_ASSOC);
 
 echo json_encode($result);
 

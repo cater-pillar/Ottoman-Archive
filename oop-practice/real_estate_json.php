@@ -2,11 +2,11 @@
 require '../require/conn.php';
 
 $query = 'SELECT 
-`real_estate`.`type` AS `real-estate`,
-`real_estate_household`.`quantity` AS `real-estate-quantity`,
-`real_estate_household`.`rent_income` AS `real-estate-income`,
-`real_estate_household`.`location` AS `real-estate-location`,
-`real_estate_household`.`description` AS `real-estate-description`
+`real_estate`.`type` AS `type`,
+`real_estate_household`.`quantity` AS `quantity`,
+`real_estate_household`.`rent_income` AS `income`,
+`real_estate_household`.`location` AS `location`,
+`real_estate_household`.`description` AS `description`
 FROM 
 `real_estate_household`,
 `real_estate`
@@ -15,6 +15,6 @@ WHERE
 AND
 `real_estate_household`.`fk_real_estate_id` = `real_estate`.`real_estate_id`';
 
-$result = $mysqli -> query($query) -> fetch_all();
+$result = $mysqli -> query($query) -> fetch_all(MYSQLI_ASSOC);
 
 echo json_encode($result);
