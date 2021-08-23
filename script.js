@@ -90,7 +90,7 @@ function getOccupationForm() {
   xhr.onload = function() {
     if(this.status == 200) {
         
-        var occupationsList = JSON.parse(this.responseText);
+        let occupationsList = JSON.parse(this.responseText);
 
 // I create a variable that will conatin an HTML string 
 // for my form and use serial ID number  
@@ -106,10 +106,12 @@ function getOccupationForm() {
 
         // I use loop to add JSON table data to the string
 
-        for (var i in occupationsList) {
+        /* for (var i in occupationsList) {
 
           output += `<option value="${occupationsList[i][0]}">${occupationsList[i][1]}</option>`;
-        };
+        }; */
+
+        occupationsList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
 
         // Here I create the rest of the form 
 
@@ -170,10 +172,7 @@ function getTaxesForm() {
                             name="taxes${idNumberTaxes}" 
                             class="form-control">`;
 
-        for (var i in taxesList) {
-
-          output += `<option value="${taxesList[i][0]}">${taxesList[i][1]}</option>`;
-        };
+        taxesList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
 
         output += `</select>
                   </div>
@@ -214,10 +213,8 @@ function getLandForm() {
                              name="land_type${idNumberLand}" 
                              class="form-control">`;
 
-        for (var i in landList) {
 
-          output += `<option value="${landList[i][0]}">${landList[i][1]}</option>`;
-        };
+        landList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
 
         output += `</select>
                   </div>
@@ -284,10 +281,8 @@ function getRealEstateForm(e) {
                             name="real_estate${idNumberRealEstate}" 
                             class="form-control">`;
 
-        for (var i in realEstateList) {
 
-          output += `<option value="${realEstateList[i][0]}">${realEstateList[i][0]}</option>`;
-        };
+        realEstateList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
 
         output += `</select>
                   </div>
@@ -360,10 +355,7 @@ function getLivestockForm(e) {
                             name="livestock${idNumberLivestock}" 
                             class="form-control">`;
 
-        for (var i in livestockList) {
-
-          output += `<option value="${livestockList[i][0]}">${livestockList[i][1]}</option>`;
-        };
+        livestockList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
 
         output += `</select>
                   </div>
