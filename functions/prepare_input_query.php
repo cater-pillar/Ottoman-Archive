@@ -7,6 +7,6 @@ function prepare_input_query($query, $conn, $id) {
     $prep -> bind_param('i', $id);
     $prep -> execute();
     $result = $prep -> get_result();
-    return $user = $result -> fetch_all();};
+    return $user = $result -> fetch_all(MYSQLI_ASSOC);};
 
 ?>

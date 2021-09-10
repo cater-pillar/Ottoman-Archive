@@ -18,7 +18,7 @@
         $mysqli->query("DELETE FROM tax_household WHERE tax_household.fk_household_id = ".$id);
         $mysqli->query("DELETE FROM household WHERE household.household_id = ".$id); 
         
-        header('Location: http://localhost/prikazNisha/unos_podataka_ajax.php');
+        header('Location: http://localhost/ottoman/input_form.php');
     }
 ?>
 <!DOCTYPE html>
@@ -40,17 +40,17 @@
                 <th>Surname
                 <th>Position 
             <tr>
-                <td><?php echo $result_new_household[0][0] ?>
-                <td><?php echo $result_new_household[0][1] ?>
-                <td><?php echo $result_new_household[0][2] ?>
-                <td><?php echo $result_new_household[0][3] ?>
-                <td><?php echo $result_new_household[0][4] ?>
-                <td><?php echo $result_new_household[0][5] ?>
-            <?php if ($result_new_household[0][6] != ''): ?>
+                <td><?php echo $result_new_household[0]['name'] ?>
+                <td><?php echo $result_new_household[0]['household_id'] ?>
+                <td><?php echo $result_new_household[0]['household_number'] ?>
+                <td><?php echo $result_new_household[0]['member_forname'] ?>
+                <td><?php echo $result_new_household[0]['member_surname'] ?>
+                <td><?php echo $result_new_household[0]['type'] .'/'.$result_new_household[0]['type_en'] ?>
+            <?php if ($result_new_household[0]['notes'] != ''): ?>
             <tr>
                 <th colspan="6">Notes
             <tr>
-                <td colspan="6"><?php echo $result_new_household[0][6] ?>
+                <td colspan="6"><?php echo $result_new_household[0]['notes'] ?>
             <?php endif; ?>
         </table>
         <?php if ($result_new_occupation != []): ?>
@@ -62,9 +62,9 @@
                 <th>Proficiency
             <?php foreach ($result_new_occupation as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
+                <td><?php echo $result['name'] .'/'. $result['name_en']?>
+                <td><?php echo $result['income']?>
+                <td><?php echo $result['type']?>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -77,9 +77,9 @@
                 <th>is exused
                 <?php foreach ($result_new_tax as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['amount']?>
+                <td><?php echo $result['is_exused']?>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -95,12 +95,12 @@
                 <th>Description
         <?php foreach ($result_new_land as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
-                <td><?php echo $result[3]?>
-                <td><?php echo $result[4]?>
-                <td><?php echo $result[5]?> 
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['area']?>
+                <td><?php echo $result['income']?>
+                <td><?php echo $result['payed_rent']?>
+                <td><?php echo $result['location']?>
+                <td><?php echo $result['description']?> 
         <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -115,11 +115,11 @@
                 <th>Description 
         <?php foreach ($result_new_real_estate as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
-                <td><?php echo $result[3]?>
-                <td><?php echo $result[4]?> 
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['quantity']?>
+                <td><?php echo $result['rent_income']?>
+                <td><?php echo $result['location']?>
+                <td><?php echo $result['description']?> 
         <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -132,17 +132,17 @@
                 <th>Income
         <?php foreach ($result_new_livestock as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['quantity']?>
+                <td><?php echo $result['income']?>
         <?php endforeach; ?>
         </table>
         <?php endif; ?>
         <div class="form-group d-flex flex-row-reverse">
-            <a href="http://localhost/prikazNisha/unos_podataka_ajax.php" 
+            <a href="http://localhost/ottoman/input_form.php" 
                class="btn btn-success btn-sm" 
                style="width:70px" >OK</a>
-            <a href="http://localhost/prikazNisha/edit_unosa.php" 
+            <a href=<?php echo 'http://localhost/ottoman/edit_form.php?src=lastadded&id='.$id?> 
                class="btn btn-warning btn-sm" 
                style="margin-right:10px; width:70px" >Edit</a>
             <button type="button" 

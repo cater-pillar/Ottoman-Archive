@@ -8,7 +8,8 @@ $new_household = 'SELECT
         household.`household_number`, 
         household.`member_forname`, 
         household.`member_surname`, 
-        household_member_type.`type`, 
+        household_member_type.`type`,
+        household_member_type.`type_en`,
         household.`notes`
     FROM 
         location_name, 
@@ -27,7 +28,8 @@ $result_new_household = prepare_input_query($new_household, $mysqli, $id);
 
 
 $new_land = 'SELECT 
-        land.`type`, 
+        land.`type`,
+        land.`type_en`, 
         land_household.area, 
         land_household.income,
         land_household.payed_rent, 
@@ -46,7 +48,8 @@ $new_land = 'SELECT
 $result_new_land = prepare_input_query($new_land, $mysqli, $id);
 
 $new_tax = 'SELECT 
-        tax.`type`, 
+        tax.`type`,
+        tax.`type_en`,
         tax_household.amount, 
         tax_household.is_exused  
     FROM 
@@ -64,7 +67,8 @@ $result_new_tax = prepare_input_query($new_tax, $mysqli, $id);
 
 
 $new_real_estate = 'SELECT 
-        real_estate.`type`, 
+        real_estate.`type`,
+        real_estate.`type_en`,
         real_estate_household.quantity,
         real_estate_household.rent_income,
         real_estate_household.location, 
@@ -84,6 +88,7 @@ $result_new_real_estate = prepare_input_query($new_real_estate, $mysqli, $id);
 
 $new_occupation = 'SELECT 
         occupation.`name`, 
+        occupation.`name_en`,
         occupation_household.income, 
         occupation_household.`type`  
     FROM 
@@ -101,7 +106,8 @@ $result_new_occupation = prepare_input_query($new_occupation, $mysqli, $id);
 
 
 $new_livestock = 'SELECT 
-        livestock.`type`, 
+        livestock.`type`,
+        livestock.`type_en`,
         livestock_household.quantity, 
         livestock_household.income  
     FROM 
@@ -121,26 +127,26 @@ $result_new_livestock = prepare_input_query($new_livestock, $mysqli, $id);
 $total_income = 0;
 
 foreach ($result_new_land as $land) {
-        $total_income += $land[2];
+        $total_income += $land['income'];
     };
 
 
 
 
 foreach ($result_new_real_estate as $real_estate) {
-    $total_income += $real_estate[2];
+    $total_income += $real_estate['rent_income'];
 };
 
 foreach ($result_new_occupation as $occupation) {
-    $total_income += $occupation[1];
+    $total_income += $occupation['income'];
 };
 
 foreach ($result_new_livestock as $livestock) {
-    $total_income += $livestock[2];
+    $total_income += $livestock['income'];
 };
 
 $total_tax = 0;
 
 foreach ($result_new_tax as $tax) {
-    $total_tax += $tax[1];
+    $total_tax += $tax['amount'];
 };

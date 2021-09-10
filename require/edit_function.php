@@ -3,14 +3,13 @@ require 'conn.php';
 require '../functions/prepare_input_query.php';
 require '../functions/edit.php';
 
-$max_id = $mysqli -> query('SELECT MAX(household_id) FROM household') -> fetch_all();
 
-$household_id = $max_id[0][0];
+$household_id = $_GET['id'];
 
 // Obtain IDs for each referential table in database, ordered according to the category they refer to
 
 $occ_household_id_query = 'SELECT
-                            occupation_household_id
+                            occupation_household_id AS id
                             FROM
                             occupation_household
                             WHERE
@@ -22,7 +21,7 @@ $occupation_household_id = prepare_input_query(
                                 $household_id);
                                 
 $tax_household_id_query = 'SELECT
-                            tax_household.tax_household_id
+                            tax_household.tax_household_id AS id
                             FROM
                             tax_household,
                             tax
@@ -41,7 +40,7 @@ $tax_household_id = prepare_input_query(
                                 $household_id);
 
 $land_household_id_query = 'SELECT
-                            land_household.land_household_id
+                            land_household.land_household_id AS id
                             FROM
                             land_household,
                             land
@@ -60,7 +59,7 @@ $land_household_id = prepare_input_query(
                                 $household_id);
 
 $estate_household_id_query = 'SELECT
-                            real_estate_household.real_estate_household_id
+                            real_estate_household.real_estate_household_id AS id
                             FROM
                             real_estate_household,
                             real_estate
@@ -79,7 +78,7 @@ $real_estate_household_id = prepare_input_query(
                                 $household_id);
 
 $livestock_household_id_query = 'SELECT
-                            livestock_household.livestock_household_id
+                            livestock_household.livestock_household_id AS id
                             FROM
                             livestock_household,
                             livestock
@@ -178,7 +177,7 @@ $livestock_household_id = prepare_input_query(
                                                         "occupation_household",
                                                         "fk_occupation_id",
                                                         "occupation_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['occupation_income'. $i_occ])) {edit(
@@ -186,7 +185,7 @@ $livestock_household_id = prepare_input_query(
                                                         "occupation_household",
                                                         "income",
                                                         "occupation_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
 
@@ -205,7 +204,7 @@ $livestock_household_id = prepare_input_query(
                                                     "tax_household",
                                                     "fk_tax_id",
                                                     "tax_household_id",
-                                                    $id[0],
+                                                    $id['id'],
                                                     $mysqli,
                                                     'i');};
             if (isset($_POST['tax_amount'. $i_tax])) {edit(
@@ -213,7 +212,7 @@ $livestock_household_id = prepare_input_query(
                                                         "tax_household",
                                                         "amount",
                                                         "tax_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
 
@@ -236,7 +235,7 @@ $livestock_household_id = prepare_input_query(
                                                         "land_household",
                                                         "fk_land_id",
                                                         "land_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['land_area'. $i_land])) {edit(
@@ -244,7 +243,7 @@ $livestock_household_id = prepare_input_query(
                                                         "land_household",
                                                         "area",
                                                         "land_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['land_income'. $i_land])) {edit(
@@ -252,7 +251,7 @@ $livestock_household_id = prepare_input_query(
                                                         "land_household",
                                                         "income",
                                                         "land_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
 
@@ -262,7 +261,7 @@ $livestock_household_id = prepare_input_query(
                                                         "land_household",
                                                         "payed_rent",
                                                         "land_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['land_location'. $i_land])) {edit(
@@ -270,7 +269,7 @@ $livestock_household_id = prepare_input_query(
                                                         "land_household",
                                                         "`location`",
                                                         "land_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         's');};
             if (isset($_POST['land_description'. $i_land])) {edit(
@@ -278,7 +277,7 @@ $livestock_household_id = prepare_input_query(
                                                         "land_household",
                                                         "`description`",
                                                         "land_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         's');};
 
@@ -301,7 +300,7 @@ $livestock_household_id = prepare_input_query(
                                                         "real_estate_household",
                                                         "fk_real_estate_id",
                                                         "real_estate_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['real_estate_quantity'. $i_estate])) {edit(
@@ -309,7 +308,7 @@ $livestock_household_id = prepare_input_query(
                                                         "real_estate_household",
                                                         "quantity",
                                                         "real_estate_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['real_estate_income'. $i_estate])) {edit(
@@ -317,7 +316,7 @@ $livestock_household_id = prepare_input_query(
                                                         "real_estate_household",
                                                         "rent_income",
                                                         "real_estate_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['real_estate_location'. $i_estate])) {edit(
@@ -325,7 +324,7 @@ $livestock_household_id = prepare_input_query(
                                                         "real_estate_household",
                                                         "`location`",
                                                         "real_estate_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         's');};
             if (isset($_POST['real_estate_description'. $i_estate])) {edit(
@@ -333,7 +332,7 @@ $livestock_household_id = prepare_input_query(
                                                         "real_estate_household",
                                                         "`description`",
                                                         "real_estate_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         's');};
             $i_estate ++;
@@ -352,7 +351,7 @@ $livestock_household_id = prepare_input_query(
                                                         "livestock_household",
                                                         "fk_livestock_id",
                                                         "livestock_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             if (isset($_POST['livestock_quantity'. $i_livestock])) {edit(
@@ -368,7 +367,7 @@ $livestock_household_id = prepare_input_query(
                                                         "livestock_household",
                                                         "income",
                                                         "livestock_household_id",
-                                                        $id[0],
+                                                        $id['id'],
                                                         $mysqli,
                                                         'i');};
             $i_livestock ++;
@@ -383,7 +382,15 @@ $livestock_household_id = prepare_input_query(
         $i_land = 1;
         $i_estate = 1;
         $i_livestock = 1;
-
-        header('Location: http://localhost/prikazNisha/unos_podataka_ajax.php'); 
+        
+        
+        if ($_GET['src'] == 'listlink')
+        {
+            header('Location: http://localhost/ottoman/list_link.php?id='.$household_id); 
+        };
+        if ($_GET['src'] == 'lastadded')
+        {
+            header('Location: http://localhost/ottoman/input_form.php'); 
+        };
     };
     

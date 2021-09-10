@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'prikaz_nisha');
+$mysqli = new mysqli('localhost', 'root', '', 'ottoman');
 
 if($mysqli -> connect_errno) {
     echo 'Failed to connect to MySQL' . $mysqli -> connect_error;

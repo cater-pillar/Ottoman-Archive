@@ -10,7 +10,8 @@
     `household`.`household_number`,
     `household`.`member_forname`,
     `household`.`member_surname`,
-    `household_member_type`.`type`
+    `household_member_type`.`type`,
+    `household_member_type`.`type_en`
     FROM 
     `location_name`,
     `household`,
@@ -28,7 +29,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Prikaz svih domaćinastava</title>
+        <title>All Households</title>
         <?php require 'require/head.php';?>
     </head>
     <body>
@@ -45,11 +46,11 @@
                     
                     <tr>
                    
-                    <td> <a href=<?php echo 'list_link.php?id=' . $member[0]?>><?php echo $member[1] ?> </a>
-                    <td><?php echo $member[2] ?>
-                    <td><?php echo $member[3] ?>
-                    <td><?php echo $member[4] ?>
-                    <td><?php echo $member[5] ?>
+                    <td> <a href=<?php echo 'list_link.php?id=' . $member['household_id']?>><?php echo $member['name'] ?> </a>
+                    <td><?php echo $member['household_number'] ?>
+                    <td><?php echo $member['member_forname'] ?>
+                    <td><?php echo $member['member_surname'] ?>
+                    <td><?php echo $member['type'] .'/'. $member['type_en'] ?>
                    
                 <?php endforeach; ?>
             </table>

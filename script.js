@@ -111,7 +111,7 @@ function getOccupationForm() {
           output += `<option value="${occupationsList[i][0]}">${occupationsList[i][1]}</option>`;
         }; */
 
-        occupationsList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
+        occupationsList.forEach( (i) => output += `<option value="${i['occupation_id']}">${i['name']}/${i['name_en']}</option>`);
 
         // Here I create the rest of the form 
 
@@ -172,7 +172,7 @@ function getTaxesForm() {
                             name="taxes${idNumberTaxes}" 
                             class="form-control">`;
 
-        taxesList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
+        taxesList.forEach( (i) => output += `<option value="${i['tax_id']}">${i['type']}/${i['type_en']}</option>`);
 
         output += `</select>
                   </div>
@@ -214,7 +214,7 @@ function getLandForm() {
                              class="form-control">`;
 
 
-        landList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
+        landList.forEach( (i) => output += `<option value="${i['land_id']}">${i['type']}/${i['type_en']}</option>`);
 
         output += `</select>
                   </div>
@@ -282,7 +282,7 @@ function getRealEstateForm(e) {
                             class="form-control">`;
 
 
-        realEstateList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
+        realEstateList.forEach( (i) => output += `<option value="${i['real_estate_id']}">${i['type']}/${i['type_en']}</option>`);
 
         output += `</select>
                   </div>
@@ -355,7 +355,7 @@ function getLivestockForm(e) {
                             name="livestock${idNumberLivestock}" 
                             class="form-control">`;
 
-        livestockList.forEach( (i) => output += `<option value="${i[0]}">${i[1]}</option>`);
+        livestockList.forEach( (i) => output += `<option value="${i['livestock_id']}">${i['type']}/${i['type_en']}</option>`);
 
         output += `</select>
                   </div>
