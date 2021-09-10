@@ -11,7 +11,7 @@ require 'require/conn.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pojedinacno domacinstvo</title>
+        <title>Single Household</title>
         <?php require 'require/head.php';?>
     </head>
     <body>
@@ -29,18 +29,18 @@ require 'require/conn.php';
                 <th>Surname
                 <th>Position 
             <tr>
-                <td><?php echo $result_new_household[0][0] ?>
-                <td><?php echo $result_new_household[0][1] ?>
-                <td><?php echo $result_new_household[0][2] ?>
-                <td><?php echo $result_new_household[0][3] ?>
-                <td><?php echo $result_new_household[0][4] ?>
-                <td><?php echo $result_new_household[0][5] ?>
+                <td><?php echo $result_new_household[0]['name'] ?>
+                <td><?php echo $result_new_household[0]['household_id'] ?>
+                <td><?php echo $result_new_household[0]['household_number'] ?>
+                <td><?php echo $result_new_household[0]['member_forname'] ?>
+                <td><?php echo $result_new_household[0]['member_surname'] ?>
+                <td><?php echo $result_new_household[0]['type'] .'/'. $result_new_household[0]['type_en'] ?>
         <?php endif?>
-            <?php if ($result_new_household[0][6] != ''): ?>
+            <?php if ($result_new_household[0]['notes'] != ''): ?>
             <tr>
                 <th colspan="6">Notes
             <tr>
-                <td colspan="6"><?php echo $result_new_household[0][6] ?>
+                <td colspan="6"><?php echo $result_new_household[0]['notes'] ?>
             <?php endif; ?>
         </table>
         <?php if ($result_new_occupation != []): ?>
@@ -52,9 +52,9 @@ require 'require/conn.php';
                 <th>Proficiency
             <?php foreach ($result_new_occupation as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
+                <td><?php echo $result['name'] .'/'. $result['name_en']?>
+                <td><?php echo $result['income']?>
+                <td><?php echo $result['type']?>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -67,9 +67,9 @@ require 'require/conn.php';
                 <th>is exused
                 <?php foreach ($result_new_tax as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['amount']?>
+                <td><?php echo $result['is_exused']?>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -85,12 +85,12 @@ require 'require/conn.php';
                 <th>Description
         <?php foreach ($result_new_land as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
-                <td><?php echo $result[3]?>
-                <td><?php echo $result[4]?>
-                <td><?php echo $result[5]?> 
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['area']?>
+                <td><?php echo $result['income']?>
+                <td><?php echo $result['payed_rent']?>
+                <td><?php echo $result['location']?>
+                <td><?php echo $result['description']?> 
         <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -105,11 +105,11 @@ require 'require/conn.php';
                 <th>Description 
         <?php foreach ($result_new_real_estate as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
-                <td><?php echo $result[3]?>
-                <td><?php echo $result[4]?> 
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['quantity']?>
+                <td><?php echo $result['rent_income']?>
+                <td><?php echo $result['location']?>
+                <td><?php echo $result['description']?> 
         <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -122,9 +122,9 @@ require 'require/conn.php';
                 <th>Income
         <?php foreach ($result_new_livestock as $result): ?>
             <tr>
-                <td><?php echo $result[0]?>
-                <td><?php echo $result[1]?>
-                <td><?php echo $result[2]?>
+                <td><?php echo $result['type'] .'/'. $result['type_en']?>
+                <td><?php echo $result['quantity']?>
+                <td><?php echo $result['income']?>
         <?php endforeach; ?>
         </table>
         <?php endif; ?>
@@ -136,9 +136,14 @@ require 'require/conn.php';
             <td><?php echo $total_income; ?>
             <td><?php echo $total_tax; ?>
         </table>
-        <div>
-            <a href=<?php echo 'list_link.php?id='.$_GET['id'] - 1 ?> >  < </a>
-            <a href=<?php echo 'list_link.php?id='.$_GET['id'] + 1 ?> > > </a> 
+        <div class='d-flex justify-content-between'>
+            <a href=<?php echo 'list_link.php?id='. ($_GET['id'] - 1) ?> 
+               class='btn btn-primary'>  < </a>
+               <a href=<?php echo "http://localhost/ottoman/edit_form.php?src=listlink&id=".$_GET['id'] ?>
+               class="btn btn-warning" 
+               style="margin-right:10px; width:70px" >Edit</a>
+            <a href=<?php echo 'list_link.php?id='.($_GET['id'] + 1) ?> 
+               class='btn btn-primary'> > </a> 
         </div>
     </div>
         <?php require 'require/jquery.php' ?>

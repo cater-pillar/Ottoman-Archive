@@ -12,7 +12,7 @@ require 'require/basic_queries.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Unos podataka u bazu</title>
+        <title>Input Form</title>
         <?php require 'require/head.php';?>
         
     </head>
@@ -21,19 +21,19 @@ require 'require/basic_queries.php';
     <div class="container alert alert-primary" 
          style="margin-top: 30px; margin-bottom: 30px">
         <h1 class="page-header" >Add Household</h1>
-        <form method="POST" action="require/add_household_function.php" >  <!-- is "action" set OK?  <php $_SERVER['PHP_SELF']; ?> -->
+        <form method="POST" action="require/add_household_function.php" >  
         <h2>Location</h2>
         <div class="form-group">
                 
-                <label for="location"> Select Location Name:</label>
+                <label for="location">Select Location Name:</label>
                     <select id="location" name="location" class="form-control">
                           <?php if (isset($_SESSION['location_id'])): ?>
                             <option value="<?php echo $_SESSION['location_id']?>" >
                             <?php echo $_SESSION['location_name'][0][0] ?>
                           <?php endif; ?>
                           <?php foreach ($result_location as $locations): ?>
-                          <option value="<?php echo $locations[1]?>" >
-                            <?php echo $locations[0] ?>
+                          <option value="<?php echo $locations['location_name_id']?>" >
+                            <?php echo $locations['name'] ?>
                           </option>
                           <?php  endforeach; ?>
                     </select>
@@ -54,8 +54,8 @@ require 'require/basic_queries.php';
             <label for="member_type">Select Household Member Position</label>
                 <select id="member_type" name="member_type" class="form-control">
                     <?php foreach ($result_household as $members): ?>
-                        <option value="<?php echo $members[0]?>" >
-                          <?php echo $members[1] ?>
+                        <option value="<?php echo $members['household_member_type_id']?>" >
+                          <?php echo $members['type'] .'/'. $members['type_en'] ?>
                         </option>
                     <?php  endforeach; ?>
                 </select>

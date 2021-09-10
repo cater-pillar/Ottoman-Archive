@@ -6,6 +6,6 @@ function prepare_query($query, $conn) {
     $prep = $conn -> prepare($query); 
     $prep -> execute();
     $result = $prep -> get_result();
-    return $user = $result -> fetch_all();};
+    return $user = $result -> fetch_all(MYSQLI_ASSOC);};
 
 ?>

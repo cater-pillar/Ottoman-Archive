@@ -14,8 +14,8 @@ $navbar = array(
         "href" => "last_added.php",
         "text" => "Last Added"),
     array(
-        "href" => "edit_form.php",
-        "text" => "Edit")
+        "href" => "household_list.php",
+        "text" => "Household List")
     );
 ?> 
 

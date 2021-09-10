@@ -285,5 +285,5 @@ $get_location = 'SELECT `name`
         $i_estate = 1;
         $i_livestock = 1;
 
-        header('Location: http://localhost/prikazNisha/uspesno_dodato.php');
+        header('Location: http://localhost/ottoman/last_added.php');
     };
