@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Anamakine: 127.0.0.1
--- Üretim Zamanı: 14 May 2021, 14:52:26
--- Sunucu sürümü: 10.4.17-MariaDB
--- PHP Sürümü: 8.0.2
+-- Host: 127.0.0.1
+-- Generation Time: Sep 12, 2021 at 02:47 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `prikaz_nisha`
+-- Database: `ottoman`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `household`
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` int(11) UNSIGNED NOT NULL,
+  `username` varchar(11) COLLATE utf8mb4_bin NOT NULL,
+  `pwd` varchar(11) COLLATE utf8mb4_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `username`, `pwd`) VALUES
+(1, 'steva', 'kamikaa');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `household`
 --
 
 CREATE TABLE `household` (
@@ -38,35 +57,35 @@ CREATE TABLE `household` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `household`
+-- Dumping data for table `household`
 --
 
 INSERT INTO `household` (`household_id`, `member_forname`, `member_surname`, `fk_household_member_type_id`, `household_number`, `fk_location_name_id`, `notes`) VALUES
-(23, 'Ahmad-Hüseyin-ve-Ali', 'merhum-Aburrahman-Ağa', 1, 1, 5, ''),
+(23, 'Ahmad Hüseyin ve Ali', 'merhum Aburrahman Ağa', 1, 1, 5, ''),
 (24, 'Ahmad', 'Osman', 1, 2, 5, ''),
 (25, 'Osman', '', 5, 2, 5, ''),
 (26, 'Emin', 'Ibrahim', 1, 3, 5, ''),
-(27, 'Hafiz-Zid-Al-Abidi-Efendi', 'Süleyman', 1, 4, 5, ''),
+(27, 'Hafiz Zid Al Abidi Efendi', 'Süleyman', 1, 4, 5, ''),
 (28, 'Ahmad', 'Hasan', 1, 5, 5, 'Merkumun damadı an aslı Edirne\'de -- mahallesi sakinlerinden olup iki seneden akdem Niş\'e gelip mahalle mezburde sakin olduğu\r\nMerkum ihtiyar ve alil olduğundan hizmetkarlığa dahi iktidarı olmayıp...'),
-(31, 'Haci-Mustafa', 'Haci-Ahmad', 1, 6, 5, ''),
+(31, 'Haci Mustafa', 'Haci Ahmad', 1, 6, 5, ''),
 (32, 'Mehmed', 'Haci-Hafiz-Hüseyin', 6, 6, 5, ''),
 (33, '', '', 3, 6, 5, ''),
 (34, 'Mustafa', 'Ahmad', 1, 7, 5, 'Merkum ıkı sene akdem Ksmın arzusuyla Rah... tarafına gitmiş'),
 (35, '', '', 7, 7, 5, ''),
-(36, 'Şerif-Mustafa', 'İsmail', 1, 8, 5, 'Leskofça kazası Mağaş karyesine gidip...'),
+(36, 'Şerif Mustafa', 'İsmail', 1, 8, 5, '                    Leskofça kazası Mağaş karyesine gidip...                '),
 (37, 'Ömer', 'Mustafa', 1, 9, 5, ''),
 (38, 'Memiş', 'Ali', 1, 10, 5, ''),
-(39, 'Ali-Bey', 'Abdulkerim-Bey', 1, 11, 5, ''),
+(39, 'Ali Bey', 'Abdulkerim Bey', 1, 11, 5, ''),
 (40, '', '', 2, 11, 5, ''),
 (41, '', '', 7, 11, 5, 'hemşireler'),
 (42, 'Hüseyin', 'Mehmed', 1, 12, 5, ''),
 (44, 'Hacı-Mehmed', 'Hafiz-Ahmad', 1, 13, 5, ''),
 (48, 'Numan', 'Süleyman', 1, 14, 5, ''),
-(49, 'Ali-ve-karındaşları-Abdurahman-ve-Hasan', 'İbrahim', 1, 15, 5, ''),
+(49, 'Ali ve karındaşları Abdurahman ve Hasan', 'İbrahim', 1, 15, 5, ''),
 (50, 'Abdurrahman', 'İbrahim', 4, 15, 5, ''),
 (51, 'Osman', 'Abdurrahman', 1, 16, 29, 'Merkum altı altı --- yetim olup vesiyesi Yahya Paşa mahallesinde sakin Hayrah valad Osman ettiği'),
 (52, 'Salih', 'Ahmad', 1, 17, 5, ''),
-(53, 'Hafiz-Yusuf', 'Hacı-Mehmed-Efendi', 1, 18, 5, ''),
+(53, 'Hafiz Yusuf', 'Hacı Mehmed Efendi', 1, 18, 5, ''),
 (54, 'Ali', 'Abdullah', 1, 19, 5, ''),
 (55, 'Abdulhalil', 'Hüseyin', 1, 20, 5, ''),
 (56, 'Ali', 'Hüseyin', 1, 21, 5, ''),
@@ -286,61 +305,138 @@ INSERT INTO `household` (`household_id`, `member_forname`, `member_surname`, `fk
 (280, 'Halil', 'Ömer', 1, 32, 8, '            '),
 (281, 'Mahmud', 'Hacı Ahmad', 1, 33, 8, 'Riaziyye mahallesi camisinde'),
 (282, 'Şerif', 'İbrahim', 1, 32, 8, '            '),
-(283, 'Mustafa Bey', 'Hacı Ali', 1, 35, 8, '            ');
+(283, 'Mustafa Bey', 'Hacı Ali', 1, 35, 8, '            '),
+(284, 'Unreadable', 'Mehmed', 1, 36, 8, '            '),
+(285, 'İbrahim', 'Abdah', 1, 37, 8, '            '),
+(286, 'Hüseyin', 'Abdah', 1, 38, 8, '            '),
+(287, 'Şeyh Hafız Efendi', 'Abdah', 1, 39, 8, '            '),
+(288, 'Yusuf', 'İsmail', 1, 40, 8, '                                                                                    '),
+(289, '', '', 2, 40, 8, '            '),
+(290, '', '', 3, 40, 8, '            '),
+(291, 'İsmail', 'Mustafa', 1, 41, 8, '            '),
+(292, 'Derviş', 'Agoş', 1, 42, 8, '            '),
+(293, 'Mehmed', 'Mustafa', 1, 43, 8, '            '),
+(295, 'Ali', 'Hasan', 1, 44, 8, 'An asl-i Ürgüp\'ten (?) olup dört seneden beri Niş\'e gelip sakin olduğu. Merkumun kasaba-i mezburde emlakı bulunup kasaba-i mezburde tahrir olduğu '),
+(296, 'Hasan', 'Zeynel', 1, 45, 8, '            '),
+(297, 'Ali', 'Mehmed', 1, 46, 8, '            '),
+(298, 'merhum Mehmed Emin eytamları', '', 1, 47, 8, 'vasileri kendi valideleri'),
+(299, 'Başar', 'Adem', 1, 48, 8, '            '),
+(300, 'Mehmed', 'Süleyman', 1, 49, 8, '            '),
+(301, 'Hasan', 'Ahmad', 1, 50, 8, '            '),
+(302, 'Salih', 'Mustafa', 1, 51, 8, '            '),
+(303, 'Yusuf', 'Hacı Salih', 1, 52, 8, 'vasiyesi kendi validesi            '),
+(304, 'Ahmad', 'Ömer', 1, 53, 8, '            '),
+(305, 'Emin', 'İbrahim', 1, 54, 8, '            '),
+(306, 'Mehmed', 'İbrahim', 1, 55, 8, '            '),
+(307, 'Bekir', 'Halid', 1, 56, 8, '            '),
+(308, 'Derviş Mehmed', 'Abdah', 1, 57, 8, '            '),
+(309, 'Fazlı', 'İsmail', 1, 58, 8, '            '),
+(310, 'Unreadable', 'Salih', 1, 59, 8, '            '),
+(311, 'Mutiş', 'Abdah', 1, 60, 8, '            '),
+(313, 'Hacı Halil', 'Musli', 1, 61, 8, '            '),
+(314, 'Halil', 'Mehmed', 1, 62, 8, '            '),
+(315, 'Halil', 'Şaban', 1, 63, 8, '            '),
+(316, 'Mehmed', 'Abdah', 1, 64, 8, '            '),
+(317, 'Ali', 'Salih', 1, 65, 8, '            '),
+(318, 'Ömer', 'Halil', 1, 66, 8, '            '),
+(321, 'Mumiş', 'Abidi', 1, 67, 8, ''),
+(322, 'Mehmed', 'Abdah', 1, 68, 8, '            '),
+(323, 'Ali', 'Unraedable', 1, 69, 8, '            '),
+(324, 'Hacı', 'Salih', 1, 70, 8, '                                                '),
+(325, 'Ferhad', 'Lütfi', 1, 71, 8, '            '),
+(326, 'Başar', 'Fazlı', 1, 72, 8, '                                                '),
+(327, 'Hasan', 'Fazlı', 1, 73, 8, '            '),
+(328, 'Arif', 'Abdah', 1, 74, 8, '            '),
+(329, 'Ahmad', 'Mustafa', 1, 75, 8, '            '),
+(330, 'Ahmad', 'Ömer', 1, 76, 8, '            '),
+(331, 'Unreadable', 'Osman', 1, 77, 8, '            '),
+(332, 'İslam', 'Mustafa', 1, 78, 8, '            '),
+(333, 'İsmail', 'Ali', 1, 79, 8, '            '),
+(335, 'Hafız Ahmad Efendi', 'Mehmed', 1, 1, 6, 'Cami-i Şerif\'in imam-ı sani. Merhumun hanesi olmayıp Defterdar mahallesinin Mustafa valad Ahmad hanesinde sakin ittüğü. Merhum an asl-ı Vidin eyaleti mulhakatından Plevne kazasında kain Agatova karyesi sakinlerinden olup bir sene akdam Niş\'e gelip mahalle-i Defterdar\'da sakin olduğu'),
+(336, 'Yusuf', 'Mehmed', 1, 2, 6, '            '),
+(337, 'Unreadable', 'Hasan', 1, 3, 6, '            '),
+(338, 'Hacı', 'Hacı', 1, 4, 6, '                                                '),
+(339, '', '', 3, 4, 6, '            '),
+(340, 'Ömer ve biraderi Mustafa', 'Mehmed', 1, 5, 6, '            '),
+(341, 'Hacı Mustafa', 'Osman', 1, 6, 6, 'Paşa Cami-i Şerif mütevellisi            '),
+(342, '', '', 8, 6, 6, '            '),
+(343, '', '', 8, 6, 6, '                                                '),
+(344, 'Hacı Ali', 'Hacı Memiş', 1, 7, 6, '            '),
+(345, 'Hasan', 'Ali', 1, 8, 6, '            '),
+(346, 'Unreadable', 'Abdah', 1, 9, 6, ''),
+(347, '', '', 3, 9, 6, '            '),
+(348, 'Yetim', 'Mehmed', 10, 9, 6, '                                                '),
+(349, '', '', 9, 9, 6, '            '),
+(350, 'Hacı', 'Abdurrahman', 1, 10, 6, '                                                                                    '),
+(351, '', '', 2, 10, 6, '                                                                                    '),
+(352, 'Hasan', 'Mehmed', 1, 11, 6, '            '),
+(353, 'Mahmud Bey', 'Bekir Bey', 1, 12, 6, 'An asl-ı Ürgüp olup dört sene önce Niş\'e geldi'),
+(354, 'Hüseyin Bey', 'Bekir Bey', 4, 12, 6, '            '),
+(355, 'Hacı Ali', 'Mehmed', 1, 13, 6, '            '),
+(356, 'Mustafa', 'Osman', 1, 14, 6, 'altı mah akdem Üsküp tarafına gitmiş            '),
+(357, 'Haşim', 'Bilal', 1, 15, 6, '            '),
+(358, 'Şerife Hatun', '', 1, 16, 6, 'Merhum Zimme Bey halilesi'),
+(359, 'Mustafa', 'Kurto', 1, 17, 6, '            '),
+(360, 'Hafiz Zid Al Abidi Efendi', 'Süleyman', 1, 4, 6, '');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `household_member_type`
+-- Table structure for table `household_member_type`
 --
 
 CREATE TABLE `household_member_type` (
   `household_member_type_id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL DEFAULT '0'
+  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL DEFAULT '0',
+  `type_en` varchar(56) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `household_member_type`
+-- Dumping data for table `household_member_type`
 --
 
-INSERT INTO `household_member_type` (`household_member_type_id`, `type`) VALUES
-(1, 'hane reisi'),
-(2, 'valide'),
-(3, 'halile'),
-(4, 'kardeş'),
-(5, 'oğul'),
-(6, 'kemin'),
-(7, 'hemşire');
+INSERT INTO `household_member_type` (`household_member_type_id`, `type`, `type_en`) VALUES
+(1, 'hane reisi', 'head of household'),
+(2, 'valide', 'mother'),
+(3, 'halile', 'wife'),
+(4, 'kardeş', 'brother'),
+(5, 'oğul', 'son'),
+(6, 'kemin', 'kemin'),
+(7, 'hemşire', 'sister'),
+(8, 'yeğen', 'nephew'),
+(9, 'kayınvalide', 'mother-in-law'),
+(10, 'öge oğul', 'adopted son');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `land`
+-- Table structure for table `land`
 --
 
 CREATE TABLE `land` (
   `land_id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL
+  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `type_en` varchar(56) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `land`
+-- Dumping data for table `land`
 --
 
-INSERT INTO `land` (`land_id`, `type`) VALUES
-(6, 'Bağ'),
-(1, 'Gayri Mezru Tarla'),
-(2, 'Mezru Tarla'),
-(4, 'Müstecir Mezru Tarla'),
-(5, 'Sebze Bahçesi'),
-(7, 'Çayır'),
-(8, 'Çiftlik'),
-(3, 'İcar ile Verildiği Tarla');
+INSERT INTO `land` (`land_id`, `type`, `type_en`) VALUES
+(1, 'Gayri Mezru Tarla', 'Uncultivated Field'),
+(2, 'Mezru Tarla', 'Cultivated Field'),
+(3, 'İcar ile Verildiği Tarla', 'Field Given for Rent'),
+(4, 'Müstecir Mezru Tarla', 'Field Taken for Rent'),
+(5, 'Sebze Bahçesi', 'Vegetables Garden'),
+(6, 'Bağ', 'Vineyard'),
+(7, 'Çayır', 'Pasture'),
+(8, 'Çiftlik', 'Farm');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `land_household`
+-- Table structure for table `land_household`
 --
 
 CREATE TABLE `land_household` (
@@ -355,26 +451,26 @@ CREATE TABLE `land_household` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `land_household`
+-- Dumping data for table `land_household`
 --
 
 INSERT INTO `land_household` (`land_household_id`, `fk_land_id`, `fk_household_id`, `area`, `income`, `payed_rent`, `location`, `description`) VALUES
-(10, 8, 23, 0, 0, 0, 'Bala Virtop karyesi', ''),
-(11, 8, 23, 0, 0, 0, 'Ofsinçe karyesi', ''),
-(12, 8, 23, 0, 0, 0, 'Zir Ksrhmir', ''),
-(13, 2, 23, 3, 135, 0, 'Bubna nam arazisi', ''),
-(14, 3, 23, 600, 1039, 0, 'Bubna nam arazisi', ''),
-(15, 7, 23, 80, 1600, 0, 'Bubna nam arazisi', ''),
-(16, 6, 23, 4, 48, 0, 'Vinik nam bayırda', ''),
-(17, 6, 23, 15, 15, 0, 'Vinik nam bayırda', ''),
-(18, 6, 23, 2, 0, 0, '', 'muattal'),
-(19, 5, 23, 6, 300, 0, '', 'kıt\'a 2'),
+(10, 8, 23, 0, 0, 0, '                                Zir Ksrhmir', '                                '),
+(11, 8, 23, 0, 0, 0, '                                Ofsinçe karyesi', '                                '),
+(12, 8, 23, 0, 0, 0, '                                Bala Virtop karyesi', '                                '),
+(13, 2, 23, 3, 135, 0, '                                Bubna nam arazisi', '                                '),
+(14, 3, 23, 600, 1039, 0, '                                Bubna nam arazisi', '                                '),
+(15, 7, 23, 80, 1600, 0, '                                Bubna nam arazisi', '                                '),
+(16, 6, 23, 2, 0, 0, '                                ', '                                muattal'),
+(17, 6, 23, 15, 15, 0, '                                Vinik nam bayırda', '                                '),
+(18, 6, 23, 4, 48, 0, '                                Vinik nam bayırda', '                                '),
+(19, 5, 23, 6, 300, 0, '                                ', '                                kıt\'a 2'),
 (20, 6, 24, 3, 36, 0, '', ''),
 (21, 3, 24, 60, 250, 0, '', ''),
-(30, 2, 31, 25, 666, 0, '', ''),
-(31, 3, 31, 80, 150, 0, '', ''),
-(32, 7, 31, 15, 300, 0, '', 'kıt\'a 3'),
-(33, 6, 31, 3, 36, 0, '', ''),
+(30, 2, 31, 25, 666, 0, '                                ', '                                '),
+(31, 3, 31, 80, 150, 0, '                                ', '                                '),
+(32, 7, 31, 15, 300, 0, '                                ', '                                kıt\'a 3'),
+(33, 6, 31, 3, 36, 0, '                                ', '                                '),
 (34, 3, 32, 210, 496, 0, '', ''),
 (35, 3, 33, 12, 120, 0, '', ''),
 (36, 7, 33, 2, 40, 0, '', ''),
@@ -383,17 +479,17 @@ INSERT INTO `land_household` (`land_household_id`, `fk_land_id`, `fk_household_i
 (39, 8, 38, 0, 0, 0, 'Emin Kotna karyesi', 'bir miktar hisse'),
 (40, 7, 38, 20, 400, 0, '', ''),
 (41, 6, 38, 10, 120, 0, '', ''),
-(42, 8, 39, 0, 0, 0, 'Çiçine karyesi', ''),
-(43, 8, 39, 0, 0, 0, 'Rosna karyesi', 'rub\' hisse'),
-(44, 8, 39, 0, 0, 0, 'Pokofça karyesi', 'nisf hisse'),
-(45, 8, 39, 0, 0, 0, 'Brestofça karyesi', 'nisf hisse'),
-(46, 8, 39, 0, 0, 0, 'Kutlemiş karyesi', 'nisf hisse'),
-(47, 8, 39, 0, 0, 0, 'İvrela karyesi', 'on iki büçük hissede bir hisse'),
-(48, 7, 39, 20, 400, 0, 'Boyna nam arazi', 'nisf hisse'),
-(49, 3, 39, 108, 150, 0, 'Boyna nam arazisi', 'nisf hisse'),
-(50, 7, 39, 4, 80, 0, 'Topolniçe karyesi', 'rub\' hisse'),
-(51, 3, 39, 84, 75, 0, 'Vinik', 'nisf hisse'),
-(52, 5, 39, 5, 200, 0, 'Niş civarında', ''),
+(42, 8, 39, 0, 0, 0, '                                Rosna karyesi', '                                rub\' hisse'),
+(43, 8, 39, 0, 0, 0, '                                Çiçine karyesi', '                                '),
+(44, 8, 39, 0, 0, 0, '                                İvrela karyesi', '                                on iki büçük hissede bir hisse'),
+(45, 8, 39, 0, 0, 0, '                                Kutlemiş karyesi', '                                nisf hisse'),
+(46, 8, 39, 0, 0, 0, '                                Brestofça karyesi', '                                nisf hisse'),
+(47, 8, 39, 0, 0, 0, '                                Pokofça karyesi', '                                nisf hisse'),
+(48, 7, 39, 4, 80, 0, '                                Topolniçe karyesi', '                                rub\' hisse'),
+(49, 3, 39, 84, 75, 0, '                                Vinik', '                                nisf hisse'),
+(50, 7, 39, 20, 400, 0, '                                Boyna nam arazi', '                                nisf hisse'),
+(51, 3, 39, 108, 150, 0, '                                Boyna nam arazisi', '                                nisf hisse'),
+(52, 5, 39, 5, 200, 0, '                                Niş civarında', '                                '),
 (53, 5, 40, 2, 0, 0, '', 'cedid'),
 (54, 6, 40, 8, 84, 0, '', ''),
 (55, 6, 40, 0, 0, 0, '', 'ma bahçe muattal'),
@@ -406,9 +502,9 @@ INSERT INTO `land_household` (`land_household_id`, `fk_land_id`, `fk_household_i
 (62, 3, 44, 60, 60, 0, 'Gubriçe karyesi', ''),
 (63, 1, 44, 30, 0, 0, 'Gubriçe karyesi', ''),
 (64, 3, 44, 48, 50, 0, 'Taşlı Bayır', ''),
-(86, 8, 49, 0, 0, 0, 'Barbat karyesi', ''),
-(87, 8, 49, 0, 0, 0, 'Brzi Brod', 'kovanlık'),
-(88, 2, 49, 36, 1003, 0, '', ''),
+(86, 8, 49, 0, 0, 0, '                                Brzi Brod', '                                kovanlık'),
+(87, 8, 49, 0, 0, 0, '                                Barbat karyesi', '                                '),
+(88, 2, 49, 36, 1003, 0, '                                ', '                                '),
 (89, 6, 56, 2, 36, 0, '', ''),
 (90, 6, 58, 2, 24, 0, '', ''),
 (91, 6, 65, 11, 132, 0, 'Goriçe', ''),
@@ -590,60 +686,129 @@ INSERT INTO `land_household` (`land_household_id`, `fk_land_id`, `fk_household_i
 (270, 5, 283, 5, 100, 0, '', ''),
 (271, 5, 283, 4, 120, 0, '', ''),
 (272, 8, 283, 0, 0, 0, 'Matifçe', ''),
-(273, 8, 283, 0, 0, 0, 'Kaltinçe', 'Mahmud Ali Bey');
+(273, 8, 283, 0, 0, 0, 'Kaltinçe', 'Mahmud Ali Bey'),
+(274, 6, 288, 7, 84, 0, '                                                                ', '                                                                '),
+(275, 7, 288, 15, 300, 0, '                                                                ', '                                                                '),
+(276, 3, 288, 162, 440, 0, '                                                                Gabrofiçe', '                                                                '),
+(277, 3, 288, 120, 450, 0, '                                                                Bayna', '                                                                '),
+(278, 8, 288, 0, 0, 0, '                                                                unreadable', '                                                                '),
+(279, 8, 288, 0, 0, 0, '                                                                unreadable', '                                                                '),
+(280, 6, 288, 850, 637, 0, '                                                                Garofiçe', '                                                                kiraya verilen bağlar'),
+(281, 8, 290, 0, 0, 0, 'unreadable', ''),
+(282, 3, 290, 150, 185, 0, '', ''),
+(283, 4, 291, 52, 880, 110, '', ''),
+(284, 6, 291, 18, 216, 0, '', ''),
+(285, 6, 292, 1, 18, 0, '', ''),
+(286, 4, 297, 5, 48, 6, '', ''),
+(287, 6, 297, 4, 48, 0, '', ''),
+(288, 5, 297, 2, 130, 0, '', ''),
+(289, 7, 298, 16, 320, 0, '', ''),
+(290, 8, 298, 0, 0, 0, 'Trupala', 'süls hisse'),
+(291, 6, 303, 2, 30, 0, '', ''),
+(293, 6, 313, 5, 99, 0, '', ''),
+(294, 3, 314, 6, 30, 0, '', ''),
+(295, 6, 314, 5, 60, 0, '', ''),
+(298, 6, 324, 1, 12, 0, '                                ', '                                '),
+(299, 6, 325, 2, 36, 0, '', ''),
+(300, 6, 329, 1, 12, 0, '', ''),
+(301, 2, 333, 30, 1372, 0, '', ''),
+(302, 7, 333, 12, 240, 0, '', ''),
+(303, 6, 333, 4, 120, 0, '', ''),
+(304, 6, 333, 3, 0, 0, '', 'cedid'),
+(305, 8, 333, 0, 0, 0, 'Zir Karn', 'kovanlık. nisf hisse'),
+(307, 6, 336, 2, 30, 0, '', ''),
+(308, 2, 337, 18, 445, 0, '', ''),
+(309, 1, 337, 24, 0, 0, '', ''),
+(310, 6, 337, 1, 0, 0, '', 'cedid'),
+(311, 2, 338, 13, 265, 0, '                                ', '                                '),
+(312, 3, 338, 308, 293, 0, '                                ', '                                '),
+(313, 8, 340, 0, 0, 0, 'Bala Komren', ''),
+(314, 8, 340, 0, 0, 0, 'Tartuşniçe', ''),
+(315, 8, 340, 0, 0, 0, 'Haleyine', ''),
+(316, 7, 340, 10, 200, 0, '', ''),
+(317, 6, 340, 7, 84, 0, '', ''),
+(318, 6, 341, 13, 138, 0, '', ''),
+(319, 6, 344, 13, 162, 0, '', ''),
+(320, 3, 344, 10, 20, 0, '', ''),
+(321, 1, 344, 10, 0, 0, '', ''),
+(322, 3, 347, 40, 100, 0, '', ''),
+(323, 1, 347, 29, 0, 0, '', ''),
+(324, 6, 347, 2, 30, 0, '', ''),
+(325, 8, 347, 0, 0, 0, 'Yakofça', 'süds hisse'),
+(326, 8, 347, 0, 0, 0, 'Brestofiçe', 'süds hisse'),
+(327, 8, 347, 0, 0, 0, 'Kotlemiş', 'süds hisse'),
+(328, 8, 350, 0, 0, 0, '                                                                Ravna Dubrava', '                                                                '),
+(329, 8, 350, 0, 0, 0, '                                                                Draşkova Kotna', '                                                                '),
+(330, 8, 350, 0, 0, 0, '                                                                Çarye', '                                                                '),
+(331, 8, 350, 0, 0, 0, '                                                                Hum', '                                                                '),
+(332, 8, 350, 0, 0, 0, '                                                                Ravna', '                                                                nisf hisse'),
+(333, 3, 350, 480, 600, 0, '                                                                Ramna ittisalında', '                                                                '),
+(334, 7, 350, 7, 140, 0, '                                                                ', '                                                                '),
+(335, 6, 350, 4, 36, 0, '                                                                ', '                                                                '),
+(336, 5, 350, 1, 50, 0, '                                                                ', '                                                                '),
+(337, 2, 352, 18, 337, 0, '', ''),
+(338, 1, 352, 18, 0, 0, '', ''),
+(339, 8, 352, 0, 0, 0, 'Kelye', ''),
+(340, 4, 355, 8, 140, 17, '', ''),
+(341, 6, 355, 3, 36, 0, '', ''),
+(342, 5, 359, 3, 300, 0, '', ''),
+(343, 6, 359, 2, 0, 0, '', 'cedid'),
+(344, 8, 359, 0, 0, 0, 'Maruşna', 'nisf hisse'),
+(345, 6, 360, 6, 84, 0, '                                ', '                                ');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `livestock`
+-- Table structure for table `livestock`
 --
 
 CREATE TABLE `livestock` (
   `livestock_id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL
+  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `type_en` varchar(56) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `livestock`
+-- Dumping data for table `livestock`
 --
 
-INSERT INTO `livestock` (`livestock_id`, `type`) VALUES
-(31, 'Arı Kovanı - bahçe'),
-(30, 'Arı Kovanı - kıt\'a'),
-(1, 'Arı Kovanı - ras'),
-(11, 'At - asab'),
-(14, 'At - bebek'),
-(12, 'At - kısrak'),
-(13, 'At - kısrak tay'),
-(10, 'Bargir'),
-(8, 'Keçi - kısır'),
-(9, 'Keçi - oğlak'),
-(7, 'Keçi - oğlak furuht'),
-(6, 'Keçi - sağman'),
-(5, 'Koyun - kuzu'),
-(3, 'Koyun - kuzu furuht'),
-(4, 'Koyun - kısır'),
-(2, 'Koyun - sağman'),
-(23, 'Manda - buzağı, dişi'),
-(22, 'Manda - buzağı, erkek'),
-(19, 'Manda - dana'),
-(21, 'Manda - erkek'),
-(20, 'Manda - kısır'),
-(18, 'Manda - sağman'),
-(16, 'Merkeb - dişi'),
-(15, 'Merkeb - erkek'),
-(17, 'Öküz'),
-(27, 'İnek - buzağı, dişi'),
-(26, 'İnek - buzağı, erkek'),
-(29, 'İnek - dana'),
-(25, 'İnek - kısır'),
-(24, 'İnek - sağman'),
-(28, 'İnek - tosun');
+INSERT INTO `livestock` (`livestock_id`, `type`, `type_en`) VALUES
+(1, 'Arı Kovanı - ras', 'Beehive- head'),
+(2, 'Koyun - sağman', 'Sheep - milking'),
+(3, 'Koyun - kuzu furuht', 'Sheep - lamb for sale'),
+(4, 'Koyun - kısır', 'Sheep - milkless'),
+(5, 'Koyun - kuzu', 'Sheep - lamb'),
+(6, 'Keçi - sağman', 'Goat - milking'),
+(7, 'Keçi - oğlak furuht', 'Goat - kid for sale'),
+(8, 'Keçi - kısır', 'Goat - milkless'),
+(9, 'Keçi - oğlak', 'Goat - kid'),
+(10, 'Bargir', 'Mule'),
+(11, 'At - asab', 'Horse - stallion'),
+(12, 'At - kısrak', 'Horse - mare'),
+(13, 'At - kısrak tay', 'Horse - little mare'),
+(14, 'At - bebek', 'Horse - baby'),
+(15, 'Merkeb - erkek', 'Donkey - male'),
+(16, 'Merkeb - dişi', 'Donkey - female'),
+(17, 'Öküz', 'Ox'),
+(18, 'Manda - sağman', 'Buffalo - milking'),
+(19, 'Manda - dana', 'Buffalo - calf'),
+(20, 'Manda - kısır', 'Buffalo - milkless'),
+(21, 'Manda - erkek', 'Buffalo - male'),
+(22, 'Manda - buzağı, erkek', 'Buffalo - kid, male'),
+(23, 'Manda - buzağı, dişi', 'Buffalo - kid, female'),
+(24, 'İnek - sağman', 'Cow - milking'),
+(25, 'İnek - kısır', 'Cow - milkless'),
+(26, 'İnek - buzağı, erkek', 'Cow - kid, male'),
+(27, 'İnek - buzağı, dişi', 'Cow - kid, female'),
+(28, 'İnek - tosun', 'Cow - bullock'),
+(29, 'İnek - dana', 'Cow - calf'),
+(30, 'Arı Kovanı - kıt\'a', 'Beehive - piece'),
+(31, 'Arı Kovanı - bahçe', 'Beehive - garden');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `livestock_household`
+-- Table structure for table `livestock_household`
 --
 
 CREATE TABLE `livestock_household` (
@@ -655,7 +820,7 @@ CREATE TABLE `livestock_household` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `livestock_household`
+-- Dumping data for table `livestock_household`
 --
 
 INSERT INTO `livestock_household` (`livestock_household_id`, `fk_livestock_id`, `fk_household_id`, `quantity`, `income`) VALUES
@@ -838,12 +1003,72 @@ INSERT INTO `livestock_household` (`livestock_household_id`, `fk_livestock_id`, 
 (194, 18, 283, 1, 15),
 (195, 1, 283, 4, 16),
 (196, 24, 283, 1, 10),
-(197, 10, 283, 3, 0);
+(197, 10, 283, 3, 0),
+(198, 1, 288, 8, 32),
+(199, 18, 288, 1, 10),
+(200, 25, 288, 1, 0),
+(201, 26, 288, 1, 0),
+(202, 10, 288, 3, 0),
+(203, 24, 291, 1, 7),
+(204, 29, 291, 1, 0),
+(205, 17, 291, 2, 0),
+(206, 10, 291, 1, 0),
+(207, 25, 292, 1, 0),
+(208, 10, 292, 1, 0),
+(211, 24, 295, 1, 10),
+(212, 10, 295, 1, 0),
+(213, 24, 296, 1, 10),
+(214, 29, 296, 0, 0),
+(215, 20, 297, 1, 0),
+(216, 17, 297, 2, 0),
+(217, 10, 297, 1, 0),
+(218, 1, 298, 28, 0),
+(219, 24, 298, 1, 10),
+(220, 25, 298, 1, 0),
+(221, 26, 298, 1, 0),
+(222, 17, 298, 2, 0),
+(223, 10, 298, 1, 0),
+(227, 24, 313, 1, 7),
+(228, 29, 313, 1, 0),
+(229, 15, 313, 1, 0),
+(230, 10, 317, 1, 0),
+(231, 25, 317, 3, 0),
+(233, 17, 330, 2, 0),
+(234, 1, 333, 12, 48),
+(235, 18, 333, 1, 15),
+(236, 19, 333, 2, 0),
+(237, 21, 333, 2, 0),
+(238, 17, 333, 2, 0),
+(239, 10, 333, 2, 0),
+(240, 24, 335, 1, 10),
+(241, 26, 335, 1, 0),
+(242, 10, 336, 1, 0),
+(243, 1, 338, 30, 120),
+(244, 10, 338, 1, 0),
+(245, 19, 338, 2, 0),
+(246, 10, 344, 1, 0),
+(247, 24, 345, 1, 10),
+(248, 27, 345, 1, 0),
+(249, 10, 345, 1, 0),
+(250, 10, 346, 1, 0),
+(251, 1, 350, 6, 24),
+(252, 24, 350, 1, 10),
+(253, 26, 350, 1, 0),
+(254, 10, 350, 1, 0),
+(255, 10, 353, 1, 0),
+(256, 10, 354, 1, 0),
+(257, 25, 355, 1, 0),
+(258, 26, 355, 1, 0),
+(259, 10, 355, 1, 0),
+(260, 10, 356, 1, 0),
+(261, 24, 359, 1, 10),
+(262, 10, 359, 1, 0),
+(263, 15, 360, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `location_name`
+-- Table structure for table `location_name`
 --
 
 CREATE TABLE `location_name` (
@@ -854,7 +1079,7 @@ CREATE TABLE `location_name` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `location_name`
+-- Dumping data for table `location_name`
 --
 
 INSERT INTO `location_name` (`location_name_id`, `name`, `fk_location_type_id`, `fk_location_name_id`) VALUES
@@ -890,190 +1115,192 @@ INSERT INTO `location_name` (`location_name_id`, `name`, `fk_location_type_id`, 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `location_type`
+-- Table structure for table `location_type`
 --
 
 CREATE TABLE `location_type` (
   `location_type_id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL DEFAULT '0'
+  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL DEFAULT '0',
+  `type_en` varchar(56) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `location_type`
+-- Dumping data for table `location_type`
 --
 
-INSERT INTO `location_type` (`location_type_id`, `type`) VALUES
-(8, 'Diğer'),
-(2, 'Kaza'),
-(6, 'Köy'),
-(3, 'Mahalle'),
-(4, 'Neverye'),
-(5, 'Varoş'),
-(7, 'Çiftlik'),
-(1, 'Şehir');
+INSERT INTO `location_type` (`location_type_id`, `type`, `type_en`) VALUES
+(1, 'Şehir', 'Town'),
+(2, 'Kaza', 'District'),
+(3, 'Mahalle', 'Neighborhood '),
+(4, 'Neverye', 'Parish'),
+(5, 'Varoş', 'Suburb'),
+(6, 'Köy', 'Village'),
+(7, 'Çiftlik', 'Farm'),
+(8, 'Diğer', 'Other');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `occupation`
+-- Table structure for table `occupation`
 --
 
 CREATE TABLE `occupation` (
   `occupation_id` int(10) UNSIGNED NOT NULL,
   `name` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `name_en` varchar(56) COLLATE utf8mb4_bin NOT NULL,
   `fk_occupation_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `occupation`
+-- Dumping data for table `occupation`
 --
 
-INSERT INTO `occupation` (`occupation_id`, `name`, `fk_occupation_id`) VALUES
-(1, 'Esnaf', NULL),
-(2, 'Görevli', NULL),
-(3, 'Ziraat', NULL),
-(4, 'Mesleksiz', NULL),
-(5, 'Ticaret', NULL),
-(6, 'Askeri Alanda Hizmet Veren Görevliler', 2),
-(7, 'Dini Alanda Hizmet Veren Görevliler', 2),
-(8, 'İctimai ve İdari Alanda Hizmet Veren Görevliler', 2),
-(9, 'İşçi', NULL),
-(10, 'Unknown', NULL),
-(11, 'Derıden Mal Ureten ve Satan Esnaf', 1),
-(12, 'Metaldan Mal Üreten ve Satan Esnaf', 1),
-(13, 'Dokumacılık Alanındaki Meslekler', 1),
-(14, 'Kumaştan Mal Üreten ve Satan Esnaf', 1),
-(15, 'Diğer Mal Üreten ve Satan Esnaf', 1),
-(16, 'Çeşitli Hizmetleri Yerine Getirenler', 1),
-(17, 'Yiyecek Maddeleri Üreten ve Satan Esnaf', 1),
-(18, 'Taşımacılık Alanındaki Meslekler', 1),
-(19, 'Askeri Mülazım', 6),
-(20, 'Asakir-i Nizamiyye', 6),
-(21, 'Binbaşı', 6),
-(22, 'İşkenci Süvar', 6),
-(23, 'Kır Bölük Başı', 6),
-(24, 'Sekban', 6),
-(25, 'Sipahi', 6),
-(26, 'Sipahi Kulağası', 6),
-(27, 'Zabit', 6),
-(28, 'Zabit Sekban', 6),
-(29, 'Zabit Sipahi', 6),
-(30, 'Yüzbaşı', 6),
-(142, 'Topçu', 6),
-(143, 'Topçu Onbaşı', 6),
-(144, 'Topçu Çavuş', 6),
-(145, 'Topçu Mülazim', 6),
-(146, 'Topçu Yüzbaşı', 6),
-(147, 'Berber', 16),
-(148, 'Çalgıcı', 16),
-(149, 'Dellal', 16),
-(150, 'Hamamcı', 16),
-(151, 'Hamam Naziri', 16),
-(152, 'Hancı', 16),
-(153, 'Kahveci', 16),
-(154, 'Kahveci Tabi', 16),
-(155, 'Meyhaneci', 16),
-(156, 'Seyis', 16),
-(157, 'Şarkıcı', 16),
-(158, 'Dülger', 15),
-(159, 'Debbağ', 11),
-(160, 'Göncü', 11),
-(161, 'Kürkçü', 11),
-(162, 'Saraç', 11),
-(163, 'Semerci', 11),
-(164, 'Yemenici', 11),
-(165, 'Kalpakçı', 11),
-(166, 'Çömlekçi', 15),
-(167, 'Çubukçu', 15),
-(168, 'Doğramacı', 15),
-(169, 'Hasırcı', 15),
-(170, 'İpçi', 15),
-(171, 'Kiremitçi', 15),
-(172, 'Koltukçu', 15),
-(173, 'Lulacı', 15),
-(174, 'Saatçı', 15),
-(175, 'Tüfekçi', 15),
-(176, 'Mumcu', 15),
-(177, 'Derviş', 7),
-(178, 'İmam', 7),
-(179, 'Muezzin', 7),
-(180, 'Müderris', 7),
-(181, 'Mütevelli', 7),
-(182, 'Şeyh', 7),
-(183, 'Talebe-i Ulum', 7),
-(184, 'Papas', 7),
-(185, 'Müftü', 7),
-(186, 'Abacı', 13),
-(187, 'Boyacı', 13),
-(188, 'Hallaç', 13),
-(189, 'Kazzaz', 13),
-(190, 'Keçeci', 13),
-(191, 'Mutaf', 13),
-(192, 'Alil', 4),
-(193, 'İhtiyar', 4),
-(194, 'İhtiyar ve Alil', 4),
-(195, 'Dülkar', 4),
-(196, 'Nisa Taifesinden', 4),
-(197, 'Mecnun', 4),
-(198, 'Fukara', 4),
-(199, 'Yetim', 4),
-(200, 'Salcı', 4),
-(201, 'Bakıcı', 8),
-(202, 'Çocuklar Okutma', 8),
-(203, 'Gezginci', 8),
-(204, 'Katib', 8),
-(205, 'Kavas', 8),
-(206, 'Kayyum', 8),
-(207, 'Mezarcı', 8),
-(208, 'Muhtar', 8),
-(209, 'Muhzır', 8),
-(210, 'Nüfüs Naziri', 8),
-(211, 'Ziraat Müdürü', 8),
-(212, 'Bahçevan', 9),
-(213, 'Çapacı', 9),
-(214, 'Çoban', 9),
-(215, 'Irgat', 9),
-(216, 'Hizmetkar', 9),
-(217, 'Dikici', 14),
-(218, 'Papuççu', 14),
-(219, 'Terzi', 14),
-(220, 'Yorgancı', 14),
-(221, 'Bıçakçı', 12),
-(222, 'Dökmeci', 12),
-(223, 'Kalaycı', 12),
-(224, 'Kazancı', 12),
-(225, 'Kuyumcu', 12),
-(226, 'Mineci', 12),
-(227, 'Nalbant', 12),
-(228, 'Kantarcı', 12),
-(229, 'Demirci', 12),
-(230, 'Aktar Ticareti', 5),
-(231, 'Tuz Ticareti', 5),
-(232, 'Eskici', 5),
-(233, 'Duhancı', 5),
-(234, 'Oduncu', 5),
-(235, 'Avrupa Ticareti', 5),
-(236, 'Erbab-ı Ticaret', 5),
-(237, 'Ayak Ticareti', 5),
-(238, 'Bezirgan', 5),
-(239, 'Araba Kiracı', 18),
-(240, 'Kiracı', 18),
-(241, 'Koçucu', 18),
-(242, 'Aşçı', 17),
-(243, 'Bakkal', 17),
-(244, 'Ekmekçi', 17),
-(245, 'Kadayifçi', 17),
-(246, 'Kasap', 17),
-(247, 'Simitçi', 17),
-(248, 'Yemişçi', 17),
-(249, 'Ashab-ı Alaka', 3),
-(250, 'Erbab-ı Ziraat', 3),
-(251, 'Rençber', 3);
+INSERT INTO `occupation` (`occupation_id`, `name`, `name_en`, `fk_occupation_id`) VALUES
+(1, 'Esnaf', 'Craftsman', NULL),
+(2, 'Görevli', 'Official', NULL),
+(3, 'Ziraat', 'Agriculture', NULL),
+(4, 'Mesleksiz', 'Unemployed', NULL),
+(5, 'Ticaret', 'Trade', NULL),
+(6, 'Askeri Alanda Hizmet Veren Görevliler', 'Military Officials', 2),
+(7, 'Dini Alanda Hizmet Veren Görevliler', 'Religious Officials', 2),
+(8, 'İctimai ve İdari Alanda Hizmet Veren Görevliler', 'Administrative and Social Officials', 2),
+(9, 'İşçi', 'Worker', NULL),
+(10, 'Bilinmeyen', 'Unknown', NULL),
+(11, 'Derıden Mal Ureten ve Satan Esnaf', 'Leather Related Craftsmen', 1),
+(12, 'Metaldan Mal Üreten ve Satan Esnaf', 'Metal Related Craftsmen', 1),
+(13, 'Dokumacılık Alanındaki Meslekler', 'Textile Related Craftsmen', 1),
+(14, 'Kumaştan Mal Üreten ve Satan Esnaf', 'Craftsmen Working with Cloth', 1),
+(15, 'Diğer Mal Üreten ve Satan Esnaf', 'Craftsmen Producing and Selling Other Products', 1),
+(16, 'Çeşitli Hizmetleri Yerine Getirenler', 'Service Related Craftsmen', 1),
+(17, 'Yiyecek Maddeleri Üreten ve Satan Esnaf', 'Craftsmen Producing and Selling Food', 1),
+(18, 'Taşımacılık Alanındaki Meslekler', 'Transport Related Occupations', 1),
+(19, 'Askeri Mülazım', 'Military Lieutenant', 6),
+(20, 'Asakir-i Nizamiye', 'Nizam-i Cedid Army', 6),
+(21, 'Binbaşı', 'Lieutenant Commander', 6),
+(22, 'İşkenci Süvari', 'İşkenci Cavarly', 6),
+(23, 'Kır Bölük Başı', 'Military Company Commander', 6),
+(24, 'Sekban', 'Mercenary Soldier', 6),
+(25, 'Sipahi', 'Cavarlyman', 6),
+(26, 'Sipahi Kulağası', 'Cavarly Adjuctant Major', 6),
+(27, 'Zabit', 'Officer', 6),
+(28, 'Zabit Sekban', 'Mercenary Officer', 6),
+(29, 'Zabit Sipahi', 'Cavarly Officer', 6),
+(30, 'Yüzbaşı', 'Military Captain', 6),
+(142, 'Topçu', 'Artilleryman', 6),
+(143, 'Topçu Onbaşı', 'Artillery Corporal', 6),
+(144, 'Topçu Çavuş', 'Artillery Sergeant', 6),
+(145, 'Topçu Mülazim', 'Artillery Lieutenant', 6),
+(146, 'Topçu Yüzbaşı', 'Artillery Captain', 6),
+(147, 'Berber', 'Barber', 16),
+(148, 'Çalgıcı', 'Musician', 16),
+(149, 'Dellal', 'Town Crier', 16),
+(150, 'Hamamcı', 'Bath Attendant', 16),
+(151, 'Hamam Naziri', 'Bath Sipervisor', 16),
+(152, 'Hancı', 'Innkeeper', 16),
+(153, 'Kahveci', 'Coffeehouse Keeper', 16),
+(154, 'Kahveci Tabi', 'Coffeehouse Assistant', 16),
+(155, 'Meyhaneci', 'Drink House Keeper', 16),
+(156, 'Seyis', 'Stableman', 16),
+(157, 'Şarkıcı', 'Singer', 16),
+(158, 'Dülger', 'Carpenter', 15),
+(159, 'Debbağ', 'Tanner', 11),
+(160, 'Göncü', 'Leather Seller', 11),
+(161, 'Kürkçü', 'Furrier', 11),
+(162, 'Saraç', 'Saddler', 11),
+(163, 'Semerci', 'Pack Saddler', 11),
+(164, 'Yemenici', 'Leather Shoe Maker', 11),
+(165, 'Kalpakçı', 'Fur Cap Maker', 11),
+(166, 'Çömlekçi', 'Potter', 15),
+(167, 'Çubukçu', 'Tobacco Pipe Maker', 15),
+(168, 'Doğramacı', 'Woodworker', 15),
+(169, 'Hasırcı', 'Caner', 15),
+(170, 'İpçi', 'Ropemaker', 15),
+(171, 'Kiremitçi', 'Tiler', 15),
+(172, 'Koltukçu', 'Upholsterer', 15),
+(173, 'Lulacı', 'Pipe Maker', 15),
+(174, 'Saatçı', 'Watchmaker', 15),
+(175, 'Tüfekçi', 'Gunsmith', 15),
+(176, 'Mumcu', 'Candle Maker', 15),
+(177, 'Derviş', 'Dervish', 7),
+(178, 'İmam', 'Imam', 7),
+(179, 'Müezzin', 'Muezzin', 7),
+(180, 'Müderris', 'Teacher', 7),
+(181, 'Mütevelli', 'Overseer', 7),
+(182, 'Şeyh', 'Sheikh', 7),
+(183, 'Talebe-i Ulum', 'Student', 7),
+(184, 'Papas', 'Priest', 7),
+(185, 'Müftü', 'Mufti', 7),
+(186, 'Abacı', 'Aba Maker', 13),
+(187, 'Boyacı', 'Dyer', 13),
+(188, 'Hallaç', 'Cotton Fluffer ', 13),
+(189, 'Kazzaz', 'Silk Seller', 13),
+(190, 'Keçeci', 'Felt Maker', 13),
+(191, 'Mutaf', 'Weaver of Goat\'s Hair', 13),
+(192, 'Alil', 'Sick', 4),
+(193, 'İhtiyar', 'Old', 4),
+(194, 'İhtiyar ve Alil', 'Old and Sick', 4),
+(195, 'Dülkar', 'Widdow', 4),
+(196, 'Nisa Taifesinden', 'Woman', 4),
+(197, 'Mecnun', 'Mentally Ill', 4),
+(198, 'Fukara', 'Poor Person', 4),
+(199, 'Yetim', 'Orphan', 4),
+(200, 'Salcı', 'Orphan (?)', 4),
+(201, 'Bakıcı', 'Watcher', 8),
+(202, 'Çocuklar Okutma', 'Children Teacher', 8),
+(203, 'Gezginci', 'Guard', 8),
+(204, 'Katib', 'Scribe', 8),
+(205, 'Kavas', 'Armed Constable', 8),
+(206, 'Kayyum', 'Mosque Caretaker', 8),
+(207, 'Mezarcı', 'Gravedigger', 8),
+(208, 'Muhtar', 'Neighborhood Representative', 8),
+(209, 'Muhzır', 'Bailiff', 8),
+(210, 'Nüfüs Naziri', 'Civil Registry Officer', 8),
+(211, 'Ziraat Müdürü', 'Agriculture Director', 8),
+(212, 'Bahçevan', 'Gardener', 9),
+(213, 'Çapacı', 'Hoer (agriculture)', 9),
+(214, 'Çoban', 'Shepherd', 9),
+(215, 'Irgat', 'Farm Labourer', 9),
+(216, 'Hizmetkar', 'Servant', 9),
+(217, 'Dikici', 'Stitcher', 14),
+(218, 'Papuççu', 'Shoe Maker', 14),
+(219, 'Terzi', 'Tailor', 14),
+(220, 'Yorgancı', 'Quilt Maker', 14),
+(221, 'Bıçakçı', 'Knife Maker', 12),
+(222, 'Dökmeci', 'Molder', 12),
+(223, 'Kalaycı', 'Tinsmith', 12),
+(224, 'Kazancı', 'Boilersmith', 12),
+(225, 'Kuyumcu', 'Goldsmith', 12),
+(226, 'Mineci', 'Enamelist', 12),
+(227, 'Nalbant', 'Horseshoer', 12),
+(228, 'Kantarcı', 'Scaler', 12),
+(229, 'Demirci', 'Ironsmith', 12),
+(230, 'Aktar Ticareti', 'Spice Seller', 5),
+(231, 'Tuz Ticareti', 'Salt Seller', 5),
+(232, 'Eskici', 'Junk Dealer', 5),
+(233, 'Duhancı', 'Tobbacco Seller', 5),
+(234, 'Oduncu', 'Lumberjack', 5),
+(235, 'Avrupa Ticareti', 'European Merchant', 5),
+(236, 'Erbab-ı Ticaret', 'Merchant', 5),
+(237, 'Ayak Ticareti', 'Street Merchant', 5),
+(238, 'Bezirgan', 'Wholesale Merchant', 5),
+(239, 'Araba Kiracı', 'Dray Driver', 18),
+(240, 'Kiracı', 'Driver', 18),
+(241, 'Koçucu', 'Coach Driver', 18),
+(242, 'Aşçı', 'Cook', 17),
+(243, 'Bakkal', 'Grocer', 17),
+(244, 'Ekmekçi', 'Bread Maker', 17),
+(245, 'Kadayifçi', 'Dessert Maker', 17),
+(246, 'Kasap', 'Butcher', 17),
+(247, 'Simitçi', 'Bagel Seller', 17),
+(248, 'Yemişçi', 'Dried Fruit Seller', 17),
+(249, 'Ashab-ı Alaka', 'Notable', 3),
+(250, 'Erbab-ı Ziraat', 'Landowner', 3),
+(251, 'Rençber', 'Farmer', 3);
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `occupation_household`
+-- Table structure for table `occupation_household`
 --
 
 CREATE TABLE `occupation_household` (
@@ -1085,7 +1312,7 @@ CREATE TABLE `occupation_household` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `occupation_household`
+-- Dumping data for table `occupation_household`
 --
 
 INSERT INTO `occupation_household` (`occupation_household_id`, `fk_occupation_id`, `fk_household_id`, `income`, `type`) VALUES
@@ -1346,37 +1573,114 @@ INSERT INTO `occupation_household` (`occupation_household_id`, `fk_occupation_id
 (280, 204, 280, 500, 'Usta'),
 (281, 179, 281, 200, 'Usta'),
 (282, 216, 282, 300, 'Usta'),
-(283, 249, 283, 0, 'Usta');
+(283, 249, 283, 0, 'Usta'),
+(284, 216, 284, 300, 'Usta'),
+(285, 216, 285, 150, 'Usta'),
+(286, 227, 286, 300, 'Usta'),
+(287, 182, 287, 0, 'Usta'),
+(288, 249, 288, 0, 'Usta'),
+(289, 142, 291, 120, 'Usta'),
+(290, 204, 292, 400, 'Usta'),
+(291, 221, 293, 200, 'Usta'),
+(292, 142, 293, 120, 'Usta'),
+(294, 249, 295, 0, ''),
+(295, 246, 296, 350, 'Usta'),
+(296, 216, 297, 500, ''),
+(297, 199, 298, 0, ''),
+(298, 27, 299, 200, ''),
+(299, 216, 300, 100, ''),
+(300, 142, 301, 120, ''),
+(301, 219, 302, 20, 'Usta'),
+(302, 142, 302, 120, ''),
+(303, 199, 303, 0, ''),
+(304, 216, 304, 120, ''),
+(305, 142, 304, 120, ''),
+(306, 216, 305, 100, ''),
+(307, 142, 306, 120, ''),
+(308, 216, 307, 150, ''),
+(309, 177, 308, 0, ''),
+(310, 216, 309, 150, ''),
+(311, 221, 310, 150, ''),
+(312, 216, 311, 100, ''),
+(314, 149, 313, 250, ''),
+(315, 216, 314, 90, ''),
+(316, 177, 315, 0, ''),
+(317, 216, 316, 100, ''),
+(318, 216, 317, 150, ''),
+(319, 149, 318, 350, ''),
+(323, 162, 321, 500, 'Usta'),
+(324, 198, 322, 0, ''),
+(325, 142, 323, 120, ''),
+(326, 217, 324, 900, 'Usta'),
+(327, 216, 325, 150, ''),
+(328, 153, 326, 120, 'Usta'),
+(329, 25, 327, 200, ''),
+(330, 177, 328, 0, ''),
+(331, 142, 329, 120, ''),
+(332, 216, 329, 100, ''),
+(333, 142, 330, 120, ''),
+(334, 239, 330, 150, ''),
+(335, 142, 331, 120, ''),
+(336, 142, 332, 120, ''),
+(337, 249, 333, 0, ''),
+(338, 238, 333, 500, ''),
+(341, 178, 335, 300, ''),
+(342, 180, 335, 60, ''),
+(343, 162, 336, 400, 'Usta'),
+(344, 250, 337, 0, ''),
+(345, 249, 338, 0, ''),
+(346, 25, 340, 612, ''),
+(347, 181, 341, 120, ''),
+(348, 236, 341, 500, ''),
+(349, 143, 342, 180, ''),
+(350, 142, 343, 120, ''),
+(351, 25, 344, 968, ''),
+(352, 149, 344, 300, ''),
+(353, 143, 345, 180, ''),
+(354, 249, 350, 0, ''),
+(355, 250, 352, 0, ''),
+(356, 142, 352, 120, ''),
+(357, 29, 353, 0, ''),
+(358, 29, 354, 0, ''),
+(359, 149, 355, 100, ''),
+(360, 183, 356, 0, ''),
+(361, 142, 357, 120, ''),
+(362, 216, 357, 150, ''),
+(363, 196, 358, 0, ''),
+(364, 236, 359, 200, ''),
+(365, 219, 360, 100, 'Usta');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `real_estate`
+-- Table structure for table `real_estate`
 --
 
 CREATE TABLE `real_estate` (
   `real_estate_id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL
+  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `type_en` varchar(56) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `real_estate`
+-- Dumping data for table `real_estate`
 --
 
-INSERT INTO `real_estate` (`real_estate_id`, `type`) VALUES
-(1, 'Asiyab'),
-(8, 'Dükkan'),
-(6, 'Gümrükhane'),
-(2, 'Hamam'),
-(3, 'Han'),
-(4, 'Kahvehane'),
-(7, 'Kirahane'),
-(5, 'Meyhane');
+INSERT INTO `real_estate` (`real_estate_id`, `type`, `type_en`) VALUES
+(1, 'Asiyab', 'Mill'),
+(2, 'Hamam', 'Bathhouse'),
+(3, 'Han', 'Inn'),
+(4, 'Kahvehane', 'Coffee House'),
+(5, 'Meyhane', 'Drink House'),
+(6, 'Gümrükhane', 'Customs Office'),
+(7, 'Kirahane', 'Renthouse'),
+(8, 'Dükkan', 'Store'),
+(9, 'Mahzan', 'Warehouse');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `real_estate_household`
+-- Table structure for table `real_estate_household`
 --
 
 CREATE TABLE `real_estate_household` (
@@ -1390,15 +1694,15 @@ CREATE TABLE `real_estate_household` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `real_estate_household`
+-- Dumping data for table `real_estate_household`
 --
 
 INSERT INTO `real_estate_household` (`real_estate_household_id`, `fk_real_estate_id`, `fk_household_id`, `rent_income`, `quantity`, `description`, `location`) VALUES
 (9, 2, 23, 1000, 1, '', 'Nişava karibinde'),
-(10, 8, 23, 2060, 16, '', ''),
+(10, 8, 23, 0, 5, 'diğer, kapalı, harap', ''),
 (11, 3, 23, 375, 1, 'nisf hisse', 'At pazarında'),
 (12, 8, 23, 715, 20, 'nisf hisse', 'at pazarındaki hana muttasil dükkanlar'),
-(13, 8, 23, 0, 5, 'diğer, kapalı, harap', ''),
+(13, 8, 23, 2060, 16, '', ''),
 (14, 8, 24, 0, 0, 'muattal', 'debbahane'),
 (15, 7, 24, 250, 5, 'yahudi', ''),
 (16, 7, 26, 20, 1, '', ''),
@@ -1518,37 +1822,80 @@ INSERT INTO `real_estate_household` (`real_estate_household_id`, `fk_real_estate
 (142, 8, 283, 200, 1, '', 'durur kasabada'),
 (143, 8, 283, 220, 3, 'nisf hisse', ''),
 (144, 8, 283, 67, 1, 'süls hisse', ''),
-(145, 7, 283, 38, 1, '', '');
+(145, 7, 283, 38, 1, '', ''),
+(146, 7, 288, 50, 1, '', 'kasabada'),
+(147, 8, 288, 320, 3, '', ''),
+(148, 1, 289, 800, 1, 'taş 1', 'Bayna'),
+(149, 8, 290, 220, 3, 'nisf hisse', ''),
+(150, 8, 290, 132, 1, '', ''),
+(151, 7, 290, 83, 2, '', ''),
+(152, 2, 292, 300, 1, 'nisf hisse', ''),
+(153, 8, 297, 140, 1, '', ''),
+(154, 8, 303, 80, 3, '', ''),
+(156, 8, 324, 600, 5, '', ''),
+(157, 8, 333, 340, 4, '', ''),
+(158, 2, 333, 200, 1, 'rub\' hisse', ''),
+(159, 1, 337, 600, 1, 'taş 2', 'Yeşinçe karyesi'),
+(160, 8, 337, 295, 7, '', ''),
+(161, 1, 338, 1200, 1, 'Nisf hisse. Taş 4', 'Niş'),
+(162, 8, 338, 250, 7, 'Nisf hisse', 'Asıyabın ittisalında'),
+(163, 8, 338, 348, 5, '', ''),
+(164, 7, 338, 24, 1, '', ''),
+(165, 8, 339, 440, 4, '', ''),
+(166, 8, 340, 90, 1, '', ''),
+(167, 8, 340, 120, 2, '', ''),
+(168, 8, 340, 440, 7, 'nisf hisse.', ''),
+(169, 8, 340, 40, 1, 'rub\' hisse', ''),
+(170, 3, 340, 300, 1, 'nisf hisse', ''),
+(171, 7, 340, 45, 2, 'hane yurdu', 'Varoş'),
+(172, 8, 341, 0, 1, 'muattal', 'Debbahanede'),
+(173, 1, 344, 3500, 1, 'taş 5', 'Yepişinçe'),
+(174, 8, 344, 1420, 12, '', ''),
+(175, 8, 344, 0, 1, 'muattal', 'Belgrad mahallesi'),
+(176, 8, 345, 120, 3, 'nisf hisse', ''),
+(177, 1, 347, 220, 1, 'bir miktar hisse', 'Yeşinçe'),
+(178, 7, 347, 20, 2, 'çiftlik', 'varoş dahilinde'),
+(179, 7, 348, 75, 0, 'çiftlik', ''),
+(180, 8, 349, 80, 1, '', ''),
+(181, 7, 349, 80, 0, 'çiftlik', ''),
+(182, 3, 350, 600, 1, '', 'Kotna'),
+(183, 7, 350, 250, 0, 'çiftlik', 'Varoş'),
+(184, 8, 350, 500, 5, '', ''),
+(185, 7, 351, 20, 2, 'çiftlik', ''),
+(186, 8, 352, 836, 11, '', ''),
+(187, 7, 358, 20, 1, '', ''),
+(188, 8, 360, 450, 3, '', '');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `tax`
+-- Table structure for table `tax`
 --
 
 CREATE TABLE `tax` (
   `tax_id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL DEFAULT '0'
+  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL DEFAULT '0',
+  `type_en` varchar(56) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `tax`
+-- Dumping data for table `tax`
 --
 
-INSERT INTO `tax` (`tax_id`, `type`) VALUES
-(3, 'bedel-i öşr-i bostan'),
-(4, 'bedel-i öşr-i kovan'),
-(8, 'cizye'),
-(7, 'resm-i adet-i ağnam'),
-(6, 'resm-i asıyab'),
-(5, 'resm-i bağ'),
-(1, 'vergi-i mahsuse'),
-(2, 'öşür (tarla)');
+INSERT INTO `tax` (`tax_id`, `type`, `type_en`) VALUES
+(1, 'vergi-i mahsuse', 'general tax'),
+(2, 'öşür (tarla)', 'tithe (field)'),
+(3, 'bedel-i öşr-i bostan', 'tithe (garden)'),
+(4, 'bedel-i öşr-i kovan', 'tithe (beehive)'),
+(5, 'resm-i bağ', 'vineyard tax'),
+(6, 'resm-i asıyab', 'mill tax'),
+(7, 'resm-i adet-i ağnam', 'sheep tax'),
+(8, 'cizye', 'poll tax (jizya)');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `tax_household`
+-- Table structure for table `tax_household`
 --
 
 CREATE TABLE `tax_household` (
@@ -1560,7 +1907,7 @@ CREATE TABLE `tax_household` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
--- Tablo döküm verisi `tax_household`
+-- Dumping data for table `tax_household`
 --
 
 INSERT INTO `tax_household` (`tax_household_id`, `fk_tax_id`, `fk_household_id`, `amount`, `is_exused`) VALUES
@@ -1757,14 +2104,73 @@ INSERT INTO `tax_household` (`tax_household_id`, `fk_tax_id`, `fk_household_id`,
 (213, 1, 280, 16, 0),
 (214, 5, 280, 10, 0),
 (215, 1, 283, 244, 0),
-(216, 5, 283, 5, 0);
+(216, 5, 283, 5, 0),
+(217, 1, 288, 192, 0),
+(218, 5, 288, 14, 0),
+(219, 1, 291, 24, 0),
+(220, 5, 291, 36, 0),
+(221, 2, 291, 110, 0),
+(222, 1, 292, 20, 0),
+(223, 1, 295, 8, 0),
+(224, 1, 296, 8, 0),
+(225, 1, 297, 16, 0),
+(226, 2, 297, 6, 0),
+(227, 5, 297, 8, 0),
+(228, 1, 298, 80, 0),
+(229, 1, 299, 2, 0),
+(230, 5, 303, 5, 0),
+(232, 1, 313, 5, 0),
+(233, 5, 313, 11, 0),
+(234, 5, 314, 10, 0),
+(235, 1, 317, 4, 0),
+(236, 1, 318, 4, 0),
+(240, 1, 321, 50, 0),
+(241, 1, 324, 24, 0),
+(242, 5, 324, 2, 0),
+(243, 1, 325, 4, 0),
+(244, 5, 325, 4, 0),
+(245, 1, 330, 4, 0),
+(246, 1, 333, 35, 0),
+(247, 5, 333, 8, 0),
+(248, 2, 333, 152, 0),
+(250, 1, 336, 10, 0),
+(251, 5, 336, 5, 0),
+(252, 1, 337, 60, 0),
+(253, 2, 337, 49, 0),
+(254, 1, 338, 152, 0),
+(255, 2, 338, 29, 0),
+(256, 1, 340, 190, 0),
+(257, 5, 340, 15, 0),
+(258, 1, 341, 42, 0),
+(259, 5, 341, 30, 0),
+(260, 1, 344, 238, 0),
+(261, 5, 344, 30, 0),
+(262, 1, 345, 6, 0),
+(263, 1, 346, 34, 0),
+(264, 5, 346, 4, 0),
+(265, 1, 350, 466, 0),
+(266, 4, 350, 5, 0),
+(267, 5, 350, 10, 0),
+(268, 1, 352, 102, 0),
+(269, 2, 352, 37, 0),
+(270, 5, 355, 6, 0),
+(271, 2, 355, 17, 0),
+(272, 1, 359, 85, 0),
+(273, 1, 360, 25, 0),
+(274, 5, 360, 14, 0);
 
 --
--- Dökümü yapılmış tablolar için indeksler
+-- Indexes for dumped tables
 --
 
 --
--- Tablo için indeksler `household`
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Indexes for table `household`
 --
 ALTER TABLE `household`
   ADD PRIMARY KEY (`household_id`),
@@ -1772,20 +2178,20 @@ ALTER TABLE `household`
   ADD KEY `fk_location_name_id` (`fk_location_name_id`);
 
 --
--- Tablo için indeksler `household_member_type`
+-- Indexes for table `household_member_type`
 --
 ALTER TABLE `household_member_type`
   ADD PRIMARY KEY (`household_member_type_id`);
 
 --
--- Tablo için indeksler `land`
+-- Indexes for table `land`
 --
 ALTER TABLE `land`
   ADD PRIMARY KEY (`land_id`),
   ADD UNIQUE KEY `type` (`type`);
 
 --
--- Tablo için indeksler `land_household`
+-- Indexes for table `land_household`
 --
 ALTER TABLE `land_household`
   ADD PRIMARY KEY (`land_household_id`),
@@ -1793,14 +2199,14 @@ ALTER TABLE `land_household`
   ADD KEY `fk_household_id_household_land_household_id` (`fk_household_id`);
 
 --
--- Tablo için indeksler `livestock`
+-- Indexes for table `livestock`
 --
 ALTER TABLE `livestock`
   ADD PRIMARY KEY (`livestock_id`),
   ADD UNIQUE KEY `type` (`type`);
 
 --
--- Tablo için indeksler `livestock_household`
+-- Indexes for table `livestock_household`
 --
 ALTER TABLE `livestock_household`
   ADD PRIMARY KEY (`livestock_household_id`),
@@ -1808,7 +2214,7 @@ ALTER TABLE `livestock_household`
   ADD KEY `fk_household_id_livestock_household_household_id` (`fk_household_id`);
 
 --
--- Tablo için indeksler `location_name`
+-- Indexes for table `location_name`
 --
 ALTER TABLE `location_name`
   ADD PRIMARY KEY (`location_name_id`),
@@ -1816,14 +2222,14 @@ ALTER TABLE `location_name`
   ADD KEY `fk_location_type_id_location_type` (`fk_location_type_id`);
 
 --
--- Tablo için indeksler `location_type`
+-- Indexes for table `location_type`
 --
 ALTER TABLE `location_type`
   ADD PRIMARY KEY (`location_type_id`),
   ADD UNIQUE KEY `type` (`type`);
 
 --
--- Tablo için indeksler `occupation`
+-- Indexes for table `occupation`
 --
 ALTER TABLE `occupation`
   ADD PRIMARY KEY (`occupation_id`),
@@ -1831,7 +2237,7 @@ ALTER TABLE `occupation`
   ADD KEY `fk_occupation_id_occupation_id` (`fk_occupation_id`);
 
 --
--- Tablo için indeksler `occupation_household`
+-- Indexes for table `occupation_household`
 --
 ALTER TABLE `occupation_household`
   ADD PRIMARY KEY (`occupation_household_id`),
@@ -1839,14 +2245,14 @@ ALTER TABLE `occupation_household`
   ADD KEY `fk_household_id` (`fk_household_id`);
 
 --
--- Tablo için indeksler `real_estate`
+-- Indexes for table `real_estate`
 --
 ALTER TABLE `real_estate`
   ADD PRIMARY KEY (`real_estate_id`),
   ADD UNIQUE KEY `type` (`type`);
 
 --
--- Tablo için indeksler `real_estate_household`
+-- Indexes for table `real_estate_household`
 --
 ALTER TABLE `real_estate_household`
   ADD PRIMARY KEY (`real_estate_household_id`),
@@ -1854,14 +2260,14 @@ ALTER TABLE `real_estate_household`
   ADD KEY `fk_real_estate_id_real_estate` (`fk_real_estate_id`);
 
 --
--- Tablo için indeksler `tax`
+-- Indexes for table `tax`
 --
 ALTER TABLE `tax`
   ADD PRIMARY KEY (`tax_id`),
   ADD UNIQUE KEY `type` (`type`);
 
 --
--- Tablo için indeksler `tax_household`
+-- Indexes for table `tax_household`
 --
 ALTER TABLE `tax_household`
   ADD PRIMARY KEY (`tax_household_id`),
@@ -1869,147 +2275,153 @@ ALTER TABLE `tax_household`
   ADD KEY `fk_household_id_household_household_id` (`fk_household_id`);
 
 --
--- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Tablo için AUTO_INCREMENT değeri `household`
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `household`
 --
 ALTER TABLE `household`
-  MODIFY `household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;
+  MODIFY `household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=361;
 
 --
--- Tablo için AUTO_INCREMENT değeri `household_member_type`
+-- AUTO_INCREMENT for table `household_member_type`
 --
 ALTER TABLE `household_member_type`
-  MODIFY `household_member_type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `household_member_type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Tablo için AUTO_INCREMENT değeri `land`
+-- AUTO_INCREMENT for table `land`
 --
 ALTER TABLE `land`
   MODIFY `land_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Tablo için AUTO_INCREMENT değeri `land_household`
+-- AUTO_INCREMENT for table `land_household`
 --
 ALTER TABLE `land_household`
-  MODIFY `land_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=274;
+  MODIFY `land_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=346;
 
 --
--- Tablo için AUTO_INCREMENT değeri `livestock`
+-- AUTO_INCREMENT for table `livestock`
 --
 ALTER TABLE `livestock`
   MODIFY `livestock_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- Tablo için AUTO_INCREMENT değeri `livestock_household`
+-- AUTO_INCREMENT for table `livestock_household`
 --
 ALTER TABLE `livestock_household`
-  MODIFY `livestock_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=198;
+  MODIFY `livestock_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=264;
 
 --
--- Tablo için AUTO_INCREMENT değeri `location_name`
+-- AUTO_INCREMENT for table `location_name`
 --
 ALTER TABLE `location_name`
   MODIFY `location_name_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- Tablo için AUTO_INCREMENT değeri `location_type`
+-- AUTO_INCREMENT for table `location_type`
 --
 ALTER TABLE `location_type`
   MODIFY `location_type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Tablo için AUTO_INCREMENT değeri `occupation`
+-- AUTO_INCREMENT for table `occupation`
 --
 ALTER TABLE `occupation`
   MODIFY `occupation_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
 
 --
--- Tablo için AUTO_INCREMENT değeri `occupation_household`
+-- AUTO_INCREMENT for table `occupation_household`
 --
 ALTER TABLE `occupation_household`
-  MODIFY `occupation_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;
+  MODIFY `occupation_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=366;
 
 --
--- Tablo için AUTO_INCREMENT değeri `real_estate`
+-- AUTO_INCREMENT for table `real_estate`
 --
 ALTER TABLE `real_estate`
-  MODIFY `real_estate_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `real_estate_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Tablo için AUTO_INCREMENT değeri `real_estate_household`
+-- AUTO_INCREMENT for table `real_estate_household`
 --
 ALTER TABLE `real_estate_household`
-  MODIFY `real_estate_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
+  MODIFY `real_estate_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
 
 --
--- Tablo için AUTO_INCREMENT değeri `tax`
+-- AUTO_INCREMENT for table `tax`
 --
 ALTER TABLE `tax`
   MODIFY `tax_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Tablo için AUTO_INCREMENT değeri `tax_household`
+-- AUTO_INCREMENT for table `tax_household`
 --
 ALTER TABLE `tax_household`
-  MODIFY `tax_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
+  MODIFY `tax_household_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=275;
 
 --
--- Dökümü yapılmış tablolar için kısıtlamalar
+-- Constraints for dumped tables
 --
 
 --
--- Tablo kısıtlamaları `household`
+-- Constraints for table `household`
 --
 ALTER TABLE `household`
   ADD CONSTRAINT `fk_household_member_type_id` FOREIGN KEY (`fk_household_member_type_id`) REFERENCES `household_member_type` (`household_member_type_id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_location_name_id` FOREIGN KEY (`fk_location_name_id`) REFERENCES `location_name` (`location_name_id`) ON UPDATE CASCADE;
 
 --
--- Tablo kısıtlamaları `land_household`
+-- Constraints for table `land_household`
 --
 ALTER TABLE `land_household`
   ADD CONSTRAINT `fk_household_id_household_land_household_id` FOREIGN KEY (`fk_household_id`) REFERENCES `household` (`household_id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_land_id_land_land_id` FOREIGN KEY (`fk_land_id`) REFERENCES `land` (`land_id`) ON UPDATE CASCADE;
 
 --
--- Tablo kısıtlamaları `livestock_household`
+-- Constraints for table `livestock_household`
 --
 ALTER TABLE `livestock_household`
   ADD CONSTRAINT `fk_household_id_livestock_household_household_id` FOREIGN KEY (`fk_household_id`) REFERENCES `household` (`household_id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_livestock_id_livestock_livestock_id` FOREIGN KEY (`fk_livestock_id`) REFERENCES `livestock` (`livestock_id`) ON UPDATE CASCADE;
 
 --
--- Tablo kısıtlamaları `location_name`
+-- Constraints for table `location_name`
 --
 ALTER TABLE `location_name`
   ADD CONSTRAINT `fk_location_name_id_location_name` FOREIGN KEY (`fk_location_name_id`) REFERENCES `location_name` (`location_name_id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_location_type_id_location_type` FOREIGN KEY (`fk_location_type_id`) REFERENCES `location_type` (`location_type_id`) ON UPDATE CASCADE;
 
 --
--- Tablo kısıtlamaları `occupation`
+-- Constraints for table `occupation`
 --
 ALTER TABLE `occupation`
   ADD CONSTRAINT `fk_occupation_id_occupation_id` FOREIGN KEY (`fk_occupation_id`) REFERENCES `occupation` (`occupation_id`) ON UPDATE CASCADE;
 
 --
--- Tablo kısıtlamaları `occupation_household`
+-- Constraints for table `occupation_household`
 --
 ALTER TABLE `occupation_household`
   ADD CONSTRAINT `fk_household_id` FOREIGN KEY (`fk_household_id`) REFERENCES `household` (`household_id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_occupation_id` FOREIGN KEY (`fk_occupation_id`) REFERENCES `occupation` (`occupation_id`) ON UPDATE CASCADE;
 
 --
--- Tablo kısıtlamaları `real_estate_household`
+-- Constraints for table `real_estate_household`
 --
 ALTER TABLE `real_estate_household`
   ADD CONSTRAINT `fk_household_id_household` FOREIGN KEY (`fk_household_id`) REFERENCES `household` (`household_id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_real_estate_id_real_estate` FOREIGN KEY (`fk_real_estate_id`) REFERENCES `real_estate` (`real_estate_id`) ON UPDATE CASCADE;
 
 --
--- Tablo kısıtlamaları `tax_household`
+-- Constraints for table `tax_household`
 --
 ALTER TABLE `tax_household`
   ADD CONSTRAINT `fk_household_id_household_household_id` FOREIGN KEY (`fk_household_id`) REFERENCES `household` (`household_id`) ON UPDATE CASCADE,
