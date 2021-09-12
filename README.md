@@ -14,6 +14,6 @@ The app has a dynamic input form for creating entries for each household member 
 
 **Browse households** section will show all available info for the chosen household id. **Household list** shows the list of all households, with links to examine details for every individual household. Households can be edited, but the delete option is currently reserved only for the last added household, accessible through **last added** link in the navbar.
 
-# Setup
+## Setup
 
 To set up the app in localhost (for XAMPP users) import the *ottoman.sql* file into a MySQL database (via phpMyAdmin), adjust database connection in the *conn.php* file and copy the entire project folder to *xampp/htdocs*.
