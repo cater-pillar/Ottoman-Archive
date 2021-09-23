@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Models;
+
+use App\Core\App;
+
 class Livestock {
     public $type;
     public $type_en;

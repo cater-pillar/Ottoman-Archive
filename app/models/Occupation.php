@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Models;
+
+use App\Core\App;
+
 class Occupation {
     public $name;
     public $name_en;
