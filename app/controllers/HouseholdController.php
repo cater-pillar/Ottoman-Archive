@@ -1,41 +1,47 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
+use App\Models\{Household, Land, Livestock, Occupation, RealEstate, Tax};
+
+
 class HouseholdsController {
 
     protected static function buildHousehold() {
         $occupation = App::get('database')
         ->selectClassPerId(
-            'Occupation', 
+            'App\\Models\\Occupation', 
             ['id' => $_GET['id']]
         );
 
         $tax = App::get('database')
         ->selectClassPerId(
-            'Tax', 
+            'App\\Models\\Tax', 
             ['id' => $_GET['id']]
         );
 
         $land = App::get('database')
         ->selectClassPerId(
-            'Land', 
+            'App\\Models\\Land', 
             ['id' => $_GET['id']]
         );
 
         $real_estate = App::get('database')
         ->selectClassPerId(
-            'RealEstate', 
+            'App\\Models\\RealEstate', 
             ['id' => $_GET['id']]
         );
 
         $livestock = App::get('database')
         ->selectClassPerId(
-            'Livestock', 
+            'App\\Models\\Livestock', 
             ['id' => $_GET['id']]
         );
 
         $household = App::get('database')
         ->selectClassPerId(
-            'Household', 
+            'App\\Models\\Household', 
             ['id' => $_GET['id']]
         );
 

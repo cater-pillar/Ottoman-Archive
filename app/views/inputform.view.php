@@ -222,7 +222,7 @@
         </form>
     </div>
     <?php require 'partials/jquery.php' ?>
-    <script src="script.js"></script>
+    <script src="public/script.js"></script>
     </body>
 </html>
 

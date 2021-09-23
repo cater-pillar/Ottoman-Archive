@@ -1,8 +1,9 @@
 <?php
 
-/* require 'core/App.php'; */
+namespace App\Controllers;
 
-
+use App\Core\App;
+use App\Models\{Household, Land, Livestock, Occupation, RealEstate, Tax};
 
 class PagesController {
 
@@ -38,7 +39,7 @@ class PagesController {
     public function householdList()
 {
     $households = App::get('database')
-    ->selectClassAll('Household');
+    ->selectClassAll('App\\Models\\Household');
     return view('householdlist', ['households' => $households]);
 }
 

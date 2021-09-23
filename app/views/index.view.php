@@ -33,7 +33,7 @@
             </div>
             <div class='col-sm-6'>
                 
-                <img src='img-example.PNG' class="img-thumbnail">
+                <img src='assets/img-example.PNG' class="img-thumbnail">
                 <p>Example image from the registers</p>
             </div>
         </div>
