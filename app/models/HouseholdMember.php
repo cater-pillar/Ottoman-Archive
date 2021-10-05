@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Core\App;
 
-class Livestock {
+class HouseholdMember {
 
     public $id;
     public $type;
@@ -12,7 +12,7 @@ class Livestock {
 
     static public function index()
     {
-        return App::get('database')->selectAll('livestock', 'type');
+        return App::get('database')->selectAll('household_member_type', 'type');
     }
 
 

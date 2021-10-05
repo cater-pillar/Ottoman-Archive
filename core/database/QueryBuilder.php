@@ -95,6 +95,43 @@ class QueryBuilder {
         
     }
 
+
+    public function update($arr, $table, $row_id, $id) {
+
+   /*      die(var_dump($arr));  */
+
+        $string = '';
+        foreach ($arr as $key => $value) {
+            $string = "{$string}{$key}=:{$key},";
+        }
+
+        $string = trim($string, ',');
+
+      
+
+        $sql = "UPDATE 
+        {$table}  
+        SET
+        {$string}
+        WHERE 
+        {$row_id} = :{$row_id}";
+
+
+        $arr[$row_id] = $id;
+
+      /*   die(var_dump($arr)); */
+ 
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($arr);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        };
+
+        
+    }
+
+
     public function editHousehold() {
         
     }
