@@ -19,6 +19,116 @@ class Household {
     public $real_estates = [];
     public $livestock = [];
 
+
+    public static function index()
+    {
+        return App::get('database')
+                ->selectClassAll('App\\Models\\Household');
+    }
+
+    public static function show($id) {
+        $occupation = App::get('database')
+        ->selectClassPerId(
+            'App\\Models\\OccupationHousehold', 
+            ['id' => $id]
+        );
+
+        $tax = App::get('database')
+        ->selectClassPerId(
+            'App\\Models\\TaxHousehold', 
+            ['id' => $id]
+        );
+
+        $land = App::get('database')
+        ->selectClassPerId(
+            'App\\Models\\LandHousehold', 
+            ['id' => $id]
+        );
+
+        $real_estate = App::get('database')
+        ->selectClassPerId(
+            'App\\Models\\RealEstateHousehold', 
+            ['id' => $id]
+        );
+
+        $livestock = App::get('database')
+        ->selectClassPerId(
+            'App\\Models\\LivestockHousehold', 
+            ['id' => $id]
+        );
+
+        $household = App::get('database')
+        ->selectClassPerId(
+            'App\\Models\\Household', 
+            ['id' => $id]
+        );
+
+        $household = $household[0];
+        $household->add($occupation, 'occupations');
+        $household->add($tax, 'taxes');
+        $household->add($land, 'lands');
+        $household->add($real_estate, 'real_estates');
+        $household->add($livestock, 'livestock');
+
+        return $household;
+    }
+
+    static public function create()
+    {
+        return App::get('database')->insert('household', 
+        [
+            ':fk_location_name_id' =>  $_POST['location'],
+            ':member_forname' => $_POST['forname'],
+            ':member_surname' => $_POST['surname'],
+            ':fk_household_member_type_id' => $_POST['member_type'],
+            ':household_number' => $_POST['household_number'],
+            ':notes' => $_POST['household_notes']
+        ]);
+    }
+
+    static public function destroy($id)
+    {
+        return App::get('database')->delete('household', 
+                                     'household.household_id', 
+                                     $id);
+    }
+
+    
+
+    static public function update($arr, $id) {
+
+        try {
+            App::get('database')->update(
+                $arr,
+                'household',
+                'household_id',
+                $id
+            );
+        }
+        catch(Exception $e) {
+            $e->getMessage();
+        } 
+    }
+
+
+    static public function performEdit($column, $value, $id) {
+
+        try {
+            App::get('database')->edit(
+                'household',
+                $column,
+                'household_id',
+                $value,
+                $id
+            );
+        }
+        catch(Exception $e) {
+            $e->getMessage();
+        } 
+    }
+
+
+
     static public function select($id)
     {
 
@@ -107,19 +217,5 @@ class Household {
         return $sum;
     }
 
-    static public function performEdit($column, $value, $id) {
 
-        try {
-            App::get('database')->edit(
-                'household',
-                $column,
-                'household_id',
-                $value,
-                $id
-            );
-        }
-        catch(Exception $e) {
-            $e->getMessage();
-        } 
-    }
 }
