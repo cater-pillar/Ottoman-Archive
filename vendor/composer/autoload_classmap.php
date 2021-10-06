@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controllers\\HouseholdsController' => $baseDir . '/app/controllers/HouseholdController.php',
+    'App\\Controllers\\JsonController' => $baseDir . '/app/controllers/JsonController.php',
     'App\\Controllers\\PagesController' => $baseDir . '/app/controllers/PagesController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',

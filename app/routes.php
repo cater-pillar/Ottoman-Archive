@@ -23,3 +23,17 @@ $router-> post('delete', 'HouseholdsController@destroy');
 
 $router-> post('insert', 'HouseholdsController@create');
 
+
+
+$router-> get('occupation', 'JsonController@occupationIndex');
+$router-> get('occupation/show', 'JsonController@occupationShow');
+$router-> get('tax', 'JsonController@taxIndex');
+$router-> get('tax/show', 'JsonController@taxShow');
+$router-> get('land', 'JsonController@landIndex');
+$router-> get('land/show', 'JsonController@landShow');
+$router-> get('realestate', 'JsonController@realestateIndex');
+$router-> get('realestate/show', 'JsonController@realestateShow');
+$router-> get('livestock', 'JsonController@livestockIndex');
+$router-> get('livestock/show', 'JsonController@livestockShow');
+
+
