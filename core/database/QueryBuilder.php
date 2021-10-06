@@ -1,7 +1,6 @@
 <?php
 
 
-
 class QueryBuilder {
 
     protected $pdo;
@@ -12,18 +11,102 @@ class QueryBuilder {
     }
 
 
-    public function selectAll($table, $orderby)
-    {
-        $statement = $this->pdo->prepare("SELECT * FROM {$table} ORDER BY {$orderby}");
+    public function selectAll($table, $orderby) {
+        
+        $statement = $this->pdo->
+        prepare("SELECT * FROM {$table} ORDER BY {$orderby}");
 
         $statement->execute();
 
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
-    public function selectMaxId()
+    public function select($table, $orderby, $id_name, $id) {
+        
+        $statement = $this->pdo->
+        prepare(
+            "SELECT * FROM {$table} 
+             WHERE {$id_name} = {$id} 
+             ORDER BY {$orderby}");
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
+
+    public function insert($table, $parameters) {
+        
+        $sql = sprintf(
+            'insert into %s (%s) values (%s)',
+            $table,
+            str_replace(':', '', implode(
+                ', ', array_keys($parameters))
+            ),
+            implode(', ', array_keys($parameters))
+        );
+       
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parameters);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        };         
+    }
+
+
+    public function update($arr, $table, $row_id, $id) {
+
+        $string = '';
+        foreach ($arr as $key => $value) {
+            $string = "{$string}{$key}=:{$key},";
+        }
+
+        $string = trim($string, ',');
+
+        $sql = "UPDATE 
+            {$table}  
+            SET
+            {$string}
+            WHERE 
+            {$row_id} = :{$row_id}";
+
+        $arr[$row_id] = $id;
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($arr);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        };   
+    }
+
+
+    public function delete($table, $id, $value) {     
+        try {
+            $statement = $this->pdo->prepare(
+                "DELETE FROM {$table} 
+                WHERE {$id} = {$value}");
+            $statement->execute();
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+ 
+
+
+
+
+
+
+
+
+
+public function selectMaxId()
     {
-        $statement = $this->pdo->prepare("SELECT MAX(household_id) FROM household");
+        $statement = $this->pdo
+        ->prepare("SELECT MAX(household_id) FROM household");
 
         $statement->execute();
 
@@ -73,92 +156,14 @@ class QueryBuilder {
         return $statement->fetchAll(PDO::FETCH_COLUMN);
     }
 
-    public function edit($table, $set_key, $id_key, $set_value, $id_value)
-    {
-        $sql = "UPDATE 
-        {$table}  
-        SET
-        {$set_key} = :x
-        WHERE 
-        {$id_key} = :id";
-
-        try {
-            $statement = $this->pdo->prepare($sql);
-            $statement->execute([
-                ':x' => $set_value,
-                ':id' => $id_value
-            ]);
-        } catch(Exception $e) {
-            die($e->getMessage());
-        };
-
-        
-    }
 
 
-    public function update($arr, $table, $row_id, $id) {
-
-   /*      die(var_dump($arr));  */
-
-        $string = '';
-        foreach ($arr as $key => $value) {
-            $string = "{$string}{$key}=:{$key},";
-        }
-
-        $string = trim($string, ',');
-
-      
-
-        $sql = "UPDATE 
-        {$table}  
-        SET
-        {$string}
-        WHERE 
-        {$row_id} = :{$row_id}";
 
 
-        $arr[$row_id] = $id;
-
-      /*   die(var_dump($arr)); */
- 
-        try {
-            $statement = $this->pdo->prepare($sql);
-            $statement->execute($arr);
-        } catch(Exception $e) {
-            die($e->getMessage());
-        };
-
-        
-    }
 
 
-    public function editHousehold() {
-        
-    }
 
 
-    public function insert($table, $parameters) {
-        
-
-            $sql = sprintf(
-                'insert into %s (%s) values (%s)',
-                $table,
-                str_replace(':', '', implode(', ', array_keys($parameters))),
-                implode(', ', array_keys($parameters))
-            );
-            
-           /*  die(var_dump($sql)); */
-           
-            try {
-                $statement = $this->pdo->prepare($sql);
-
-                $statement->execute($parameters);
-
-            } catch(Exception $e) {
-                die($e->getMessage());
-            };
-            
-    }
 
     public function lastId()
     {
@@ -170,19 +175,7 @@ class QueryBuilder {
     }
 
 
-    public function delete($table, $id, $value)
-    {
-        
-        try {
-            $statement = $this->pdo->prepare(
-                "DELETE FROM {$table} 
-                WHERE {$id} = {$value}");
-            $statement->execute();
-        } catch(Exception $e) {
-            die($e->getMessage());
-        }
-        
-    }
+
 
     public function count($entry, $table)
     {

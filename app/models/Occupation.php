@@ -11,10 +11,29 @@ class Occupation {
     public $name_en;
     public $fk_occupation_id;
 
-    static public function index()
-    {
-        return App::get('database')->selectAll('occupation', 'name');
+    static public function index() {
+        return App::get('database')
+        ->selectAll('occupation', 'name');
     }
 
+    static public function create($parameters) {
+        return App::get('database')
+        ->insert('occupation', $parameters);
+    }
+
+    static public function show($id) {
+        return App::get('database')
+        ->select('occupation', 'name', 'occupation_id', $id);
+    }
+
+    static public function destroy($id) {
+        return App::get('database')
+        ->delete('occupation', 'occupation_id', $id);
+    }
+
+    static public function update($arr, $id) {
+        return App::get('database')
+        ->update($arr, 'occupation', 'occupation_id', $id);
+    }
 
 }

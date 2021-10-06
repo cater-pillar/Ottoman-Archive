@@ -27,9 +27,10 @@ class LivestockHousehold {
 
     static public function destroy($id)
     {
-        return App::get('database')->delete('livestock_household', 
-                                     'livestock_household.fk_household_id', 
-                                     $id);
+        return App::get('database')
+        ->delete('livestock_household', 
+                'livestock_household.fk_household_id', 
+                $id);
     }
 
     static public function update($arr, $id) {

@@ -85,7 +85,7 @@ function getOccupationForm() {
   let xhr = new XMLHttpRequest();
 
   // I obtain data from table Occupation in JSON format
-  xhr.open('GET', 'json/occupation.json', true); 
+  xhr.open('GET', '/occupation', true); 
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -158,7 +158,7 @@ function getTaxesForm() {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'json/taxes.json', true);
+  xhr.open('GET', '/tax', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -198,7 +198,7 @@ function getLandForm() {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'json/land.json', true);
+  xhr.open('GET', '/land', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -265,7 +265,7 @@ function getRealEstateForm(e) {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'json/real_estate.json', true);
+  xhr.open('GET', '/realestate', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -339,7 +339,7 @@ function getLivestockForm(e) {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'json/livestock.json', true);
+  xhr.open('GET', '/livestock', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
