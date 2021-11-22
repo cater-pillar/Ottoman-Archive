@@ -14,28 +14,30 @@ class OccupationHousehold {
     static public function create($fk_occupation_id, 
                                   $income, 
                                   $fk_household_id, 
-                                  $type)
-    {
-        return App::get('database')->insert('occupation_household', 
-                [
-                    ':fk_occupation_id' => $fk_occupation_id,
-                    ':income' => $income,
-                    ':fk_household_id' => $fk_household_id,
-                    ':type' => $type
-                ]);
+                                  $type) {
+        if (!is_numeric($income)) {$income = null;};
+        return App::get('database')
+        ->insert('occupation_household', 
+            [
+                ':fk_occupation_id' => $fk_occupation_id,
+                ':income' => $income,
+                ':fk_household_id' => $fk_household_id,
+                ':type' => $type
+            ]);
     }
 
 
     public function destroy($id)
     {
-        return App::get('database')->delete('occupation_household', 
-                                     'occupation_household.fk_household_id', 
-                                     $id);
+        return App::get('database')
+        ->delete('occupation_household', 
+            'occupation_household.fk_household_id', 
+            $id);
     }
 
 
     static public function update($arr, $id) {
-
+        if (!is_numeric($arr['income'])) {$arr['income'] = null;};
         try {
             App::get('database')->update(
                 $arr,
@@ -48,6 +50,10 @@ class OccupationHousehold {
             $e->getMessage();
         } 
     }
+
+
+
+
 
     static public function select($id)
     {
@@ -64,11 +70,10 @@ class OccupationHousehold {
         WHERE 
             occupation_household.fk_household_id = {$id}
         AND 
-            occupation.occupation_id = 
+            occupation.id = 
             occupation_household.fk_occupation_id
         ORDER BY
             occupation.`name`";
-        
 
     }
 
@@ -83,19 +88,4 @@ class OccupationHousehold {
                 fk_household_id = :id";
     }
 
-    static public function performEdit($column, $value, $id) {
-
-        try {
-            App::get('database')->edit(
-                'occupation_household',
-                $column,
-                'occupation_household_id',
-                $value,
-                $id
-            );
-        }
-        catch(Exception $e) {
-            $e->getMessage();
-        }    
-    }
 }

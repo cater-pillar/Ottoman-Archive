@@ -225,7 +225,7 @@ class HouseholdsController {
            ];
 
         if (isset($_POST['land_type'.$i_land])) {
-            $taxData['fk_land_id'] = 
+            $landData['fk_land_id'] = 
             $_POST['land_type'.$i_land];
            }
 

@@ -21,31 +21,35 @@ class LandHousehold {
                                   $payed_rent,
                                   $location,
                                   $description,
-                                  $fk_household_id)
-    {
-        return App::get('database')->insert('land_household', 
-                [
-                    ':fk_land_id' =>  $fk_land_id,
-                    ':area' => $area,
-                    ':income' => $income,
-                    ':payed_rent' => $payed_rent,
-                    ':location' => $location,
-                    ':description' => $description,
-                    ':fk_household_id' => $fk_household_id
-                ]);
+                                  $fk_household_id) {
+        if (!is_numeric($area)) {$area = null;};
+        if (!is_numeric($income)) {$income = null;};
+        if (!is_numeric($payed_rent)) {$payed_rent = null;};
+        return App::get('database')
+        ->insert('land_household', 
+            [
+                ':fk_land_id' =>  $fk_land_id,
+                ':area' => $area,
+                ':income' => $income,
+                ':payed_rent' => $payed_rent,
+                ':location' => $location,
+                ':description' => $description,
+                ':fk_household_id' => $fk_household_id
+            ]);
     }
 
-    static public function destroy($id)
-    {
-        return App::get('database')->delete(
+    static public function destroy($id) {
+        return App::get('database')
+        ->delete(
             "land_household", 
             "land_household.fk_household_id", 
             $id);
     }
 
-
     static public function update($arr, $id) {
-
+        if (!is_numeric($arr['area'])) {$arr['area'] = null;};
+        if (!is_numeric($arr['income'])) {$arr['income'] = null;};
+        if (!is_numeric($arr['payed_rent'])) {$arr['payed_rent'] = null;};
         try {
             App::get('database')->update(
                 $arr,
@@ -59,13 +63,15 @@ class LandHousehold {
         } 
     }
 
-    static public function select($id)
-    {
+
+
+
+    static public function select($id) {
 
         return
             "SELECT 
-            land.`type`,
-            land.`type_en`, 
+            land.`name`,
+            land.`name_en`, 
             land_household.area, 
             land_household.income,
             land_household.payed_rent, 
@@ -77,13 +83,12 @@ class LandHousehold {
         WHERE 
             land_household.fk_household_id = {$id} 
         AND 
-            land.land_id = land_household.fk_land_id
+            land.id = land_household.fk_land_id
         ORDER BY
-            land.`type`";
+            land.`name`";
     }
 
-    static public function getId()
-    {
+    static public function getId() {
         return  "SELECT
         land_household.land_household_id AS id
         FROM
@@ -92,27 +97,11 @@ class LandHousehold {
         WHERE
         fk_household_id = :id
         AND
-        land_household.fk_land_id = land.land_id
+        land_household.fk_land_id = land.id
         GROUP BY
         land_household.land_household_id
         ORDER BY
-        land.`type`";
+        land.`name`";
     }
 
-    static public function performEdit($column, $value, $id) {
-
-        try {
-            App::get('database')->edit(
-                'land_household',
-                $column,
-                'land_household_id',
-                $value,
-                $id
-            );
-        }
-        catch(Exception $e) {
-            $e->getMessage();
-        } 
-       
-    }
 }

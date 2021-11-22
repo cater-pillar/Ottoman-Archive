@@ -18,28 +18,31 @@ class RealEstateHousehold {
                                   $rent_income,
                                   $location,
                                   $description,
-                                  $fk_household_id)
-    {
-        return App::get('database')->insert('real_estate_household', 
-                [
-                    ':fk_real_estate_id' =>  $fk_real_estate_id,
-                    ':quantity' => $quantity,
-                    ':rent_income' => $rent_income,
-                    ':location' => $location,
-                    ':description' => $description,
-                    ':fk_household_id' => $fk_household_id
-                ]);
+                                  $fk_household_id) {
+        if (!is_numeric($quantity)) {$quantity = null;};
+        if (!is_numeric($rent_income)) {$rent_income = null;};
+        return App::get('database')
+        ->insert('real_estate_household', 
+            [
+                ':fk_real_estate_id' =>  $fk_real_estate_id,
+                ':quantity' => $quantity,
+                ':rent_income' => $rent_income,
+                ':location' => $location,
+                ':description' => $description,
+                ':fk_household_id' => $fk_household_id
+            ]);
     }
 
-    static public function destroy($id)
-    {
-        return App::get('database')->delete('real_estate_household', 
-                                     'real_estate_household.fk_household_id', 
-                                     $id);
+    static public function destroy($id) {
+        return App::get('database')
+        ->delete('real_estate_household', 
+                'real_estate_household.fk_household_id', 
+                $id);
     }
-
 
     static public function update($arr, $id) {
+        if (!is_numeric($arr['quantity'])) {$arr['quantity'] = null;};
+        if (!is_numeric($arr['rent_income'])) {$arr['rent_income'] = null;};
 
         try {
             App::get('database')->update(
@@ -54,13 +57,24 @@ class RealEstateHousehold {
         } 
     }
 
+
+
+
+
+
+
+
+
+
+
+
     static public function select($id)
     {
 
         return
             "SELECT 
-            real_estate.`type`,
-            real_estate.`type_en`,
+            real_estate.`name`,
+            real_estate.`name_en`,
             real_estate_household.quantity,
             real_estate_household.rent_income AS `income`,
             real_estate_household.location, 
@@ -71,10 +85,10 @@ class RealEstateHousehold {
         WHERE 
             real_estate_household.fk_household_id = {$id} 
         AND 
-            real_estate.real_estate_id = 
+            real_estate.id = 
             real_estate_household.fk_real_estate_id
         ORDER BY
-            real_estate.`type`";
+            real_estate.`name`";
         
 
     }
@@ -90,27 +104,11 @@ class RealEstateHousehold {
                 WHERE
                 fk_household_id = :id
                 AND
-                real_estate_household.fk_real_estate_id = real_estate.real_estate_id
+                real_estate_household.fk_real_estate_id = real_estate.id
                 GROUP BY
                 real_estate_household.real_estate_household_id
                 ORDER BY
-                real_estate.`type`";
+                real_estate.`name`";
     }
 
-    static public function performEdit($column, $value, $id) {
-
-        try {
-            App::get('database')->edit(
-                'real_estate_household',
-                $column,
-                'real_estate_household_id',
-                $value,
-                $id
-            );
-        }
-        catch(Exception $e) {
-            $e->getMessage();
-        } 
-       
-    }
 }

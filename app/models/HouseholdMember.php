@@ -12,7 +12,7 @@ class HouseholdMember {
 
     static public function index()
     {
-        return App::get('database')->selectAll('household_member_type', 'type');
+        return App::get('database')->selectAll('household_member_type', 'name');
     }
 
 

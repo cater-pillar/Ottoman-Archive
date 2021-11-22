@@ -64,7 +64,7 @@
                         </option>
                     <?php foreach ($member_types as $members): ?>
                         <option value="<?= $members->household_member_type_id?>" >
-                    <?= $members->type .'/'. $members->type_en ?>
+                    <?= $members->name .'/'. $members->name_en ?>
                         </option>
                     <?php  endforeach; ?>
                     </select>
@@ -76,7 +76,7 @@
                 <textarea   id="household_notes" 
                             name="household_notes" 
                             class="form-control" 
-                            value=<?=$household->notes ?>>
+                            value="<?=$household->notes ?>">
                     <?=$household->notes ?>
                 </textarea>
             <?php endif; ?>
@@ -97,7 +97,7 @@
                             <?= $occupation->name .'/'. $occupation->name_en ?> 
                         </option>
                           <?php foreach ($occupations as $occ): ?>
-                          <option value="<?= $occ->occupation_id?>" >
+                          <option value="<?= $occ->id?>" >
                             <?= $occ->name .'/'. $occ->name_en ?>
                           </option>
                           <?php  endforeach; ?>
@@ -105,8 +105,8 @@
                 <td><input type="number" id=<?= "occupation_income".$i_occ ?> 
                            name=<?= "occupation_income".$i_occ ?> 
                            class="form-control" 
-                           placeholder=<?= $occupation->income?>
-                           value=<?= $occupation->income?> >
+                           placeholder="<?= $occupation->income?>"
+                           value="<?= $occupation->income?>" >
                 <td><?= $occupation->type?>
                 <?php $i_occ++ ?>
             <?php endforeach; ?>
@@ -125,11 +125,11 @@
                             name=<?= "tax_type".$i_tax ?> 
                             class="form-control">
                          <option value="" disabled selected> 
-                            <?= $tax->type .'/'. $tax->type_en?> 
+                            <?= $tax->name .'/'. $tax->name_en?> 
                          </option>
                           <?php foreach ($taxes as $tx): ?>
-                            <option value="<?= $tx->tax_id?>" >
-                                <?= $tx->type .'/'.  $tx->type_en ?>
+                            <option value="<?= $tx->id?>" >
+                                <?= $tx->name .'/'.  $tx->name_en ?>
                             </option>
                           <?php  endforeach; ?>
                     </select>
@@ -137,8 +137,8 @@
                            id=<?= "tax_amount".$i_tax ?> 
                            name=<?= "tax_amount".$i_tax ?> 
                            class="form-control" 
-                           placeholder=<?= $tax->amount?>
-                           value=<?= $tax->amount?> >
+                           placeholder="<?= $tax->amount?>"
+                           value="<?= $tax->amount?>" >
                 <td><?= $tax->is_exused?>
                 <?php $i_tax++ ?>
             <?php endforeach; ?>
@@ -160,11 +160,11 @@
                             name=<?= "land_type".$i_land ?> 
                             class="form-control">
                          <option value="" disabled selected> 
-                            <?= $land->type .'/'. $land->type_en?> 
+                            <?= $land->name .'/'. $land->name_en?> 
                          </option>
                           <?php foreach ($lands as $lnd): ?>
-                          <option value="<?= $lnd->land_id?>" >
-                            <?= $lnd->type .'/'. $lnd->type_en ?>
+                          <option value="<?= $lnd->id?>" >
+                            <?= $lnd->name .'/'. $lnd->name_en ?>
                           </option>
                           <?php  endforeach; ?>
                     </select>
@@ -172,29 +172,29 @@
                            id=<?= "land_area".$i_land ?> 
                            name=<?= "land_area".$i_land ?> 
                            class="form-control" 
-                           placeholder=<?= $land->area?>
-                           value=<?= $land->area?> >
+                           placeholder="<?= $land->area?>"
+                           value="<?= $land->area?>" >
                 <td><input type="number" 
                            id=<?= "land_income".$i_land ?> 
                            name=<?= "land_income".$i_land ?> 
                            class="form-control" 
-                           placeholder=<?= $land->income?>
-                           value=<?= $land->income?> >
+                           placeholder="<?= $land->income?>"
+                           value="<?= $land->income?>" >
                 <td><input type="number" 
                            id=<?= "land_rent".$i_land ?> 
                            name=<?= "land_rent".$i_land ?> 
                            class="form-control" 
-                           placeholder=<?= $land->payed_rent?>
-                           value=<?= $land->payed_rent?> >
+                           placeholder="<?= $land->payed_rent?>"
+                           value="<?= $land->payed_rent?>" >
                 <td><textarea id=<?= "land_location".$i_land ?> 
                               name=<?= "land_location".$i_land ?>
                               class="form-control" 
-                              value=<?= $land->location?>>
+                              value="<?= $land->location?>">
                                 <?= $land->location?></textarea> 
                 <td><textarea id=<?= "land_description".$i_land ?> 
                               name=<?= "land_description".$i_land ?> 
                               class="form-control" 
-                              value=<?= $land->description?>>
+                              value="<?= $land->description?>">
                                 <?= $land->description?></textarea>
                 <?php $i_land++ ?>
         <?php endforeach; ?>
@@ -215,11 +215,11 @@
                             name=<?= "real_estate_type".$i_estate ?> 
                             class="form-control">
                          <option value="" disabled selected> 
-                            <?= $real_estate->type .'/'. $real_estate->type_en?> 
+                            <?= $real_estate->name .'/'. $real_estate->name_en?> 
                          </option>
                           <?php foreach ($realestates as $realestate): ?>
-                          <option value="<?= $realestate->real_estate_id?>" >
-                            <?= $realestate->type .'/'. $realestate->type_en?>
+                          <option value="<?= $realestate->id?>" >
+                            <?= $realestate->name .'/'. $realestate->name_en?>
                           </option>
                           <?php  endforeach; ?>
                     </select>
@@ -227,23 +227,23 @@
                            id=<?= "real_estate_quantity".$i_estate ?> 
                            name=<?= "real_estate_quantity".$i_estate ?> 
                            class="form-control" 
-                           placeholder=<?= $real_estate->quantity?>
-                           value=<?= $real_estate->quantity?> >
+                           placeholder="<?= $real_estate->quantity?>"
+                           value="<?= $real_estate->quantity?>" >
                 <td><input type="number" 
                            id=<?= "real_estate_income".$i_estate ?> 
                            name=<?= "real_estate_income".$i_estate ?> 
                            class="form-control" 
-                           placeholder=<?= $real_estate->income?>
-                           value=<?= $real_estate->income?> >
+                           placeholder="<?= $real_estate->income?>"
+                           value="<?= $real_estate->income?>" >
                 <td><textarea id=<?= "real_estate_location".$i_estate ?> 
                               name=<?= "real_estate_location".$i_estate ?> 
                               class="form-control" 
-                              value=<?= $real_estate->location?>
+                              value="<?= $real_estate->location?>"
                            ><?= $real_estate->location?></textarea>
                 <td><textarea id=<?= "real_estate_description".$i_estate ?> 
                               name=<?= "real_estate_description".$i_estate ?> 
                               class="form-control" 
-                              value=<?= $real_estate->description?>
+                              value="<?= $real_estate->description?>"
                            ><?= $real_estate->description?></textarea> 
                 <?php $i_estate++ ?>
         <?php endforeach; ?>
@@ -262,11 +262,11 @@
                             name=<?= "livestock_type".$i_livestock ?> 
                             class="form-control">
                          <option value="" disabled selected> 
-                            <?= $livestock->type .'/'. $livestock->type_en?> 
+                            <?= $livestock->name .'/'. $livestock->name_en?> 
                          </option>
                           <?php foreach ($livestocks as $stock): ?>
-                          <option value="<?= $stock->livestock_id?>" >
-                            <?= $stock->type .'/'. $stock->type_en ?>
+                          <option value="<?= $stock->id?>" >
+                            <?= $stock->name .'/'. $stock->name_en ?>
                           </option>
                           <?php  endforeach; ?>
                     </select>
@@ -274,14 +274,14 @@
                            id=<?= "livestock_quantity".$i_livestock ?> 
                            name=<?= "livestock_quantity".$i_livestock ?> 
                            class="form-control" 
-                           placeholder=<?= $livestock->quantity?>
+                           placeholder="<?= $livestock->quantity?>"
                            value=<?= $livestock->quantity?> >
                 <td><input type="number" 
                            id=<?= "livestock_income".$i_livestock ?> 
                            name=<?= "livestock_income".$i_livestock ?>  
                            class="form-control" 
-                           placeholder=<?= $livestock->income?>
-                           value=<?= $livestock->income?> >
+                           placeholder="<?= $livestock->income?>"
+                           value="<?= $livestock->income?>" >
                 <?php $i_livestock++ ?>
         <?php endforeach; ?>
         </table>

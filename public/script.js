@@ -85,7 +85,7 @@ function getOccupationForm() {
   let xhr = new XMLHttpRequest();
 
   // I obtain data from table Occupation in JSON format
-  xhr.open('GET', '/occupation', true); 
+  xhr.open('GET', './occupation', true); 
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -111,7 +111,7 @@ function getOccupationForm() {
           output += `<option value="${occupationsList[i][0]}">${occupationsList[i][1]}</option>`;
         }; */
 
-        occupationsList.forEach( (i) => output += `<option value="${i['occupation_id']}">${i['name']}/${i['name_en']}</option>`);
+        occupationsList.forEach( (i) => output += `<option value="${i['id']}">${i['name']}/${i['name_en']}</option>`);
 
         // Here I create the rest of the form 
 
@@ -130,7 +130,7 @@ function getOccupationForm() {
                   <select id="occupation_type${idNumberOccupation}" 
                           name="occupation_type${idNumberOccupation}" 
                           class="form-control">
-                  <option value="">--</option>
+                  <option value="0">--</option>
                   <option value="Usta">Usta</option>
                   <option value="Kalfa">Kalfa</option>
                   <option value="Çırak">Çırak</option>
@@ -158,7 +158,7 @@ function getTaxesForm() {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', '/tax', true);
+  xhr.open('GET', './tax', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -172,7 +172,7 @@ function getTaxesForm() {
                             name="taxes${idNumberTaxes}" 
                             class="form-control">`;
 
-        taxesList.forEach( (i) => output += `<option value="${i['tax_id']}">${i['type']}/${i['type_en']}</option>`);
+        taxesList.forEach( (i) => output += `<option value="${i['id']}">${i['name']}/${i['name_en']}</option>`);
 
         output += `</select>
                   </div>
@@ -198,7 +198,7 @@ function getLandForm() {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', '/land', true);
+  xhr.open('GET', './land', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -214,7 +214,7 @@ function getLandForm() {
                              class="form-control">`;
 
 
-        landList.forEach( (i) => output += `<option value="${i['land_id']}">${i['type']}/${i['type_en']}</option>`);
+        landList.forEach( (i) => output += `<option value="${i['id']}">${i['name']}/${i['name_en']}</option>`);
 
         output += `</select>
                   </div>
@@ -265,7 +265,7 @@ function getRealEstateForm(e) {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', '/realestate', true);
+  xhr.open('GET', './realestate', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -282,7 +282,7 @@ function getRealEstateForm(e) {
                             class="form-control">`;
 
 
-        realEstateList.forEach( (i) => output += `<option value="${i['real_estate_id']}">${i['type']}/${i['type_en']}</option>`);
+        realEstateList.forEach( (i) => output += `<option value="${i['id']}">${i['name']}/${i['name_en']}</option>`);
 
         output += `</select>
                   </div>
@@ -339,7 +339,7 @@ function getLivestockForm(e) {
 
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', '/livestock', true);
+  xhr.open('GET', './livestock', true);
 
   xhr.onload = function() {
     if(this.status == 200) {
@@ -355,7 +355,7 @@ function getLivestockForm(e) {
                             name="livestock${idNumberLivestock}" 
                             class="form-control">`;
 
-        livestockList.forEach( (i) => output += `<option value="${i['livestock_id']}">${i['type']}/${i['type_en']}</option>`);
+        livestockList.forEach( (i) => output += `<option value="${i['id']}">${i['name']}/${i['name_en']}</option>`);
 
         output += `</select>
                   </div>

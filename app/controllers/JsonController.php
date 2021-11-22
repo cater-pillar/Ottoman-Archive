@@ -60,4 +60,20 @@ class JsonController {
     public function livestockShow() {
         echo json_encode(Livestock::show($_GET['id']));
     }
+
+    public function householdIndex() {
+        echo json_encode(Household::index());
+    }
+
+    public function householdShow() {
+        echo json_encode(Household::show($_GET['id']));
+    }
+
+    public function memberIndex() {
+        echo json_encode(HouseholdMember::index());
+    }
+
+    public function locationIndex() {
+        echo json_encode(Location::index());
+    }
 }

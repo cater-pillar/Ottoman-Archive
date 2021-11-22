@@ -57,7 +57,7 @@
                 <th>is exused
                 <?php foreach ($household->taxes as $tax): ?>
             <tr>
-                <td><?= $tax->type .'/'. $tax->type_en?>
+                <td><?= $tax->name .'/'. $tax->name_en?>
                 <td><?= $tax->amount?>
                 <td><?= $tax->is_exused?>
             <?php endforeach; ?>
@@ -75,7 +75,7 @@
                 <th>Description
         <?php foreach ($household->lands as $land): ?>
             <tr>
-                <td><?= $land->type .'/'. $land->type_en?>
+                <td><?= $land->name .'/'. $land->name_en?>
                 <td><?= $land->area?>
                 <td><?= $land->income?>
                 <td><?= $land->payed_rent?>
@@ -95,7 +95,7 @@
                 <th>Description 
         <?php foreach ($household->real_estates as $real_estate): ?>
             <tr>
-                <td><?= $real_estate->type .'/'. $real_estate->type_en?>
+                <td><?= $real_estate->name .'/'. $real_estate->name_en?>
                 <td><?= $real_estate->quantity?>
                 <td><?= $real_estate->income?>
                 <td><?= $real_estate->location?>
@@ -112,7 +112,7 @@
                 <th>Income
         <?php foreach ($household->livestock as $livestock): ?>
             <tr>
-                <td><?= $livestock->type .'/'. $livestock->type_en?>
+                <td><?= $livestock->name .'/'. $livestock->name_en?>
                 <td><?= $livestock->quantity?>
                 <td><?= $livestock->income?>
         <?php endforeach; ?>

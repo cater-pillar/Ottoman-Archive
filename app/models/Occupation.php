@@ -23,17 +23,17 @@ class Occupation {
 
     static public function show($id) {
         return App::get('database')
-        ->select('occupation', 'name', 'occupation_id', $id);
+        ->select('occupation', 'name', 'id', $id);
     }
 
     static public function destroy($id) {
         return App::get('database')
-        ->delete('occupation', 'occupation_id', $id);
+        ->delete('occupation', 'id', $id);
     }
 
     static public function update($arr, $id) {
         return App::get('database')
-        ->update($arr, 'occupation', 'occupation_id', $id);
+        ->update($arr, 'occupation', 'id', $id);
     }
 
 }

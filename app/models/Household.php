@@ -20,8 +20,7 @@ class Household {
     public $livestock = [];
 
 
-    public static function index()
-    {
+    public static function index() {
         return App::get('database')
                 ->selectClassAll('App\\Models\\Household');
     }
@@ -73,8 +72,7 @@ class Household {
         return $household;
     }
 
-    static public function create()
-    {
+    static public function create() {
         return App::get('database')->insert('household', 
         [
             ':fk_location_name_id' =>  $_POST['location'],
@@ -86,14 +84,11 @@ class Household {
         ]);
     }
 
-    static public function destroy($id)
-    {
+    static public function destroy($id) {
         return App::get('database')->delete('household', 
                                      'household.household_id', 
                                      $id);
     }
-
-    
 
     static public function update($arr, $id) {
 
@@ -111,26 +106,11 @@ class Household {
     }
 
 
-    static public function performEdit($column, $value, $id) {
-
-        try {
-            App::get('database')->edit(
-                'household',
-                $column,
-                'household_id',
-                $value,
-                $id
-            );
-        }
-        catch(Exception $e) {
-            $e->getMessage();
-        } 
-    }
 
 
 
-    static public function select($id)
-    {
+
+    static public function select($id) {
 
         return
             "SELECT 
@@ -139,8 +119,8 @@ class Household {
             household.`household_number` AS `number`, 
             household.`member_forname`, 
             household.`member_surname`, 
-            household_member_type.`type` AS `member_type`,
-            household_member_type.`type_en` AS `member_type_en`,
+            household_member_type.`name` AS `member_type`,
+            household_member_type.`name_en` AS `member_type_en`,
             household.`notes`
         FROM 
             location_name, 
@@ -150,49 +130,46 @@ class Household {
             household.household_id = {$id} 
         AND 
             household.fk_location_name_id = 
-            location_name.location_name_id 
+            location_name.id 
         AND 
             household.fk_household_member_type_id = 
-            household_member_type.household_member_type_id";
+            household_member_type.id";
         
 
     }
     
-    public function selectAll()
-    {
+    public function selectAll() {
         return
         "SELECT 
-        location_name.`name` AS `location`, 
-        household.`household_id` AS `id`, 
-        household.`household_number` AS `number`, 
-        household.`member_forname`, 
-        household.`member_surname`, 
-        household_member_type.`type` AS `member_type`,
-        household_member_type.`type_en` AS `member_type_en`,
-        household.`notes`
-    FROM 
-        location_name, 
-        household, 
-        household_member_type 
-    WHERE 
-        household.fk_location_name_id = 
-        location_name.location_name_id 
-    AND 
-        household.fk_household_member_type_id = 
-        household_member_type.household_member_type_id
-    ORDER BY 
-        `location`, `number`";
+            location_name.`name` AS `location`, 
+            household.`household_id` AS `id`, 
+            household.`household_number` AS `number`, 
+            household.`member_forname`, 
+            household.`member_surname`, 
+            household_member_type.`name` AS `member_type`,
+            household_member_type.`name_en` AS `member_type_en`,
+            household.`notes`
+        FROM 
+            location_name, 
+            household, 
+            household_member_type 
+        WHERE 
+            household.fk_location_name_id = 
+            location_name.id 
+        AND 
+            household.fk_household_member_type_id = 
+            household_member_type.id
+        ORDER BY 
+            `location`, `number`";
     }
 
 
 
-    public function add($object, $array)
-    {
+    public function add($object, $array) {
         $this->$array = $object;
     }
 
   
-
     public function income($array) {
         $sum = 0;
         foreach ($this->$array as $item) {

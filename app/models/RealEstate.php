@@ -7,12 +7,12 @@ use App\Core\App;
 class RealEstate {
 
     public $id;
-    public $type;
-    public $type_en;
+    public $name;
+    public $name_en;
 
     static public function index() {
         return App::get('database')
-        ->selectAll('real_estate', 'type');
+        ->selectAll('real_estate', 'name');
     }
 
     static public function create($parameters) {
@@ -22,17 +22,17 @@ class RealEstate {
 
     static public function show($id) {
         return App::get('database')
-        ->select('real_estate', 'type', 'real_estate_id', $id);
+        ->select('real_estate', 'name', 'id', $id);
     }
 
     static public function destroy($id) {
         return App::get('database')
-        ->delete('real_estate', 'real_estate_id', $id);
+        ->delete('real_estate', 'id', $id);
     }
 
     static public function update($arr, $id) {
         return App::get('database')
-        ->update($arr, 'real_estate', 'real_estate_id', $id);
+        ->update($arr, 'real_estate', 'id', $id);
     }
 
 }

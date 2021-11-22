@@ -29,7 +29,7 @@
                             <?= $_SESSION['location_name'][0][0] ?>
                           <?php endif; ?>
                           <?php foreach ($locations as $location): ?>
-                          <option value="<?= $location->location_name_id; ?>" >
+                          <option value="<?= $location->id; ?>" >
                             <?= $location->name; ?>
                           </option>
                           <?php  endforeach; ?>
@@ -51,8 +51,8 @@
             <label for="member_type">Select Household Member Position</label>
                 <select id="member_type" name="member_type" class="form-control">
                     <?php foreach ($member_types as $member_type): ?>
-                        <option value="<?= $member_type->household_member_type_id;?>" >
-                          <?= $member_type->type .'/'. $member_type->type_en; ?>
+                        <option value="<?= $member_type->id;?>" >
+                          <?= $member_type->name .'/'. $member_type->name_en; ?>
                         </option>
                     <?php  endforeach; ?>
                 </select>

@@ -35,5 +35,9 @@ $router-> get('realestate', 'JsonController@realestateIndex');
 $router-> get('realestate/show', 'JsonController@realestateShow');
 $router-> get('livestock', 'JsonController@livestockIndex');
 $router-> get('livestock/show', 'JsonController@livestockShow');
+$router-> get('householdjson', 'JsonController@householdIndex');
+$router-> get('householdjson/show', 'JsonController@householdShow');
+$router-> get('location', 'JsonController@locationIndex');
+$router-> get('member', 'JsonController@memberIndex');
 
 
