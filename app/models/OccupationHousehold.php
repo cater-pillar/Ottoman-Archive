@@ -26,7 +26,7 @@ class OccupationHousehold {
     }
 
 
-    public function destroy($id)
+    static public function destroy($id)
     {
         return App::get('database')->delete('occupation_household', 
                                      'occupation_household.fk_household_id', 

@@ -31,8 +31,10 @@ class QueryBuilder {
 
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        return $statement->fetchAll(PDO::FETCH_OBJ);
     }
+
+ 
 
 
     public function insert($table, $parameters) {
@@ -122,6 +124,15 @@ public function selectMaxId()
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+    public function getAllIds($sql)
+    {
+        $statement = $this->pdo->prepare($sql);
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_COLUMN);
+    }
+
 
 
     public function selectClassPerId($class, $id)
@@ -159,7 +170,15 @@ public function selectMaxId()
 
 
 
-
+    public function byReference($reference, $id) {
+            $statement = $this->pdo->prepare(
+                "SELECT fk_household_id 
+                FROM {$reference}_household
+                WHERE fk_{$reference}_id = {$id}");
+            $statement->execute();
+            return $statement->fetchAll(PDO::FETCH_COLUMN);
+        
+    }
 
 
 

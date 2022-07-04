@@ -10,6 +10,9 @@ class Tax {
     public $type;
     public $type_en;
 
+    private $table = 'tax';
+    private $orderby = 'type';
+
     static public function index() {
         return App::get('database')
         ->selectAll('tax', 'type');

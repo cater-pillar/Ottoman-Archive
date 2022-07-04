@@ -23,14 +23,24 @@ class HouseholdsController {
 
     public function index() {
 
-        $households = Household::index();
-        return view('householdlist', 
+     $households = Household::index();
+
+     /*    $households_ids = App::get('database')->getAllIds("SELECT household_id FROM household");
+        
+        $households = [];
+        foreach ($households_ids as $id) {
+            array_push($households, Household::show($id));
+        }
+     */
+         return view('householdlist', 
                     ['households' => $households]);
     }
 
+    
+
     public function new() {
 
-        $locations = Location::index();
+        $locations = Location::getCityAreas(1);
         $member_types = HouseholdMember::index();
         return view('inputform', 
                     ['locations' => $locations,
@@ -38,7 +48,10 @@ class HouseholdsController {
     } 
 
     public function create() {
-        
+        $_SESSION['location_id'] = $_POST['location'];
+        $_SESSION['archive_code'] = $_POST['archive_code'];
+        $_SESSION['location_name'] = Location::show($_POST['location'])->name;
+      //  die(var_dump(Location::show($_POST['location'])));
         /* HOUSEHOLD */
         Household::create();
 
@@ -144,6 +157,8 @@ class HouseholdsController {
         $householdData = [
             'member_forname' => $_POST['forname'],
             'member_surname' => $_POST['surname'],
+            'archive_code' => $_POST['archive_code'],
+            'page' => $_POST['page'],
             'household_number' => $_POST['household_number']];
 
         if (isset($_POST['location'])) {
@@ -225,7 +240,7 @@ class HouseholdsController {
            ];
 
         if (isset($_POST['land_type'.$i_land])) {
-            $taxData['fk_land_id'] = 
+            $landData['fk_land_id'] = 
             $_POST['land_type'.$i_land];
            }
 
@@ -290,6 +305,10 @@ class HouseholdsController {
         RealEstateHousehold::destroy($id);
         TaxHousehold::destroy($id);
         Household::destroy($id);
+        redirect('inputform');
+    }
+
+    public function test() {
         redirect('inputform');
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Core;
-
+use FFI\Exception;
 
 // Dependency injection container
 

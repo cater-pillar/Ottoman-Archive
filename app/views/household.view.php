@@ -13,14 +13,16 @@
         <table class="table table-striped">
             <tr>
                 <th>Location
-                <th>ID
-                <th>Number
+                <th>Archive Code
+                <th>Page No
+                <th>House No
                 <th>Forname
                 <th>Surname
                 <th>Position 
             <tr>
                 <td><?= $household->location ?>
-                <td><?= $household->id ?>
+                <td><?= $household->archive_code ?>
+                <td><?= $household->page ?>
                 <td><?= $household->number ?>
                 <td><?= $household->member_forname ?>
                 <td><?= $household->member_surname ?>

@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\App;
-use App\Models\{Household, Land, Livestock, Occupation, RealEstate, Tax};
+use App\Models\{Household, Land, Livestock, Occupation, RealEstate, Tax, Location, LocationType};
 
 class PagesController {
 
@@ -24,6 +24,13 @@ class PagesController {
     $ids = App::get('database')->selectColumns('household_id', 'household');
     return view('browsehouseholds', ['ids' => $ids]);
 }
+
+public function filterhouseholds()
+{
+    $livestock = Livestock::index();
+    
+    return view('filterhouseholds', ['livestock' => $livestock]);
+}
     public function lastAdded()
 {   
     
@@ -32,6 +39,16 @@ class PagesController {
 }
 
 
-
+public function test() {
+    $result = [];
+    foreach($_GET as $key => $value) {
+        if($value != "Submit") {
+            $result[$key] = App::get('database')->byReference('livestock', $value);
+        }
+    }
+    echo "<pre>";
+    var_dump(array_intersect($result['livestock-10'], $result['livestock-17']));
+    echo "</pre>";
+}
 
 }

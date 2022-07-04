@@ -23,8 +23,9 @@
         <table class="table table-striped">
             <tr>
                 <th>Location
-                <th>ID
-                <th><label for="household_number">Number</label>
+                <th>Archive Code
+                <th>Page No
+                <th><label for="household_number">House No</label>
                 <th>Forname
                 <th>Surname
                 <th>Position 
@@ -35,12 +36,21 @@
                             <?= $household->location ?>
                         </option>
                           <?php foreach ($locations as $location): ?>
-                          <option value=<?= $location->location_name_id?> >
+                          <option value=<?= $location->id?> >
                             <?= $location->name ?>
                           </option>
                           <?php  endforeach; ?>
                     </select>
-                <td><div><?= $household->id ?></div>
+                <td>
+                <input type="text" id="archive_code" 
+                           class="form-control" name="archive_code" 
+                           placeholder=<?= $household->archive_code ?>
+                           value=<?= $household->archive_code ?>>
+                <td>
+                <input type="number" id="page" 
+                           class="form-control" name="page" 
+                           placeholder=<?= $household->page ?>
+                           value=<?= $household->page ?>>
                 <td>
                     <input type="number" id="household_number" 
                            class="form-control" name="household_number" 

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use FFI\Exception;
 use App\Core\App;
 
 class LivestockHousehold {
@@ -54,6 +54,7 @@ class LivestockHousehold {
 
         return
             "SELECT 
+            livestock.`livestock_id`,
             livestock.`type`,
             livestock.`type_en`,
             livestock_household.quantity, 

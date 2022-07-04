@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'name' => 'ottoman',
+        'name' => 'ottomantest4',
         'username' => 'root',
         'password' => '',
         'connection' => 'mysql:host=127.0.0.1',

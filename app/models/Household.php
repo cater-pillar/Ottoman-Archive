@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use FFI\Exception;
 use App\Core\App;
 
 class Household {
@@ -13,6 +13,8 @@ class Household {
     public $member_type;
     public $member_type_en;
     public $notes;
+    public $archive_code;
+    public $page;
     public $occupations = [];
     public $taxes = [];
     public $lands = [];
@@ -22,8 +24,10 @@ class Household {
 
     public static function index()
     {
-        return App::get('database')
+        $result = App::get('database')
                 ->selectClassAll('App\\Models\\Household');
+        
+        return $result;
     }
 
     public static function show($id) {
@@ -69,7 +73,6 @@ class Household {
         $household->add($land, 'lands');
         $household->add($real_estate, 'real_estates');
         $household->add($livestock, 'livestock');
-
         return $household;
     }
 
@@ -82,6 +85,8 @@ class Household {
             ':member_surname' => $_POST['surname'],
             ':fk_household_member_type_id' => $_POST['member_type'],
             ':household_number' => $_POST['household_number'],
+            ':archive_code' => $_POST['archive_code'],
+            ':page' => $_POST['page'],
             ':notes' => $_POST['household_notes']
         ]);
     }
@@ -141,6 +146,8 @@ class Household {
             household.`member_surname`, 
             household_member_type.`type` AS `member_type`,
             household_member_type.`type_en` AS `member_type_en`,
+            household.archive_code,
+            household.page,
             household.`notes`
         FROM 
             location_name, 
@@ -158,7 +165,7 @@ class Household {
 
     }
     
-    public function selectAll()
+    static public function selectAll()
     {
         return
         "SELECT 
@@ -169,6 +176,8 @@ class Household {
         household.`member_surname`, 
         household_member_type.`type` AS `member_type`,
         household_member_type.`type_en` AS `member_type_en`,
+        household.archive_code,
+        household.page,
         household.`notes`
     FROM 
         location_name, 
@@ -184,7 +193,7 @@ class Household {
         `location`, `number`";
     }
 
-
+   
 
     public function add($object, $array)
     {

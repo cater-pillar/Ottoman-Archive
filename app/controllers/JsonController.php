@@ -24,10 +24,26 @@ class JsonController {
     public function occupationIndex() {
         echo json_encode(Occupation::index());
     }
+        public function occupationTop() {
+            echo json_encode(Occupation::getTop());
+        }
+        public function occupationBottom() {
+            echo json_encode(Occupation::getBottom());
+        }
 
     public function occupationShow() {
         echo json_encode(Occupation::show($_GET['id']));
     }
+    public function locationIndex() {
+        echo json_encode(Location::index());
+    }
+    public function locationShow() {
+        echo json_encode(Location::show($_GET['id']));
+    }
+    public function locationCity() {
+        echo json_encode(Location::getCityAreas($_GET['city']));
+    }
+    
 
     public function taxIndex() {
         echo json_encode(Tax::index());
@@ -59,5 +75,12 @@ class JsonController {
 
     public function livestockShow() {
         echo json_encode(Livestock::show($_GET['id']));
+    }
+
+    public function householdIndex() {
+        echo json_encode(Household::index());
+    }
+    public function householdShow() {
+        echo json_encode(Household::show($_GET['id']));
     }
 }

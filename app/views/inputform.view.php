@@ -1,11 +1,4 @@
-<!-- 
-    $_SESSION['location_id']
-    $_SESSION['location_name'][0][0] 
-    $result_location as $locations
-    $result_household as $members
- -->
-<!-- <?php foreach($locations as $location) {
-    var_dump($location->name);}?> -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,16 +17,30 @@
                 
                 <label for="location">Select Location Name:</label>
                     <select id="location" name="location" class="form-control">
-                          <?php if (isset($_SESSION['location_id'])): ?>
+                          <?php if (isset($_SESSION['location_id']) && isset($_SESSION['location_name'])): ?>
                             <option value="<?= $_SESSION['location_id']?>" >
-                            <?= $_SESSION['location_name'][0][0] ?>
+                            <?= $_SESSION['location_name'] ?>
                           <?php endif; ?>
                           <?php foreach ($locations as $location): ?>
-                          <option value="<?= $location->location_name_id; ?>" >
+                          <option value="<?= $location->id; ?>" >
                             <?= $location->name; ?>
                           </option>
                           <?php  endforeach; ?>
                     </select>
+        </div>
+        <div class="form-group">
+            
+            <label for="archive_code">Add Archive Code:</label>
+            <input type="text" id="archive_code" name="archive_code" 
+                   class="form-control" placeholder="Archive Code" required <?php if (isset($_SESSION['archive_code'])) {
+                       echo "value='". $_SESSION['archive_code'] . "'";
+                   };?> >
+        </div>
+
+        <div class="form-group">    
+            <label for="page">Add Archive Page Number:</label>
+            <input type="number" id="page" name="page" 
+                   class="form-control" placeholder="Archive Page Number" required>
         </div>
         <h2>Household Member</h2>
         <div class="form-group">
